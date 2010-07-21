@@ -189,6 +189,16 @@
                 android:targetClass="com.android.settings.DateTimeSettings" />
         </com.android.settings.IconPreferenceScreen>
 
+        <!-- GEM Settings -->
+        <com.android.settings.IconPreferenceScreen
+            settings:icon="@drawable/ic_gem"
+            android:title="@string/gem_settings_title">
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetPackage="org.cvpcs.android.gem_settings"
+                android:targetClass="org.cvpcs.android.gem_settings.activities.GEMSettings" />
+        </com.android.settings.IconPreferenceScreen>
+
         <!-- About Device -->
 
         <com.android.settings.IconPreferenceScreen
