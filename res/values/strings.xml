@@ -2531,5 +2531,5 @@ found in the list of installed applications.</string>
     <string name="sound_category_notification_title">Notifications</string>
     <string name="sound_category_feedback_title">Feedback</string>
 
-    <string name="gem_settings_title">GEM Tweaks</string>
+    <string name="gem_settings_title">GEM settings</string>
 </resources>
