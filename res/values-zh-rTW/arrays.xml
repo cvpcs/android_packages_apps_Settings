@@ -115,19 +115,6 @@
     <item msgid="1549288661423279207">"插入時絕不"</item>
     <item msgid="1986753720941888596">"永不"</item>
   </string-array>
-  <string-array name="battery_history_type_spinner">
-    <item msgid="2193799199027871385">"CPU 使用率"</item>
-    <item msgid="6401018715947316517">"網路使用率"</item>
-    <item msgid="188092590354892392">"GPS 使用率"</item>
-    <item msgid="8414109131222049141">"感應器使用率"</item>
-    <item msgid="1327904325081257093">"部分喚醒使用率"</item>
-    <item msgid="4832254146664706277">"其他使用率"</item>
-  </string-array>
-  <string-array name="battery_history_which_spinner">
-    <item msgid="3451981114763440074">"自上次拔除插頭後的時間"</item>
-    <item msgid="166936313535197598">"開機後總時間"</item>
-    <item msgid="4793941382744963893">"所有時間的總計"</item>
-  </string-array>
   <string-array name="usage_stats_display_order_types">
     <item msgid="9077371706468756228">"使用時間"</item>
     <item msgid="1908750532762193304">"啟動計數"</item>

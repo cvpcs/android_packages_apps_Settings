@@ -18,6 +18,7 @@ package com.android.settings.bluetooth;
 
 import com.android.settings.R;
 import com.android.settings.bluetooth.LocalBluetoothProfileManager.Profile;
+import com.android.settings.bluetooth.LocalBluetoothProfileManager.ServiceListener;
 
 import android.app.AlertDialog;
 import android.app.Notification;
@@ -48,7 +49,7 @@ import java.util.Set;
 
 public class DockService extends Service implements AlertDialog.OnMultiChoiceClickListener,
         DialogInterface.OnClickListener, DialogInterface.OnDismissListener,
-        CompoundButton.OnCheckedChangeListener {
+        CompoundButton.OnCheckedChangeListener, ServiceListener {
 
     private static final String TAG = "DockService";
 
@@ -101,6 +102,7 @@ public class DockService extends Service implements AlertDialog.OnMultiChoiceCli
     // Created in OnCreate()
     private volatile Looper mServiceLooper;
     private volatile ServiceHandler mServiceHandler;
+    private Runnable mRunnable;
     private DockService mContext;
     private LocalBluetoothManager mBtManager;
 
@@ -138,6 +140,8 @@ public class DockService extends Service implements AlertDialog.OnMultiChoiceCli
     @Override
     public void onDestroy() {
         if (DEBUG) Log.d(TAG, "onDestroy");
+        mRunnable = null;
+        LocalBluetoothProfileManager.removeServiceListener(this);
         if (mDialog != null) {
             mDialog.dismiss();
             mDialog = null;
@@ -228,8 +232,8 @@ public class DockService extends Service implements AlertDialog.OnMultiChoiceCli
     // This method gets messages from both onStartCommand and mServiceHandler/mServiceLooper
     private synchronized void processMessage(Message msg) {
         int msgType = msg.what;
-        int state = msg.arg1;
-        int startId = msg.arg2;
+        final int state = msg.arg1;
+        final int startId = msg.arg2;
         boolean deferFinishCall = false;
         BluetoothDevice device = null;
         if (msg.obj != null) {
@@ -271,12 +275,23 @@ public class DockService extends Service implements AlertDialog.OnMultiChoiceCli
                     }
 
                     mDevice = device;
-                    if (mBtManager.getDockAutoConnectSetting(device.getAddress())) {
-                        // Setting == auto connect
-                        initBtSettings(mContext, device, state, false);
-                        applyBtSettings(mDevice, startId);
+
+                    // Register first in case LocalBluetoothProfileManager
+                    // becomes ready after isManagerReady is called and it
+                    // would be too late to register a service listener.
+                    LocalBluetoothProfileManager.addServiceListener(this);
+                    if (LocalBluetoothProfileManager.isManagerReady()) {
+                        handleDocked(device, state, startId);
+                        // Not needed after all
+                        LocalBluetoothProfileManager.removeServiceListener(this);
                     } else {
-                        createDialog(mContext, mDevice, state, startId);
+                        final BluetoothDevice d = device;
+                        mRunnable = new Runnable() {
+                            public void run() {
+                                handleDocked(d, state, startId);
+                            }
+                        };
+                        deferFinishCall = true;
                     }
                 }
                 break;
@@ -703,9 +718,12 @@ public class DockService extends Service implements AlertDialog.OnMultiChoiceCli
                 // Checked but not connected
                 callConnect = true;
             } else if (!mCheckedItems[i]) {
-                // Unchecked but connected
-                if (DEBUG) Log.d(TAG, "applyBtSettings - Disconnecting");
-                cachedDevice.disconnect(mProfiles[i]);
+                // Unchecked, may or may not be connected.
+                int status = profileManager.getConnectionStatus(cachedDevice.getDevice());
+                if (SettingsBtStatus.isConnectionStatusConnected(status)) {
+                    if (DEBUG) Log.d(TAG, "applyBtSettings - Disconnecting");
+                    cachedDevice.disconnect(mProfiles[i]);
+                }
             }
             profileManager.setPreferred(device, mCheckedItems[i]);
             if (DEBUG) {
@@ -721,8 +739,21 @@ public class DockService extends Service implements AlertDialog.OnMultiChoiceCli
         }
     }
 
+    private synchronized void handleDocked(final BluetoothDevice device, final int state,
+            final int startId) {
+        if (mBtManager.getDockAutoConnectSetting(device.getAddress())) {
+            // Setting == auto connect
+            initBtSettings(mContext, device, state, false);
+            applyBtSettings(mDevice, startId);
+        } else {
+            createDialog(mContext, device, state, startId);
+        }
+    }
+
     private synchronized void handleUndocked(Context context, LocalBluetoothManager localManager,
             BluetoothDevice device) {
+        mRunnable = null;
+        LocalBluetoothProfileManager.removeServiceListener(this);
         if (mDialog != null) {
             mDialog.dismiss();
             mDialog = null;
@@ -760,14 +791,14 @@ public class DockService extends Service implements AlertDialog.OnMultiChoiceCli
         SharedPreferences.Editor editor = getSharedPreferences(SHARED_PREFERENCES_NAME,
                 Context.MODE_PRIVATE).edit();
         editor.putBoolean(key, bool);
-        editor.commit();
+        editor.apply();
     }
 
     private void setSettingInt(String key, int value) {
         SharedPreferences.Editor editor = getSharedPreferences(SHARED_PREFERENCES_NAME,
                 Context.MODE_PRIVATE).edit();
         editor.putInt(key, value);
-        editor.commit();
+        editor.apply();
     }
 
     private void removeSetting(String key) {
@@ -775,7 +806,17 @@ public class DockService extends Service implements AlertDialog.OnMultiChoiceCli
                 Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();
         editor.remove(key);
-        editor.commit();
-        return;
+        editor.apply();
+    }
+
+    public synchronized void onServiceConnected() {
+        if (mRunnable != null) {
+            mRunnable.run();
+            mRunnable = null;
+            LocalBluetoothProfileManager.removeServiceListener(this);
+        }
+    }
+
+    public void onServiceDisconnected() {
     }
 }

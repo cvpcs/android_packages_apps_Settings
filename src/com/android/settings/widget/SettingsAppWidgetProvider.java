@@ -23,8 +23,8 @@ import android.bluetooth.BluetoothAdapter;
 import android.content.ComponentName;
 import android.content.ContentResolver;
 import android.content.Context;
-import android.content.IContentService;
 import android.content.Intent;
+import android.content.SyncStorageEngine;
 import android.content.pm.PackageManager;
 import android.location.LocationManager;
 import android.net.ConnectivityManager;
@@ -68,6 +68,28 @@ public class SettingsAppWidgetProvider extends AppWidgetProvider {
     private static final int STATE_UNKNOWN = 4;
     private static final int STATE_INTERMEDIATE = 5;
 
+    // Position in the widget bar, to enable different graphics for left, center and right buttons
+    private static final int POS_LEFT = 0;
+    private static final int POS_CENTER = 1;
+    private static final int POS_RIGHT = 2;
+
+    private static final int[] IND_DRAWABLE_OFF = {
+        R.drawable.appwidget_settings_ind_off_l,
+        R.drawable.appwidget_settings_ind_off_c,
+        R.drawable.appwidget_settings_ind_off_r
+    };
+
+    private static final int[] IND_DRAWABLE_MID = {
+        R.drawable.appwidget_settings_ind_mid_l,
+        R.drawable.appwidget_settings_ind_mid_c,
+        R.drawable.appwidget_settings_ind_mid_r
+    };
+
+    private static final int[] IND_DRAWABLE_ON = {
+        R.drawable.appwidget_settings_ind_on_l,
+        R.drawable.appwidget_settings_ind_on_c,
+        R.drawable.appwidget_settings_ind_on_r
+    };
 
     /**
      * Minimum and maximum brightnesses.  Don't go to 0 since that makes the display unusable
@@ -78,10 +100,12 @@ public class SettingsAppWidgetProvider extends AppWidgetProvider {
 
     private static final StateTracker sWifiState = new WifiStateTracker();
     private static final StateTracker sBluetoothState = new BluetoothStateTracker();
+    private static final StateTracker sGpsState = new GpsStateTracker();
+    private static final StateTracker sSyncState = new SyncStateTracker();
 
     /**
-     * The state machine for Wifi and Bluetooth toggling, tracking
-     * reality versus the user's intent.
+     * The state machine for a setting's toggling, tracking reality
+     * versus the user's intent.
      *
      * This is necessary because reality moves relatively slowly
      * (turning on &amp; off radio drivers), compared to user's
@@ -130,6 +154,65 @@ public class SettingsAppWidgetProvider extends AppWidgetProvider {
             } else {
                 mInTransition = true;
                 requestStateChange(context, newState);
+            }
+        }
+
+        /**
+         * Return the ID of the main large image button for the setting.
+         */
+        public abstract int getButtonId();
+
+        /**
+         * Returns the small indicator image ID underneath the setting.
+         */
+        public abstract int getIndicatorId();
+
+        /**
+         * Returns the resource ID of the image to show as a function of
+         * the on-vs-off state.
+         */
+        public abstract int getButtonImageId(boolean on);
+
+        /**
+         * Returns the position in the button bar - either POS_LEFT, POS_RIGHT or POS_CENTER.
+         */
+        public int getPosition() { return POS_CENTER; }
+
+        /**
+         * Updates the remote views depending on the state (off, on,
+         * turning off, turning on) of the setting.
+         */
+        public final void setImageViewResources(Context context, RemoteViews views) {
+            int buttonId = getButtonId();
+            int indicatorId = getIndicatorId();
+            int pos = getPosition();
+            switch (getTriState(context)) {
+                case STATE_DISABLED:
+                    views.setImageViewResource(buttonId, getButtonImageId(false));
+                    views.setImageViewResource(
+                        indicatorId, IND_DRAWABLE_OFF[pos]);
+                    break;
+                case STATE_ENABLED:
+                    views.setImageViewResource(buttonId, getButtonImageId(true));
+                    views.setImageViewResource(
+                        indicatorId, IND_DRAWABLE_ON[pos]);
+                    break;
+                case STATE_INTERMEDIATE:
+                    // In the transitional state, the bottom green bar
+                    // shows the tri-state (on, off, transitioning), but
+                    // the top dark-gray-or-bright-white logo shows the
+                    // user's intent.  This is much easier to see in
+                    // sunlight.
+                    if (isTurningOn()) {
+                        views.setImageViewResource(buttonId, getButtonImageId(true));
+                        views.setImageViewResource(
+                            indicatorId, IND_DRAWABLE_MID[pos]);
+                    } else {
+                        views.setImageViewResource(buttonId, getButtonImageId(false));
+                        views.setImageViewResource(
+                            indicatorId, IND_DRAWABLE_OFF[pos]);
+                    }
+                    break;
             }
         }
 
@@ -236,6 +319,16 @@ public class SettingsAppWidgetProvider extends AppWidgetProvider {
      * Subclass of StateTracker to get/set Wifi state.
      */
     private static final class WifiStateTracker extends StateTracker {
+        public int getButtonId() { return R.id.img_wifi; }
+        public int getIndicatorId() { return R.id.ind_wifi; }
+        public int getButtonImageId(boolean on) {
+            return on ? R.drawable.ic_appwidget_settings_wifi_on
+                    : R.drawable.ic_appwidget_settings_wifi_off;
+        }
+
+        @Override
+        public int getPosition() { return POS_LEFT; }
+
         @Override
         public int getActualState(Context context) {
             WifiManager wifiManager = (WifiManager) context.getSystemService(Context.WIFI_SERVICE);
@@ -247,7 +340,8 @@ public class SettingsAppWidgetProvider extends AppWidgetProvider {
 
         @Override
         protected void requestStateChange(Context context, final boolean desiredState) {
-            final WifiManager wifiManager = (WifiManager) context.getSystemService(Context.WIFI_SERVICE);
+            final WifiManager wifiManager =
+                    (WifiManager) context.getSystemService(Context.WIFI_SERVICE);
             if (wifiManager == null) {
                 Log.d(TAG, "No wifiManager.");
                 return;
@@ -308,6 +402,12 @@ public class SettingsAppWidgetProvider extends AppWidgetProvider {
      * Subclass of StateTracker to get/set Bluetooth state.
      */
     private static final class BluetoothStateTracker extends StateTracker {
+        public int getButtonId() { return R.id.img_bluetooth; }
+        public int getIndicatorId() { return R.id.ind_bluetooth; }
+        public int getButtonImageId(boolean on) {
+            return on ? R.drawable.ic_appwidget_settings_bluetooth_on
+                    : R.drawable.ic_appwidget_settings_bluetooth_off;
+        }
 
         @Override
         public int getActualState(Context context) {
@@ -368,6 +468,117 @@ public class SettingsAppWidgetProvider extends AppWidgetProvider {
         }
     }
 
+    /**
+     * Subclass of StateTracker for GPS state.
+     */
+    private static final class GpsStateTracker extends StateTracker {
+        public int getButtonId() { return R.id.img_gps; }
+        public int getIndicatorId() { return R.id.ind_gps; }
+        public int getButtonImageId(boolean on) {
+            return on ? R.drawable.ic_appwidget_settings_gps_on
+                    : R.drawable.ic_appwidget_settings_gps_off;
+        }
+
+        @Override
+        public int getActualState(Context context) {
+            ContentResolver resolver = context.getContentResolver();
+            boolean on = Settings.Secure.isLocationProviderEnabled(
+                resolver, LocationManager.GPS_PROVIDER);
+            return on ? STATE_ENABLED : STATE_DISABLED;
+        }
+
+        @Override
+        public void onActualStateChange(Context context, Intent unused) {
+            // Note: the broadcast location providers changed intent
+            // doesn't include an extras bundles saying what the new value is.
+            setCurrentState(context, getActualState(context));
+        }
+
+        @Override
+        public void requestStateChange(final Context context, final boolean desiredState) {
+            final ContentResolver resolver = context.getContentResolver();
+            new AsyncTask<Void, Void, Boolean>() {
+                @Override
+                protected Boolean doInBackground(Void... args) {
+                    Settings.Secure.setLocationProviderEnabled(
+                        resolver,
+                        LocationManager.GPS_PROVIDER,
+                        desiredState);
+                    return desiredState;
+                }
+
+                @Override
+                protected void onPostExecute(Boolean result) {
+                    setCurrentState(
+                        context,
+                        result ? STATE_ENABLED : STATE_DISABLED);
+                    updateWidget(context);
+                }
+            }.execute();
+        }
+    }
+
+    /**
+     * Subclass of StateTracker for sync state.
+     */
+    private static final class SyncStateTracker extends StateTracker {
+        public int getButtonId() { return R.id.img_sync; }
+        public int getIndicatorId() { return R.id.ind_sync; }
+        public int getButtonImageId(boolean on) {
+            return on ? R.drawable.ic_appwidget_settings_sync_on
+                    : R.drawable.ic_appwidget_settings_sync_off;
+        }
+
+        @Override
+        public int getActualState(Context context) {
+            boolean on = getBackgroundDataState(context) &&
+                    ContentResolver.getMasterSyncAutomatically();
+            return on ? STATE_ENABLED : STATE_DISABLED;
+        }
+
+        @Override
+        public void onActualStateChange(Context context, Intent unused) {
+            setCurrentState(context, getActualState(context));
+        }
+
+        @Override
+        public void requestStateChange(final Context context, final boolean desiredState) {
+            final ConnectivityManager connManager =
+                    (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+            final boolean backgroundData = getBackgroundDataState(context);
+            final boolean sync = ContentResolver.getMasterSyncAutomatically();
+
+            new AsyncTask<Void, Void, Boolean>() {
+                @Override
+                protected Boolean doInBackground(Void... args) {
+                    // Turning sync on.
+                    if (desiredState) {
+                        if (!backgroundData) {
+                            connManager.setBackgroundDataSetting(true);
+                        }
+                        if (!sync) {
+                            ContentResolver.setMasterSyncAutomatically(true);
+                        }
+                        return true;
+                    }
+
+                    // Turning sync off
+                    if (sync) {
+                        ContentResolver.setMasterSyncAutomatically(false);
+                    }
+                    return false;
+                }
+
+                @Override
+                protected void onPostExecute(Boolean result) {
+                    setCurrentState(
+                        context,
+                        result ? STATE_ENABLED : STATE_DISABLED);
+                    updateWidget(context);
+                }
+            }.execute();
+        }
+    }
 
     @Override
     public void onUpdate(Context context, AppWidgetManager appWidgetManager,
@@ -442,38 +653,11 @@ public class SettingsAppWidgetProvider extends AppWidgetProvider {
      * @param context
      */
     private static void updateButtons(RemoteViews views, Context context) {
-        switch (sWifiState.getTriState(context)) {
-            case STATE_DISABLED:
-                views.setImageViewResource(R.id.img_wifi,
-                                           R.drawable.ic_appwidget_settings_wifi_off);
-                views.setImageViewResource(R.id.ind_wifi,
-                                           R.drawable.appwidget_settings_ind_off_l);
-                break;
-            case STATE_ENABLED:
-                views.setImageViewResource(R.id.img_wifi,
-                                           R.drawable.ic_appwidget_settings_wifi_on);
-                views.setImageViewResource(R.id.ind_wifi,
-                                           R.drawable.appwidget_settings_ind_on_l);
-                break;
-            case STATE_INTERMEDIATE:
-                // In the transitional state, the bottom green bar
-                // shows the tri-state (on, off, transitioning), but
-                // the top dark-gray-or-bright-white logo shows the
-                // user's intent.  This is much easier to see in
-                // sunlight.
-                if (sWifiState.isTurningOn()) {
-                    views.setImageViewResource(R.id.img_wifi,
-                                               R.drawable.ic_appwidget_settings_wifi_on);
-                    views.setImageViewResource(R.id.ind_wifi,
-                                               R.drawable.appwidget_settings_ind_mid_l);
-                } else {
-                    views.setImageViewResource(R.id.img_wifi,
-                                               R.drawable.ic_appwidget_settings_wifi_off);
-                    views.setImageViewResource(R.id.ind_wifi,
-                                               R.drawable.appwidget_settings_ind_off_l);
-                }
-                break;
-        }
+        sWifiState.setImageViewResources(context, views);
+        sBluetoothState.setImageViewResources(context, views);
+        sGpsState.setImageViewResources(context, views);
+        sSyncState.setImageViewResources(context, views);
+
         if (getBrightnessMode(context)) {
             views.setImageViewResource(R.id.img_brightness,
                                        R.drawable.ic_appwidget_settings_brightness_auto);
@@ -489,52 +673,6 @@ public class SettingsAppWidgetProvider extends AppWidgetProvider {
                                        R.drawable.ic_appwidget_settings_brightness_off);
             views.setImageViewResource(R.id.ind_brightness,
                                        R.drawable.appwidget_settings_ind_off_r);
-        }
-        if (getSync(context)) {
-            views.setImageViewResource(R.id.img_sync, R.drawable.ic_appwidget_settings_sync_on);
-            views.setImageViewResource(R.id.ind_sync, R.drawable.appwidget_settings_ind_on_c);
-        } else {
-            views.setImageViewResource(R.id.img_sync, R.drawable.ic_appwidget_settings_sync_off);
-            views.setImageViewResource(R.id.ind_sync, R.drawable.appwidget_settings_ind_off_c);
-        }
-        if (getGpsState(context)) {
-            views.setImageViewResource(R.id.img_gps, R.drawable.ic_appwidget_settings_gps_on);
-            views.setImageViewResource(R.id.ind_gps, R.drawable.appwidget_settings_ind_on_c);
-        } else {
-            views.setImageViewResource(R.id.img_gps, R.drawable.ic_appwidget_settings_gps_off);
-            views.setImageViewResource(R.id.ind_gps, R.drawable.appwidget_settings_ind_off_c);
-        }
-        switch (sBluetoothState.getTriState(context)) {
-            case STATE_DISABLED:
-                views.setImageViewResource(R.id.img_bluetooth,
-                                           R.drawable.ic_appwidget_settings_bluetooth_off);
-                views.setImageViewResource(R.id.ind_bluetooth,
-                                           R.drawable.appwidget_settings_ind_off_c);
-                break;
-            case STATE_ENABLED:
-                views.setImageViewResource(R.id.img_bluetooth,
-                                           R.drawable.ic_appwidget_settings_bluetooth_on);
-                views.setImageViewResource(R.id.ind_bluetooth,
-                                           R.drawable.appwidget_settings_ind_on_c);
-                break;
-            case STATE_INTERMEDIATE:
-                // In the transitional state, the bottom green bar
-                // shows the tri-state (on, off, transitioning), but
-                // the top dark-gray-or-bright-white logo shows the
-                // user's intent.  This is much easier to see in
-                // sunlight.
-                if (sBluetoothState.isTurningOn()) {
-                    views.setImageViewResource(R.id.img_bluetooth,
-                                               R.drawable.ic_appwidget_settings_bluetooth_on);
-                    views.setImageViewResource(R.id.ind_bluetooth,
-                                               R.drawable.appwidget_settings_ind_mid_c);
-                } else {
-                    views.setImageViewResource(R.id.img_bluetooth,
-                                               R.drawable.ic_appwidget_settings_bluetooth_off);
-                    views.setImageViewResource(R.id.ind_bluetooth,
-                                               R.drawable.appwidget_settings_ind_off_c);
-                }
-                break;
         }
     }
 
@@ -565,10 +703,16 @@ public class SettingsAppWidgetProvider extends AppWidgetProvider {
     @Override
     public void onReceive(Context context, Intent intent) {
         super.onReceive(context, intent);
-        if (WifiManager.WIFI_STATE_CHANGED_ACTION.equals(intent.getAction())) {
+        String action = intent.getAction();
+        if (WifiManager.WIFI_STATE_CHANGED_ACTION.equals(action)) {
             sWifiState.onActualStateChange(context, intent);
-        } else if (BluetoothAdapter.ACTION_STATE_CHANGED.equals(intent.getAction())) {
+        } else if (BluetoothAdapter.ACTION_STATE_CHANGED.equals(action)) {
             sBluetoothState.onActualStateChange(context, intent);
+        } else if (LocationManager.PROVIDERS_CHANGED_ACTION.equals(action)) {
+            sGpsState.onActualStateChange(context, intent);
+        } else if (SyncStorageEngine.SYNC_CONNECTION_SETTING_CHANGED_INTENT.getAction()
+                .equals(action)) {
+            sSyncState.onActualStateChange(context, intent);
         } else if (intent.hasCategory(Intent.CATEGORY_ALTERNATIVE)) {
             Uri data = intent.getData();
             int buttonId = Integer.parseInt(data.getSchemeSpecificPart());
@@ -577,9 +721,9 @@ public class SettingsAppWidgetProvider extends AppWidgetProvider {
             } else if (buttonId == BUTTON_BRIGHTNESS) {
                 toggleBrightness(context);
             } else if (buttonId == BUTTON_SYNC) {
-                toggleSync(context);
+                sSyncState.toggleState(context);
             } else if (buttonId == BUTTON_GPS) {
-                toggleGps(context);
+                sGpsState.toggleState(context);
             } else if (buttonId == BUTTON_BLUETOOTH) {
                 sBluetoothState.toggleState(context);
             }
@@ -604,77 +748,6 @@ public class SettingsAppWidgetProvider extends AppWidgetProvider {
         ConnectivityManager connManager =
                 (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
         return connManager.getBackgroundDataSetting();
-    }
-
-    /**
-     * Gets the state of auto-sync.
-     *
-     * @param context
-     * @return true if enabled
-     */
-    private static boolean getSync(Context context) {
-        boolean backgroundData = getBackgroundDataState(context);
-        boolean sync = ContentResolver.getMasterSyncAutomatically();
-        return backgroundData && sync;
-    }
-
-    /**
-     * Toggle auto-sync
-     *
-     * @param context
-     */
-    private void toggleSync(Context context) {
-        ConnectivityManager connManager =
-                (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
-        boolean backgroundData = getBackgroundDataState(context);
-        boolean sync = ContentResolver.getMasterSyncAutomatically();
-
-        // four cases to handle:
-        // setting toggled from off to on:
-        // 1. background data was off, sync was off: turn on both
-        if (!backgroundData && !sync) {
-            connManager.setBackgroundDataSetting(true);
-            ContentResolver.setMasterSyncAutomatically(true);
-        }
-
-        // 2. background data was off, sync was on: turn on background data
-        if (!backgroundData && sync) {
-            connManager.setBackgroundDataSetting(true);
-        }
-
-        // 3. background data was on, sync was off: turn on sync
-        if (backgroundData && !sync) {
-            ContentResolver.setMasterSyncAutomatically(true);
-        }
-
-        // setting toggled from on to off:
-        // 4. background data was on, sync was on: turn off sync
-        if (backgroundData && sync) {
-            ContentResolver.setMasterSyncAutomatically(false);
-        }
-    }
-
-    /**
-     * Gets the state of GPS location.
-     *
-     * @param context
-     * @return true if enabled.
-     */
-    private static boolean getGpsState(Context context) {
-        ContentResolver resolver = context.getContentResolver();
-        return Settings.Secure.isLocationProviderEnabled(resolver, LocationManager.GPS_PROVIDER);
-    }
-
-    /**
-     * Toggles the state of GPS.
-     *
-     * @param context
-     */
-    private void toggleGps(Context context) {
-        ContentResolver resolver = context.getContentResolver();
-        boolean enabled = getGpsState(context);
-        Settings.Secure.setLocationProviderEnabled(resolver, LocationManager.GPS_PROVIDER,
-                !enabled);
     }
 
     /**

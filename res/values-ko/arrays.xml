@@ -115,19 +115,6 @@
     <item msgid="1549288661423279207">"전원에 연결되었을 때는 절전 모드로 전환되지 않음"</item>
     <item msgid="1986753720941888596">"절전 모드로 전환 안함"</item>
   </string-array>
-  <string-array name="battery_history_type_spinner">
-    <item msgid="2193799199027871385">"CPU 사용량"</item>
-    <item msgid="6401018715947316517">"네트워크 사용량"</item>
-    <item msgid="188092590354892392">"GPS 사용량"</item>
-    <item msgid="8414109131222049141">"센서 사용량"</item>
-    <item msgid="1327904325081257093">"부분 가동 사용량"</item>
-    <item msgid="4832254146664706277">"기타 사용량"</item>
-  </string-array>
-  <string-array name="battery_history_which_spinner">
-    <item msgid="3451981114763440074">"마지막으로 플러그를 뽑은 이후"</item>
-    <item msgid="166936313535197598">"부팅 후 총 사용 시간"</item>
-    <item msgid="4793941382744963893">"총 사용 시간"</item>
-  </string-array>
   <string-array name="usage_stats_display_order_types">
     <item msgid="9077371706468756228">"사용 시간"</item>
     <item msgid="1908750532762193304">"계수 시작"</item>

@@ -45,13 +45,16 @@
     <string name="radioInfo_display_asu" msgid="1422248392727818082">"asu"</string>
     <string name="radioInfo_lac" msgid="8415219164758307156">"LAC"</string>
     <string name="radioInfo_cid" msgid="4362599198392643138">"CID"</string>
-    <string name="sdcard_unmount" msgid="3364184561355611897">"Odłącz kartę SD"</string>
-    <string name="sdcard_format" msgid="362497552060004057">"Formatuj kartę SD"</string>
+    <string name="sdcard_unmount" product="nosdcard" msgid="6325292633327972272">"Odłącz nośnik USB"</string>
+    <string name="sdcard_unmount" product="default" msgid="3364184561355611897">"Odłącz kartę SD"</string>
+    <string name="sdcard_format" product="nosdcard" msgid="6285310523155166716">"Wyczyść nośnik USB"</string>
+    <string name="sdcard_format" product="default" msgid="6713185532039187532">"Wyczyść kartę SD"</string>
     <string name="small_font" msgid="2295331917424072635">"Mały"</string>
     <string name="medium_font" msgid="2068475425515133701">"Średni"</string>
     <string name="large_font" msgid="599055175160971446">"Duży"</string>
     <string name="font_size_save" msgid="3450855718056759095">"OK"</string>
-    <string name="sdcard_setting" msgid="5922637503871474866">"Karta SD"</string>
+    <string name="sdcard_setting" product="nosdcard" msgid="8281011784066476192">"Nośnik USB"</string>
+    <string name="sdcard_setting" product="default" msgid="5922637503871474866">"Karta SD"</string>
     <string name="battery_info_status_label" msgid="8109155295509700309">"Stan baterii:"</string>
     <string name="battery_info_power_label" msgid="7465140230991349382">"Podłączone zasilanie:"</string>
     <string name="battery_info_scale_label" msgid="3649763192389778437">"Poziom baterii:"</string>
@@ -180,27 +183,34 @@
     <string name="sdcard_changes_instructions" msgid="1364712901180556244">"Zmiany zostaną wprowadzone po ponownym podłączeniu przewodu USB"</string>
     <string name="sdcard_settings_screen_mass_storage_text" msgid="3741220147296482474">"Włącz pamięć masową USB"</string>
     <string name="sdcard_settings_total_bytes_label" msgid="9184160745785062144">"Łącznie bajtów:"</string>
-    <string name="sdcard_settings_not_present_status" msgid="6666688653496819947">"Brak karty SD"</string>
+    <string name="sdcard_settings_not_present_status" product="nosdcard" msgid="2902787003418172125">"Nośnik USB nie jest podłączony"</string>
+    <string name="sdcard_settings_not_present_status" product="default" msgid="6666688653496819947">"Brak karty SD"</string>
     <string name="sdcard_settings_available_bytes_label" msgid="763232429899373001">"Dostępnych bajtów:"</string>
-    <string name="sdcard_settings_mass_storage_status" msgid="4786433969313661655">"Karta SD wykorzystywana jest jako pamięć masowa"</string>
-    <string name="sdcard_settings_unmounted_status" msgid="3812022095683863087">"Można teraz bezpiecznie usunąć kartę SD"</string>
-    <string name="sdcard_settings_bad_removal_status" msgid="5145797653495907970">"Karta SD została usunięta, gdy była używana!"</string>
+    <string name="sdcard_settings_mass_storage_status" product="nosdcard" msgid="2736378870889777857">"Nośnik USB jako pamięć masowa"</string>
+    <string name="sdcard_settings_mass_storage_status" product="default" msgid="4786433969313661655">"Karta SD wykorzystywana jest jako pamięć masowa"</string>
+    <string name="sdcard_settings_unmounted_status" product="nosdcard" msgid="7503300818792750913">"Można teraz wyjąć nośnik USB"</string>
+    <string name="sdcard_settings_unmounted_status" product="default" msgid="3812022095683863087">"Można teraz bezpiecznie usunąć kartę SD"</string>
+    <string name="sdcard_settings_bad_removal_status" product="nosdcard" msgid="7761390725880773697">"Wyjęto USB podczas używania."</string>
+    <string name="sdcard_settings_bad_removal_status" product="default" msgid="5145797653495907970">"Karta SD została usunięta, gdy była używana!"</string>
     <string name="sdcard_settings_used_bytes_label" msgid="8820289486001170836">"Wykorzystanych bajtów:"</string>
-    <string name="sdcard_settings_scanning_status" msgid="2763464949274455656">"Przeszukiwanie karty SD w poszukiwaniu multimediów..."</string>
-    <string name="sdcard_settings_read_only_status" msgid="5706115860484118911">"Karta SD jest podłączona tylko do odczytu"</string>
+    <string name="sdcard_settings_scanning_status" product="nosdcard" msgid="7503429447676219564">"Trwa skanowanie nośnika USB…"</string>
+    <string name="sdcard_settings_scanning_status" product="default" msgid="2763464949274455656">"Przeszukiwanie karty SD w poszukiwaniu multimediów..."</string>
+    <string name="sdcard_settings_read_only_status" product="nosdcard" msgid="3771783090621312312">"Nośnik USB podłącz. do odczytu"</string>
+    <string name="sdcard_settings_read_only_status" product="default" msgid="5706115860484118911">"Karta SD jest podłączona tylko do odczytu"</string>
     <string name="next_label" msgid="4693520878012668114">"Dalej"</string>
     <string name="language_picker_title" msgid="4034157617842965844">"Ustawienia regionalne"</string>
     <string name="select_your_language" msgid="1146235168951906084">"Wybierz język"</string>
     <string name="activity_picker_label" msgid="4910700713930693329">"Wybierz czynność"</string>
     <string name="device_info_label" msgid="6551553813651711205">"Informacje o urządzeniu"</string>
     <string name="battery_info_label" msgid="4132685016148679403">"Informacje o baterii"</string>
-    <string name="battery_history_label" msgid="8242244969757414501">"Historia baterii"</string>
     <string name="display_label" msgid="7403874003169865762">"Wyświetlacz"</string>
     <string name="phone_info_label" msgid="2127552523124277664">"Informacje o telefonie"</string>
-    <string name="sd_card_settings_label" msgid="5743100901106177102">"Karta SD"</string>
+    <string name="sd_card_settings_label" product="nosdcard" msgid="8101475181301178428">"Nośnik USB"</string>
+    <string name="sd_card_settings_label" product="default" msgid="5743100901106177102">"Karta SD"</string>
     <string name="proxy_settings_label" msgid="3271174136184391743">"Ustawienia proxy"</string>
     <string name="cancel" msgid="6859253417269739139">"Anuluj"</string>
     <string name="settings_label" msgid="1626402585530130914">"Ustawienia"</string>
+    <string name="settings_label_launcher" msgid="8344735489639482340">"Ustawienia"</string>
     <string name="settings_shortcut" msgid="3672145147925639262">"Ustawienia"</string>
     <string name="airplane_mode" msgid="8837269988154128601">"Tryb samolotowy"</string>
     <string name="airplane_mode_summary" msgid="3154817401368780988">"Wyłącz wszystkie połączenia bezprzewodowe"</string>
@@ -323,6 +333,11 @@
     <string name="bluetooth_dock_settings_headset" msgid="1001821426078644650">"Jako telefon w trybie głośnika"</string>
     <string name="bluetooth_dock_settings_a2dp" msgid="8791004998846630574">"Dla muzyki i multimediów"</string>
     <string name="bluetooth_dock_settings_remember" msgid="5551459057010609115">"Zapamiętaj ustawienia"</string>
+    <string name="nfc_quick_toggle_title" msgid="6769159366307299004">"Komunikacja NFC"</string>
+    <string name="nfc_quick_toggle_summary" msgid="1988408027741447231">"Używaj komunikacji Near Field Communication do odczytywania i wymiany tagów"</string>
+    <!-- no translation found for nfc_toggle_error (2233172102497535522) -->
+    <!-- no translation found for nfc_toggle_error (8998642457947607263) -->
+    <skip />
     <string name="wifi_quick_toggle_title" msgid="874495178395350104">"Wi-Fi"</string>
     <string name="wifi_quick_toggle_summary" msgid="1047950931623694366">"Włącz Wi-Fi"</string>
     <string name="wifi_settings" msgid="4746946030627213196">"Ustawienia Wi-Fi"</string>
@@ -376,6 +391,7 @@
     <string name="wifi_setting_sleep_policy_summary" msgid="7573693311804602041">"Określ, kiedy przełączyć Wi-Fi na komórkowe połączenie danych"</string>
     <string name="wifi_setting_sleep_policy_error" msgid="5103670439972135148">"Wystąpił problem podczas ustawiania zasad usypiania."</string>
     <string name="wifi_advanced_mac_address_title" msgid="6571335466330978393">"Adres MAC"</string>
+    <string name="wifi_advanced_ip_address_title" msgid="6215297094363164846">"Adres IP"</string>
     <string name="wifi_ip_settings_titlebar" msgid="4345739031248760326">"Ustawienia IP"</string>
     <string name="wifi_ip_settings_menu_save" msgid="7296724066102908366">"Zapisz"</string>
     <string name="wifi_ip_settings_menu_cancel" msgid="6582567330136502340">"Anuluj"</string>
@@ -496,9 +512,10 @@
     <string name="device_status_activity_title" msgid="1411201799384697904">"Informacje o telefonie"</string>
     <string name="device_status" msgid="607405385799807324">"Informacje o telefonie"</string>
     <string name="device_status_summary" msgid="2599162787451519618">"Numer telefonu, sygnał itd."</string>
-    <string name="storage_settings" msgid="6681164315506788024">"Karta SD i pamięć telefonu"</string>
-    <string name="storage_settings_title" msgid="5379463509034022773">"Ustawienia karty SD i pamięci telefonu"</string>
-    <string name="storage_settings_summary" msgid="9176693537325988610">"Odłącz kartę SD, pokaż ilość dostępnej pamięci w telefonie"</string>
+    <string name="storage_settings" msgid="4211799979832404953">"Pamięć"</string>
+    <string name="storage_settings_title" msgid="8746016738388094064">"Ustawienia pamięci"</string>
+    <string name="storage_settings_summary" product="nosdcard" msgid="3543813623294870759">"Odłącz nośnik USB i wyświetl ilość dostępnej pamięci"</string>
+    <string name="storage_settings_summary" product="default" msgid="9176693537325988610">"Odłącz kartę SD, pokaż ilość dostępnej pamięci w telefonie"</string>
     <string name="status_number" msgid="5123197324870153205">"Mój numer telefonu"</string>
     <string name="status_min_number" msgid="3519504522179420597">"Numer MIN"</string>
     <string name="status_prl_version" msgid="8499039751817386529">"Wersja listy PRL"</string>
@@ -514,24 +531,36 @@
     <string name="status_unavailable" msgid="7862009036663793314">"Niedostępny"</string>
     <string name="status_up_time" msgid="7294859476816760399">"Czas działania"</string>
     <string name="status_awake_time" msgid="2393949909051183652">"Czas działania (włączony)"</string>
-    <string name="internal_memory" msgid="1130932766236387454">"Pamięć wewnętrzna telefonu"</string>
-    <string name="sd_memory" msgid="151871913888051515">"Karta SD"</string>
+    <string name="internal_memory" msgid="9129595691484260784">"Pamięć wewnętrzna"</string>
+    <string name="sd_memory" product="nosdcard" msgid="2510246194083052841">"Nośnik USB"</string>
+    <string name="sd_memory" product="default" msgid="151871913888051515">"Karta SD"</string>
     <string name="memory_available" msgid="418542433817289474">"Dostępne miejsce"</string>
     <string name="memory_size" msgid="6629067715017232195">"Całkowita pojemność"</string>
-    <string name="sd_eject" msgid="6915293408836853020">"Odłącz kartę SD"</string>
-    <string name="sd_eject_summary" msgid="3315557796211542962">"Odłącz kartę SD, aby bezpiecznie ją usunąć"</string>
-    <string name="sd_insert_summary" msgid="2048640010381803841">"Włóż kartę SD w celu zainstalowania"</string>
-    <string name="sd_mount" msgid="5940523765187704135">"Zainstaluj kartę SD"</string>
-    <string name="sd_mount_summary" msgid="4936591681679097699">"Zainstaluj kartę SD"</string>
-    <string name="sd_format" msgid="5448738337382712203">"Formatuj kartę SD"</string>
-    <string name="sd_format_summary" msgid="6616491027883134004">"Formatuj (wymaż) kartę SD"</string>
+    <string name="sd_eject" product="default" msgid="6915293408836853020">"Odłącz kartę SD"</string>
+    <string name="sd_eject_summary" product="nosdcard" msgid="5009296896648072891">"Odłącz wewnętrzny nośnik USB"</string>
+    <string name="sd_eject_summary" product="default" msgid="3300599435073550246">"Odłącz kartę SD, aby bezpiecznie ją wyjąć"</string>
+    <string name="sd_insert_summary" product="nosdcard" msgid="5264016886409577313">"Włóż USB do podłączenia"</string>
+    <string name="sd_insert_summary" product="default" msgid="2048640010381803841">"Włóż kartę SD w celu zainstalowania"</string>
+    <string name="sd_mount" product="nosdcard" msgid="8966695015677343116">"Podłącz nośnik USB"</string>
+    <string name="sd_mount" product="default" msgid="5940523765187704135">"Zainstaluj kartę SD"</string>
+    <!-- outdated translation 6733254203291665551 -->     <string name="sd_mount_summary" product="nosdcard" msgid="1794150364965145726">"Podłącz wewnętrzny nośnik USB"</string>
+    <string name="sd_mount_summary" product="default" msgid="4936591681679097699">"Zainstaluj kartę SD"</string>
+    <string name="sd_format" product="nosdcard" msgid="2148179271623099054">"Wyczyść nośnik USB"</string>
+    <string name="sd_format" product="default" msgid="2576054280507119870">"Wyczyść kartę SD"</string>
+    <string name="sd_format_summary" product="nosdcard" msgid="1504606546865152514">"Wymazuje wszystko z wewn. USB"</string>
+    <string name="sd_format_summary" product="default" msgid="915849621390821841">"Wymazuje wszystkie dane z karty SD telefonu, takie jak muzyka czy zdjęcia"</string>
     <string name="sd_unavailable" msgid="8580107589533213904">"Niedostępna"</string>
     <string name="read_only" msgid="6702420168629076340">" (Tylko do odczytu)"</string>
-    <string name="dlg_confirm_unmount_title" msgid="8612140627310646730">"Odinstaluj kartę SD"</string>
-    <string name="dlg_confirm_unmount_text" msgid="5851214273718817727">"Jeśli odinstalujesz kartę SD, niektóre używane aplikacje zostaną zatrzymane i mogą być niedostępne do chwili jej ponownego zainstalowania."</string>
-    <string name="dlg_error_unmount_title" msgid="4004106918266783081">"Odinstalowanie karty SD nie powiodło się"</string>
-    <string name="dlg_error_unmount_text" msgid="9188972789897713180">"Nie można odinstalować karty SD. Spróbuj ponownie później."</string>
-    <string name="unmount_inform_text" msgid="3213378327712151498">"Karta SD zostanie odinstalowana. Sprawdź stan w obszarze powiadomień."</string>
+    <string name="dlg_confirm_unmount_title" product="nosdcard" msgid="2349876662428231297">"Odłącz nośnik USB"</string>
+    <string name="dlg_confirm_unmount_title" product="default" msgid="8612140627310646730">"Odinstaluj kartę SD"</string>
+    <string name="dlg_confirm_unmount_text" product="nosdcard" msgid="3390169455621185223">"Jeśli odłączysz nośnik USB, niektóre używane aplikacje zostaną zatrzymane i mogą być niedostępne do momentu ponownego podłączenia tego nośnika USB."</string>
+    <string name="dlg_confirm_unmount_text" product="default" msgid="5851214273718817727">"Jeśli odinstalujesz kartę SD, niektóre używane aplikacje zostaną zatrzymane i mogą być niedostępne do chwili jej ponownego zainstalowania."</string>
+    <string name="dlg_error_unmount_title" product="nosdcard" msgid="7695491947411836733">"Niepowodzenie odłączania USB"</string>
+    <string name="dlg_error_unmount_title" product="default" msgid="4004106918266783081">"Odinstalowanie karty SD nie powiodło się"</string>
+    <string name="dlg_error_unmount_text" product="nosdcard" msgid="1450864147013376592">"Nie można odłączyć nośnika USB. Spróbuj ponownie później."</string>
+    <string name="dlg_error_unmount_text" product="default" msgid="9188972789897713180">"Nie można odinstalować karty SD. Spróbuj ponownie później."</string>
+    <string name="unmount_inform_text" product="nosdcard" msgid="7120241136790744265">"Nośnik USB zostanie odłączony."</string>
+    <string name="unmount_inform_text" product="default" msgid="1904212716075458402">"Karta SD zostanie odłączona."</string>
     <string name="sd_ejecting_title" msgid="8824572198034365468">"Odinstalowywanie"</string>
     <string name="sd_ejecting_summary" msgid="2028753069184908491">"Odinstalowywanie w toku"</string>
     <string name="battery_status_title" msgid="9159414319574976203">"Stan baterii"</string>
@@ -571,21 +600,32 @@
     <string name="restore_default_apn_completed" msgid="3990449939234957281">"Zakończono resetowanie domyślnych ustawień APN"</string>
     <string name="master_clear_title" msgid="5907939616087039756">"Ustawienia fabryczne"</string>
     <string name="master_clear_summary" msgid="4986154238001088492">"Wymazuje wszystkie dane w telefonie"</string>
-    <string name="master_clear_desc" msgid="7823268823499739178">"Spowoduje to wymazanie wszystkich danych w telefonie, w tym:"\n<li>"danych konta Google;"</li>\n<li>"danych i ustawień systemu oraz aplikacji;"</li>\n<li>"pobranych aplikacji."</li>\n"Nie zostaną wymazane:"\n<li>"bieżące oprogramowanie systemowe i dołączone aplikacje;"</li>\n<li>"pliki na kartach SD, takie jak utwory muzyczne i zdjęcia."</li></string>
+    <string name="master_clear_desc" product="nosdcard" msgid="2163013814299528247">"Spowoduje to wymazanie wszystkich danych z "<b>"wewnętrznej pamięci"</b>" telefonu, w tym:"\n\n<li>"danych konta Google,"</li>\n<li>"danych i ustawień systemu oraz aplikacji,"</li>\n<li>"pobranych aplikacji."</li>\n\n"Aby usunąć wszystkie dane z tego telefonu, należy wyczyścić "<b>"nośnik USB"</b>"."\n\n</string>
+    <string name="master_clear_desc" product="default" msgid="1741944496458365969">"Spowoduje to wymazanie wszystkich danych z "<b>"wewnętrznej pamięci"</b>" telefonu, w tym:"\n\n<li>"danych konta Google,"</li>\n<li>"danych i ustawień systemu oraz aplikacji,"</li>\n<li>"pobranych aplikacji."</li>\n\n"Aby usunąć również muzykę, zdjęcia i inne dane użytkownika, należy wyczyścić "<b>"kartę SD"</b>"."\n\n</string>
+    <string name="erase_external_storage" product="nosdcard" msgid="969364037450286809">"Wyczyść nośnik USB"</string>
+    <string name="erase_external_storage" product="default" msgid="1397239046334307625">"Wyczyść kartę SD"</string>
+    <string name="erase_external_storage_description" product="nosdcard" msgid="1657838142707381027">"Wymaż wszystko z wewn. USB."</string>
+    <string name="erase_external_storage_description" product="default" msgid="8100175974635894073">"Wymaż wszystko z karty SD."</string>
     <string name="master_clear_button_text" msgid="7550632653343157971">"Resetuj telefon"</string>
     <string name="master_clear_final_desc" msgid="6917971132484622696">"Czy usunąć wszystkie informacje osobiste i wszystkie pobrane aplikacje? Tej operacji nie można cofnąć!"</string>
     <string name="master_clear_final_button_text" msgid="5390908019019242910">"Wymaż wszystko"</string>
     <string name="master_clear_gesture_prompt" msgid="1428645764883536750">"Narysuj wzór odblokowania"</string>
     <string name="master_clear_gesture_explanation" msgid="8901714274312707918">"Aby potwierdzić resetowanie telefonu, musisz narysować swój wzór odblokowania."</string>
     <string name="master_clear_failed" msgid="8655202125010189406">"Nie wykonano resetowania, ponieważ usługa czyszczenia systemu nie jest dostępna."</string>
-    <string name="media_format_title" msgid="4671276096695789895">"Formatuj kartę SD."</string>
-    <string name="media_format_summary" msgid="3805714639375830120">"Wymazuje wszystkie dane z karty SD"</string>
-    <string name="media_format_desc" msgid="1142563222357820834">"Ta akcja spowoduje wymazanie danych z karty SD w telefonie. WSZYSTKIE dane na karcie zostaną utracone."</string>
-    <string name="media_format_button_text" msgid="370856400090190151">"Formatuj kartę SD"</string>
-    <string name="media_format_final_desc" msgid="1776666694910717198">"Czy sformatować kartę SD i wymazać wszystkie multimedia? Nie można cofnąć tej akcji!"</string>
+    <string name="media_format_title" product="nosdcard" msgid="3999653431422767156">"Wyczyść nośnik USB"</string>
+    <string name="media_format_title" product="default" msgid="4427528440306787972">"Wyczyść kartę SD"</string>
+    <string name="media_format_summary" product="nosdcard" msgid="776603298628082065">"Wymazuje wszystko z nośnika USB"</string>
+    <string name="media_format_summary" product="default" msgid="3805714639375830120">"Wymazuje wszystkie dane z karty SD"</string>
+    <string name="media_format_desc" product="nosdcard" msgid="4553860683952763905">"Ta czynność spowoduje wymazanie nośnika USB. "<b>"Wszystkie"</b>" zapisane na nim dane zostaną utracone!"</string>
+    <string name="media_format_desc" product="default" msgid="1598627584181935513">"Ta czynność spowoduje wymazanie karty SD. "<b>"Wszystkie"</b>" zapisane na niej dane zostaną utracone!"</string>
+    <string name="media_format_button_text" product="nosdcard" msgid="6293669371185352810">"Wyczyść nośnik USB"</string>
+    <string name="media_format_button_text" product="default" msgid="6721544380069373626">"Wyczyść kartę SD"</string>
+    <string name="media_format_final_desc" product="nosdcard" msgid="8094635533378487255">"Czy wyczyścić nośnik USB, usuwając wszystkie zapisane na nim pliki? Tej czynności nie można cofnąć."</string>
+    <string name="media_format_final_desc" product="default" msgid="9015504991522581434">"Czy wyczyścić kartę SD, usuwając wszystkie zapisane na niej pliki? Tej czynności nie można cofnąć."</string>
     <string name="media_format_final_button_text" msgid="4881713344315923175">"Wymaż wszystko"</string>
     <string name="media_format_gesture_prompt" msgid="3109349468816856670">"Narysuj wzór odblokowania"</string>
-    <string name="media_format_gesture_explanation" msgid="4239529439389660159">"Aby potwierdzić formatowanie karty SD, należy narysować swój wzór odblokowania."</string>
+    <string name="media_format_gesture_explanation" product="nosdcard" msgid="1379736318750958338">"Aby potwierdzić zamiar wyczyszczenia nośnika USB, musisz narysować wzór odblokowania."</string>
+    <string name="media_format_gesture_explanation" product="default" msgid="1681213416497647321">"Aby potwierdzić zamiar wyczyszczenia karty SD, musisz narysować wzór odblokowania."</string>
     <string name="call_settings_title" msgid="5188713413939232801">"Ustawienia połączeń"</string>
     <string name="call_settings_summary" msgid="7291195704801002886">"Poczta głosowa, przekierowania połączeń, poł. oczekujące, ID rozmówcy"</string>
     <string name="tether_settings_title_usb" msgid="4315031513434087777">"Powiązanie"</string>
@@ -609,7 +649,7 @@
     <string name="location_networks_disabled" msgid="2708968452901433980">"Określ moją lokalizację w aplikacjach (takich jak Mapy), korzystając z sieci bezprzewodowych"</string>
     <string name="location_neighborhood_level" msgid="4656658097932515921">"Lokalizacja określana jest za pomocą Wi-Fi i/lub sieci komórkowych"</string>
     <string name="location_gps" msgid="6296125378829097831">"Użyj satelitów GPS"</string>
-    <string name="location_street_level" msgid="6460740847018275745">"Określa lokalizację z dokładnością do ulicy (wyłącz, aby oszczędzać baterię)"</string>
+    <string name="location_street_level" msgid="7456259025474443314">"Określaj lokalizację z dokładnością do ulicy"</string>
     <string name="location_gps_disabled" msgid="6632537158777308128">"Podaje dokładne położenie (zużywa więcej baterii, działa na zewnątrz)"</string>
     <string name="assisted_gps" msgid="4649317129586736885">"Użyj wspomaganego systemu GPS"</string>
     <string name="assisted_gps_enabled" msgid="8751899609589792803">"Użyj serwera do wspomagania systemu GPS (usuń zaznaczenie, aby zmniejszyć ruch sieciowy)"</string>
@@ -692,22 +732,31 @@
     <string name="application_size_label" msgid="5055196275624686382">"Aplikacja"</string>
     <string name="data_size_label" msgid="8679376373625710107">"Dane"</string>
     <string name="uninstall_text" msgid="3644892466144802466">"Odinstaluj"</string>
+    <string name="disable_text" msgid="6544054052049395202">"Wyłącz"</string>
+    <string name="enable_text" msgid="9217362512327828987">"Włącz"</string>
     <string name="clear_user_data_text" msgid="5597622864770098388">"Wyczyść dane"</string>
     <string name="app_factory_reset" msgid="6635744722502563022">"Odinstaluj aktualizacje"</string>
     <string name="auto_launch_enable_text" msgid="2630656657744196691">"Wybrano domyślne uruchamianie tej aplikacji dla niektórych czynności."</string>
     <string name="auto_launch_disable_text" msgid="7800385822185540166">"Brak ustawień domyślnych."</string>
     <string name="clear_activities" msgid="7408923511535174430">"Wyczyść domyślne"</string>
     <string name="unknown" msgid="1592123443519355854">"Nieznana"</string>
-    <string name="sort_order_alpha" msgid="8622029358896599842">"Sortuj"</string>
+    <string name="sort_order_alpha" msgid="1410278099123670628">"Sortuj według nazwy"</string>
     <string name="sort_order_size" msgid="7024513286636502362">"Sortuj według rozmiaru"</string>
+    <string name="show_running_services" msgid="5736278767975544570">"Pokaż działające usługi"</string>
+    <string name="show_background_processes" msgid="2009840211972293429">"Pokaż procesy z pam. pod."</string>
     <string name="manage_space_text" msgid="8852711522447794676">"Zarządzaj rozmiarem"</string>
     <string name="filter" msgid="2018011724373033887">"Filtr"</string>
     <string name="filter_dlg_title" msgid="6507663329723966854">"Wybierz opcje filtru"</string>
     <string name="filter_apps_all" msgid="5142129378749391876">"Wszystkie"</string>
     <string name="filter_apps_third_party" msgid="7786348047690140979">"Pobrane"</string>
     <string name="filter_apps_running" msgid="7767071454371350486">"Uruchomione"</string>
-    <string name="filter_apps_onsdcard" msgid="1477351142334784771">"Na karcie SD"</string>
-    <string name="loading" msgid="3200408047793887917">"Ładowanie..."</string>
+    <string name="filter_apps_onsdcard" product="nosdcard" msgid="4843063154701023349">"Nośnik USB"</string>
+    <string name="filter_apps_onsdcard" product="default" msgid="1477351142334784771">"Na karcie SD"</string>
+    <string name="disabled" msgid="9206776641295849915">"Wyłączone"</string>
+    <string name="no_applications" msgid="5190227407135243904">"Brak aplikacji."</string>
+    <string name="internal_storage" msgid="1584700623164275282">"Pamięć wewn."</string>
+    <string name="sd_card_storage" product="nosdcard" msgid="2673203150465132465">"Nośnik USB"</string>
+    <string name="sd_card_storage" product="default" msgid="7623513618171928235">"Pamięć karty SD"</string>
     <string name="recompute_size" msgid="7722567982831691718">"Przeliczanie rozmiaru..."</string>
     <string name="clear_data_dlg_title" msgid="4470209520936375508">"Usuń"</string>
     <string name="clear_data_dlg_text" msgid="8368035073300828451">"Wszystkie dane tej aplikacji zostaną trwale usunięte. Dotyczy to wszystkich plików, ustawień, kont, baz danych itd."</string>
@@ -727,7 +776,8 @@
     <string name="version_text" msgid="9189073826278676425">"wersja <xliff:g id="VERSION_NUM">%1$s</xliff:g>"</string>
     <string name="move_app" msgid="5042838441401731346">"Przenieś"</string>
     <string name="move_app_to_internal" msgid="3895430471913858185">"Przenieś do telefonu"</string>
-    <string name="move_app_to_sdcard" msgid="1143379049903056407">"Przenieś na kartę SD"</string>
+    <string name="move_app_to_sdcard" product="nosdcard" msgid="4350451696315265420">"Przenieś na nośnik USB"</string>
+    <string name="move_app_to_sdcard" product="default" msgid="1143379049903056407">"Przenieś na kartę SD"</string>
     <string name="moving" msgid="6431016143218876491">"Przenoszenie"</string>
     <string name="insufficient_storage" msgid="8566913062094452962">"Brak wystarczającej ilości wolnego miejsca."</string>
     <string name="does_not_exist" msgid="837163572898468245">"Aplikacja nie istnieje."</string>
@@ -735,29 +785,49 @@
     <string name="invalid_location" msgid="4934491353200240499">"Podane położenie instalacji jest nieprawidłowe."</string>
     <string name="system_package" msgid="1030561474413022831">"Aktualizacje systemowe nie mogą być instalowane na nośniku zewnętrznym."</string>
     <string name="force_stop_dlg_title" msgid="4289453224368188476">"Wymuś zatrzymanie"</string>
-    <string name="force_stop_dlg_text" msgid="3381302041569982075">"Ta aplikacja zostanie natychmiast uruchomiona ponownie. Czy na pewno chcesz wymusić zatrzymanie?"</string>
+    <string name="force_stop_dlg_text" msgid="5157374701213502922">"Wymuszenie zatrzymania aplikacji może spowodować jej nieprawidłowe działanie. Czy na pewno chcesz to zrobić?"</string>
     <string name="move_app_failed_dlg_title" msgid="4337731903265156405">"Przenieś aplikację"</string>
     <string name="move_app_failed_dlg_text" msgid="8824246817947643697">"Przeniesienie aplikacji nie powiodło się. <xliff:g id="REASON">%1$s</xliff:g>"</string>
     <string name="app_install_location_title" msgid="2068975150026852168">"Preferowana lokalizacja instalacji"</string>
     <string name="app_install_location_summary" msgid="879753854530300436">"Zmień preferowaną lokalizację instalacji dla nowych aplikacji."</string>
+    <string name="storageuse_settings_title" msgid="5657014373502630403">"Użycie pamięci"</string>
+    <string name="storageuse_settings_summary" msgid="2556057379120846792">"Wyświetl pamięć używaną przez aplikacje"</string>
     <string name="runningservices_settings_title" msgid="8097287939865165213">"Uruchomione usługi"</string>
     <string name="runningservices_settings_summary" msgid="854608995821032748">"Wyświetl i kontroluj obecnie uruchomione usługi"</string>
     <string name="service_restarting" msgid="2242747937372354306">"Ponowne uruchamianie"</string>
-    <string name="no_running_services" msgid="6981216347270280598">"Brak uruchomionych usług"</string>
-    <string name="confirm_stop_service" msgid="5700448757318301681">"Zatrzymać usługę?"</string>
-    <string name="confirm_stop_service_msg" msgid="1166661293369421272">"Usługa nie będzie działać, dopóki nie zostanie ponownie uruchomiona. Może to mieć niepożądany wpływ na aplikację <xliff:g id="APPLICATION">%1$s</xliff:g>."</string>
-    <string name="confirm_stop_stop" msgid="7382363913280993331">"Zatrzymaj"</string>
-    <string name="confirm_stop_cancel" msgid="206495326622692381">"Anuluj"</string>
-    <string name="service_started_by_app" msgid="8432097226392386802">"Uruchomiona przez aplikację: dotknij, aby zatrzymać"</string>
-    <string name="service_client_name" msgid="2337664610975074717">"<xliff:g id="CLIENT_NAME">%1$s</xliff:g>: dotknij, aby zarządzać"</string>
-    <string name="service_background_processes" msgid="5158600475629177758">"Dostępne: <xliff:g id="FREE">%2$s</xliff:g>+<xliff:g id="MEMORY">%3$s</xliff:g> w <xliff:g id="COUNT">%1$d</xliff:g>"</string>
-    <string name="service_foreground_processes" msgid="4013890350284680796">"Inne: <xliff:g id="MEMORY">%2$s</xliff:g> w <xliff:g id="COUNT">%1$d</xliff:g>"</string>
-    <string name="service_process_name" msgid="8630408984456958400">"Proces: <xliff:g id="PROCESS">%1$s</xliff:g>"</string>
+    <string name="cached" msgid="1059590879740175019">"Proces w tle z pamięci podręcznej"</string>
+    <string name="no_running_services" msgid="2059536495597645347">"Brak uruchomionych usług."</string>
+    <string name="service_started_by_app" msgid="6575184738671598131">"Uruchomiona przez aplikację."</string>
+    <!-- no translation found for service_client_name (4037193625611815517) -->
+    <skip />
+    <string name="service_background_processes" msgid="6844156253576174488">"Wolne: <xliff:g id="MEMORY">%1$s</xliff:g>"</string>
+    <string name="service_foreground_processes" msgid="7583975676795574276">"Używane: <xliff:g id="MEMORY">%1$s</xliff:g>"</string>
+    <string name="memory" msgid="6609961111091483458">"Pamięć RAM"</string>
+    <!-- no translation found for service_process_name (4098932168654826656) -->
+    <skip />
+    <string name="running_processes_item_description_s_s" msgid="5790575965282023145">"Procesów: <xliff:g id="NUMPROCESS">%1$d</xliff:g>, usług: <xliff:g id="NUMSERVICES">%2$d</xliff:g>"</string>
+    <string name="running_processes_item_description_s_p" msgid="8019860457123222953">"Procesów: <xliff:g id="NUMPROCESS">%1$d</xliff:g>, usług: <xliff:g id="NUMSERVICES">%2$d</xliff:g>"</string>
+    <string name="running_processes_item_description_p_s" msgid="744424668287252915">"Procesów: <xliff:g id="NUMPROCESS">%1$d</xliff:g>, usług: <xliff:g id="NUMSERVICES">%2$d</xliff:g>"</string>
+    <string name="running_processes_item_description_p_p" msgid="1607384595790852782">"Procesów: <xliff:g id="NUMPROCESS">%1$d</xliff:g>, usług: <xliff:g id="NUMSERVICES">%2$d</xliff:g>"</string>
+    <string name="runningservicedetails_settings_title" msgid="6188692418986988288">"Działająca aplikacja"</string>
+    <string name="no_services" msgid="7133900764462288263">"Nieaktywne"</string>
+    <string name="runningservicedetails_services_title" msgid="391168243725357375">"Usługi"</string>
+    <string name="runningservicedetails_processes_title" msgid="928115582044655268">"Procesy"</string>
+    <string name="service_stop" msgid="6369807553277527248">"Zatrzymaj"</string>
+    <string name="service_manage" msgid="1876642087421959194">"Ustawienia"</string>
+    <string name="service_stop_description" msgid="3261798282116866961">"Ta usługa została uruchomiona przez jej aplikację. Jej zatrzymanie może spowodować zakończenie działania aplikacji niepowodzeniem."</string>
+    <string name="heavy_weight_stop_description" msgid="6855241582643136019">"Nie można bezpiecznie zatrzymać tej aplikacji. Może to spowodować utratę części Twojej bieżącej pracy."</string>
+    <string name="background_process_stop_description" msgid="1728354083304746737">"To jest stary proces aplikacji zachowany dla zapewnienia lepszej szybkości w przypadku, gdyby był jeszcze potrzebny. Zwykle nie ma powodu, aby go zatrzymywać."</string>
+    <string name="service_manage_description" msgid="7050092269951613102">"<xliff:g id="CLIENT_NAME">%1$s</xliff:g>: aktualnie w użyciu. Dotknij opcji Ustawienia, aby nią sterować."</string>
+    <string name="main_running_process_description" msgid="929204645380391397">"Główny proces będący w użyciu."</string>
+    <string name="process_service_in_use_description" msgid="8993335064403217080">"Usługa <xliff:g id="COMP_NAME">%1$s</xliff:g> jest w użyciu."</string>
+    <string name="process_provider_in_use_description" msgid="5586603325677678940">"Dostawca <xliff:g id="COMP_NAME">%1$s</xliff:g> jest w użyciu."</string>
+    <string name="runningservicedetails_stop_dlg_title" msgid="4253292537154337233">"Czy zatrzymać usługę systemową?"</string>
+    <string name="runningservicedetails_stop_dlg_text" msgid="6929716497425738387">"Czy na pewno chcesz zatrzymać tę usługę systemową? Jeśli tak, niektóre funkcje telefonu mogą przestać poprawnie działać do chwili jego wyłączenia i ponownego włączenia."</string>
     <string name="language_settings" msgid="502219872342167227">"Język i klawiatura"</string>
     <string name="language_keyboard_settings_title" msgid="3455826933385341107">"Ustawienia języka i klawiatury"</string>
-    <string name="language_settings_summary" msgid="595647729475399987">"Określ ustawienia regionalne (język i region) oraz opcje wprowadzania tekstu i autokorekty"</string>
-    <string name="language_category" msgid="3391756582724541530">"Ustawienia regionalne"</string>
-    <string name="text_category" msgid="6342540511465136739">"Ustawienia tekstu"</string>
+    <string name="language_settings_category" msgid="2288258489940617043">"Ustawienia języka"</string>
+    <string name="keyboard_settings_category" msgid="7060453865544070642">"Ustawienia klawiatury"</string>
     <string name="phone_language" msgid="1165758957501090679">"Wybierz język"</string>
     <string name="phone_language_summary" msgid="3871309445655554211"></string>
     <string name="auto_replace" msgid="6199184757891937822">"Autokorekta"</string>
@@ -782,7 +852,6 @@
     <string name="testing" msgid="6584352735303604146">"Testowanie"</string>
     <string name="testing_phone_info" msgid="8656693364332840056">"Informacje o telefonie"</string>
     <string name="testing_battery_info" msgid="3497865525976497848">"Informacje o baterii"</string>
-    <string name="testing_battery_history" msgid="3043329445810695647">"Historia baterii"</string>
     <string name="quick_launch_title" msgid="7904609846945905306">"Szybkie uruchamianie"</string>
     <string name="quick_launch_summary" msgid="3453825712466417452">"Ustaw skróty klawiaturowe, aby uruchamiać aplikacje"</string>
     <string name="quick_launch_assign_application" msgid="4521368464929956350">"Przypisz aplikację"</string>
@@ -798,8 +867,8 @@
     <string name="input_methods_settings_summary" msgid="7571173442946675205">"Zarządzaj opcjami wprowadzania tekstu"</string>
     <string name="input_methods_settings_label_format" msgid="6002887604815693322">"Ustawienia <xliff:g id="IME_NAME">%1$s</xliff:g>"</string>
     <string name="onscreen_keyboard_settings_summary" msgid="5841558383556238653">"Ustawienia klawiatury ekranowej"</string>
-    <string name="builtin_keyboard_settings_title" msgid="8169889453770863227">"Klawiatura urządzenia"</string>
-    <string name="builtin_keyboard_settings_summary" msgid="6404687907454621637">"Ustawienia klawiatury wbudowanej"</string>
+    <string name="builtin_keyboard_settings_title" msgid="5274990495405941804">"Klawiatura wbudowana"</string>
+    <string name="builtin_keyboard_settings_summary" msgid="7990296351888096836">"Ustawienia wbudowanej klawiatury fizycznej"</string>
     <string name="development_settings_title" msgid="6719732334835420989">"Dla programistów"</string>
     <string name="development_settings_summary" msgid="2151320488701538355">"Ustaw opcje związane z programowaniem aplikacji"</string>
     <string name="enable_adb" msgid="7982306934419797485">"Debugowanie USB"</string>
@@ -812,36 +881,10 @@
     <string name="adb_warning_message" msgid="5352555112049663033">"Debugowanie USB jest przeznaczone wyłącznie do celów programistycznych. Może posłużyć do kopiowania danych między komputerem a urządzeniem, instalowania aplikacji w urządzeniu bez powiadamiania, a także odczytywania danych dziennika."</string>
     <string name="gadget_picker_title" msgid="98374951396755811">"Wybierz gadżet"</string>
     <string name="widget_picker_title" msgid="9130684134213467557">"Wybierz widżet"</string>
-    <string name="battery_history_details_for" msgid="5924639922153109669">"Szczegóły dotyczące identyfikatora UID <xliff:g id="NUMBER">%d</xliff:g>"</string>
-    <string name="battery_history_uid" msgid="1016606150528436298">"Identyfikator UID <xliff:g id="USER_ID">%1$d</xliff:g>"</string>
-    <string name="battery_history_network_usage" msgid="8010852371665217020">"Szczegóły wykorzystania sieci dla <xliff:g id="APP_NAME">%1$s</xliff:g>:"</string>
-    <string name="battery_history_bytes_received" msgid="980307569180518302">"Odebranych bajtów: <xliff:g id="BYTES">%1$d</xliff:g>"</string>
-    <string name="battery_history_bytes_sent" msgid="2501748768602119159">"Wysłanych bajtów: <xliff:g id="BYTES">%1$d</xliff:g>"</string>
-    <string name="battery_history_bytes_total" msgid="4444807574361642753">"Łącznie bajtów: <xliff:g id="BYTES">%1$d</xliff:g>"</string>
-    <string name="battery_history_cpu_usage" msgid="2597353713014790877">"Szczegóły wykorzystania procesora dla <xliff:g id="APP_NAME">%1$s</xliff:g>:"</string>
-    <string name="battery_history_user_time" msgid="6227507614894791359">"Czas użytkownika:"</string>
-    <string name="battery_history_system_time" msgid="2015862072724507547">"Czas systemu:"</string>
-    <string name="battery_history_total_time" msgid="3618703970098556104">"Łączny czas:"</string>
-    <string name="battery_history_starts" msgid="9137453931978571696">"Uruchomień: <xliff:g id="STARTS">%1$d</xliff:g>"</string>
     <string name="battery_history_days" msgid="7110262897769622564">"<xliff:g id="DAYS">%1$d</xliff:g> dni, <xliff:g id="HOURS">%2$d</xliff:g> godz., <xliff:g id="MINUTES">%3$d</xliff:g> min, <xliff:g id="SECONDS">%4$d</xliff:g> s"</string>
     <string name="battery_history_hours" msgid="7525170329826274999">"<xliff:g id="HOURS">%1$d</xliff:g> godz., <xliff:g id="MINUTES">%2$d</xliff:g> min, <xliff:g id="SECONDS">%3$d</xliff:g> s"</string>
     <string name="battery_history_minutes" msgid="1467775596084148610">"<xliff:g id="MINUTES">%1$d</xliff:g> min, <xliff:g id="SECONDS">%2$d</xliff:g> s"</string>
     <string name="battery_history_seconds" msgid="4283492130945761685">"<xliff:g id="SECONDS">%1$d</xliff:g> s"</string>
-    <string name="battery_history_packages_sharing_this_uid" msgid="4101596071379250050">"Pakiety współdzielące ten identyfikator UID:"</string>
-    <string name="battery_history_no_data" msgid="1177238743237067617">"Brak danych o użyciu baterii"</string>
-    <string name="battery_history_sensor" msgid="2333488996028993982">"Czujnik:"</string>
-    <string name="battery_history_wakelock" msgid="608683447522396293">"Częściowa blokada wybudzenia:"</string>
-    <string name="battery_history_used_by_packages" msgid="3000711380023436470">"Czujnik używany przez pakiety:"</string>
-    <string name="battery_history_sensor_usage" msgid="3593133338613209024">"Używane <xliff:g id="COUNT">%1$d</xliff:g> raz(y) przez <xliff:g id="PACKAGE">%2$s</xliff:g>"</string>
-    <string name="battery_history_sensor_usage_multi" msgid="4536084375991014508">"Używane <xliff:g id="COUNT">%1$d</xliff:g> raz(y) przez:"</string>
-    <string name="battery_history_awake_label" msgid="8449792868990080882">"Działa"</string>
-    <string name="battery_history_screen_on_label" msgid="1848936521786339362">"Ekran włączony"</string>
-    <string name="battery_history_phone_on_label" msgid="700191958853142297">"Telefon włączony"</string>
-    <string name="battery_history_awake" msgid="4350886665719031057">"Czas bez uśpienia:"</string>
-    <string name="battery_history_screen_on" msgid="1377240025275657277">"Czas pracy z włączonym ekranem:"</string>
-    <string name="battery_history_phone_on" msgid="4891504401623839532">"Czas pracy przy włączonym telefonie:"</string>
-    <string name="battery_history_screen_on_battery" msgid="536058210445081888">"Praca na baterii:"</string>
-    <string name="battery_history_screen_on_plugged" msgid="5019127390021871260">"Podłączone:"</string>
     <string name="usage_stats_label" msgid="5890846333487083609">"Statystyki użycia"</string>
     <string name="testing_usage_stats" msgid="7823048598893937339">"Statystyki użycia"</string>
     <string name="display_order_text" msgid="8592776965827565271">"Sortuj wg:"</string>
@@ -865,12 +908,19 @@
     <string name="power_usage_summary" msgid="7237084831082848168">"Gdzie wykorzystywana jest bateria"</string>
     <string name="battery_since_unplugged" msgid="338073389740738437">"Użycie baterii od odłączenia"</string>
     <string name="battery_since_reset" msgid="7464546661121187045">"Użycie baterii od zresetowania"</string>
+    <string name="battery_stats_on_battery" msgid="4970762168505236033">"<xliff:g id="TIME">%1$s</xliff:g> pracy na baterii"</string>
     <string name="battery_stats_duration" msgid="7464501326709469282">"<xliff:g id="TIME">%1$s</xliff:g> od odłączenia"</string>
+    <string name="battery_stats_charging_label" msgid="4223311142875178785">"Ładowanie"</string>
+    <string name="battery_stats_screen_on_label" msgid="7150221809877509708">"Ekran włączony"</string>
+    <string name="battery_stats_gps_on_label" msgid="1193657533641951256">"GPS włączony"</string>
+    <string name="battery_stats_wifi_running_label" msgid="3093545080361658269">"Wi-Fi"</string>
+    <string name="battery_stats_wake_lock_label" msgid="1908942681902324095">"Aktywność"</string>
+    <string name="battery_stats_phone_signal_label" msgid="6822042940376636775">"Sygnał telefonu"</string>
     <!-- no translation found for battery_stats_last_duration (1535831453827905957) -->
     <skip />
     <string name="awake" msgid="387122265874485088">"Czas aktywności urządzenia"</string>
-    <string name="wifi_on_time" msgid="4630925382578609056">"WiFi na czas"</string>
-    <string name="bluetooth_on_time" msgid="4478515071957280711">"WiFi na czas"</string>
+    <string name="wifi_on_time" msgid="6310209835617490616">"Wi-Fi na czas"</string>
+    <string name="bluetooth_on_time" msgid="6157799524996162271">"Wi-Fi na czas"</string>
     <string name="usage_name_percent" msgid="7976919382448235858">"<xliff:g id="NAME">%1$s</xliff:g> – <xliff:g id="NUMBER">%2$s</xliff:g><xliff:g id="PERCENT">%%</xliff:g>"</string>
     <string name="details_title" msgid="7564809986329021063">"Szczegóły użycia baterii"</string>
     <string name="details_subtitle" msgid="32593908269911734">"Szczegóły użycia"</string>
@@ -884,7 +934,9 @@
     <string name="power_idle" msgid="9055659695602194990">"Telefon nieaktywny"</string>
     <string name="usage_type_cpu" msgid="715162150698338714">"Łącznie dla procesora"</string>
     <string name="usage_type_cpu_foreground" msgid="6500579611933211831">"Procesor w działaniach pierwszoplanowych"</string>
+    <string name="usage_type_wake_lock" msgid="5125438890233677880">"Utrzymuj aktywność"</string>
     <string name="usage_type_gps" msgid="7989688715128160790">"GPS"</string>
+    <string name="usage_type_wifi_running" msgid="8234997940652067049">"Działanie Wi-Fi"</string>
     <string name="usage_type_phone" msgid="9108247984998041853">"Telefon"</string>
     <string name="usage_type_data_send" msgid="2857401966985425427">"Dane wysłane"</string>
     <string name="usage_type_data_recv" msgid="7251090882025234185">"Dane odebrane"</string>
@@ -896,7 +948,7 @@
     <string name="battery_action_app_details" msgid="3275013531871113681">"Informacje o aplikacji"</string>
     <string name="battery_action_app_settings" msgid="350562653472577250">"Ustawienia aplikacji"</string>
     <string name="battery_action_display" msgid="5302763261448580102">"Ustawienia wyświetlacza"</string>
-    <string name="battery_action_wifi" msgid="5452076674659927993">"Ustawienia WiFi"</string>
+    <string name="battery_action_wifi" msgid="2272741639606146903">"Ustawienia Wi-Fi"</string>
     <string name="battery_action_bluetooth" msgid="8374789049507723142">"Ustawienia Bluetooth"</string>
     <string name="battery_desc_voice" msgid="8980322055722959211">"Użycie baterii przez połączenia głosowe"</string>
     <string name="battery_desc_standby" msgid="3009080001948091424">"Użycie baterii przy nieaktywnym telefonie"</string>
@@ -909,9 +961,9 @@
     <string name="battery_desc_bluetooth" msgid="7535520658674621902">"Użycie baterii przez bluetooth"</string>
     <string name="battery_sugg_bluetooth_basic" msgid="817276933922157788">"Wyłącz moduł Bluetooth, gdy nie jest używany"</string>
     <string name="battery_sugg_bluetooth_headset" msgid="8214816222115517479">"Spróbuj połączyć się z innym urządzeniem bluetooth"</string>
-    <string name="battery_desc_apps" msgid="8123202939321333639">"Użycie baterii przez działające aplikacje"</string>
+    <string name="battery_desc_apps" msgid="6665712811746233450">"Użycie baterii przez aplikację"</string>
     <string name="battery_sugg_apps_info" msgid="6065882899391322442">"Zatrzymaj lub odinstaluj aplikację"</string>
-    <string name="battery_sugg_apps_gps" msgid="4145005297393800223">"Wyłącz odbiornik GPS, gdy nie jest używany"</string>
+    <string name="battery_sugg_apps_gps" msgid="4545056413090932541">"Włączaj i wyłączaj GPS ręcznie, aby kontrolować jego użycie w aplikacjach"</string>
     <string name="battery_sugg_apps_settings" msgid="8021302847272481168">"Aplikacja może oferować ustawienia pozwalające zredukować użycie baterii"</string>
     <string name="menu_stats_unplugged" msgid="8296577130840261624">"<xliff:g id="UNPLUGGED">%1$s</xliff:g> od odłączenia"</string>
     <string name="menu_stats_last_unplugged" msgid="5922246077592434526">"Ostatnio odłączony na <xliff:g id="UNPLUGGED">%1$s</xliff:g>"</string>
@@ -961,6 +1013,8 @@
     <string name="pico_not_installed" msgid="6266845418419994311">"Nie zainstalowano"</string>
     <string name="pico_voice_summary_female" msgid="8047327176247727492">"Kobieta"</string>
     <string name="pico_voice_summary_male" msgid="8331266854058577610">"Mężczyzna"</string>
+    <string name="tts_notif_engine_install_title" msgid="7000346872482649034">"Zainstalowano mechanizm syntezy mowy"</string>
+    <string name="tts_notif_engine_install_message" msgid="5304661142202662693">"Najpierw włącz nowy mechanizm"</string>
     <string name="gadget_title" msgid="7455548605888590466">"Zarządzanie energią"</string>
     <string name="gadget_toggle_wifi" msgid="2382963973155082629">"Aktualizowanie ustawień Wi-Fi"</string>
     <string name="gadget_toggle_bluetooth" msgid="7538903239807020826">"Aktualizowanie ustawień Bluetooth"</string>
@@ -1047,8 +1101,10 @@
     <string name="credentials_access_summary" msgid="319662078718574168">"Zezwalaj aplikacjom na dostęp do bezpiecznych certyfikatów i innych danych logowania"</string>
     <string name="credentials_unlock" msgid="1463040326264133844">"Wprowadź hasło"</string>
     <string name="credentials_unlock_hint" msgid="594679530407918031">"Wprowadź hasło magazynu danych logowania."</string>
-    <string name="credentials_install_certificates" msgid="177337517568022236">"Zainstaluj z karty SD"</string>
-    <string name="credentials_install_certificates_summary" msgid="7737001268684193093">"Zainstaluj zaszyfrowane certyfikaty z karty SD"</string>
+    <string name="credentials_install_certificates" product="nosdcard" msgid="619171634797689906">"Zainstaluj z nośnika USB"</string>
+    <string name="credentials_install_certificates" product="default" msgid="177337517568022236">"Zainstaluj z karty SD"</string>
+    <string name="credentials_install_certificates_summary" product="nosdcard" msgid="8920330112631198575">"Instaluj szyf. cer. z USB"</string>
+    <string name="credentials_install_certificates_summary" product="default" msgid="7737001268684193093">"Zainstaluj zaszyfrowane certyfikaty z karty SD"</string>
     <string name="credentials_set_password" msgid="9104473585811899989">"Ustaw hasło"</string>
     <string name="credentials_set_password_summary" msgid="8287876917562085701">"Ustaw lub zmień hasło magazynu danych logowania"</string>
     <string name="credentials_reset" msgid="9170150870552453457">"Wyczyść magazyn"</string>
@@ -1068,6 +1124,16 @@
     <string name="credentials_erased" msgid="7700309135582200849">"Magazyn danych uwierzytelniania został wyczyszczony."</string>
     <string name="credentials_enabled" msgid="7588607413349978930">"Magazyn danych logowania jest włączony."</string>
     <string name="credentials_disabled" msgid="7453188089059045380">"Magazyn danych logowania jest wyłączony."</string>
+    <string name="encrypted_fs_category" msgid="1841367653663913956">"System szyfrowania plików"</string>
+    <string name="encrypted_fs_enable" msgid="3884033081603327729">"Zaszyfruj prywatne dane użytkownika"</string>
+    <string name="encrypted_fs_enable_summary" msgid="5635188119509076089">"Włącz magazyn zaszyfrowanego systemu plików na potrzeby prywatnych danych użytkownika na tym urządzeniu"</string>
+    <string name="encrypted_fs_enable_dialog" msgid="919487211207214266">"Włączenie systemów szyfrowania plików wymaga wymazania danych urządzenia."</string>
+    <string name="encrypted_fs_disable_dialog" msgid="6960413613985682501">"Wyłączenie systemów szyfrowania plików wymaga wymazania danych urządzenia."</string>
+    <string name="encrypted_fs_enable_button" msgid="8453841319751433751">"Włącz"</string>
+    <string name="encrypted_fs_disable_button" msgid="8468354944060220496">"Wyłącz"</string>
+    <string name="encrypted_fs_cancel_button" msgid="4785921255266305799">"Anuluj"</string>
+    <string name="encrypted_fs_cancel_confirm" msgid="853572431153803557">"Zmiana trybu systemów szyfrowania plików została anulowana."</string>
+    <string name="encrypted_fs_alert_dialog_title" msgid="583462447886934755">"Ostrzeżenie dotyczące systemów szyfrowania plików"</string>
     <string name="emergency_tone_title" msgid="1055954530111587114">"Sygnał alarmowy"</string>
     <string name="emergency_tone_summary" msgid="722259232924572153">"Skonfiguruj sposób działania w przypadku połączenia alarmowego"</string>
     <string name="privacy_settings" msgid="9206631214140954954">"Prywatność"</string>
@@ -1075,11 +1141,11 @@
     <string name="backup_section_title" msgid="8856083167469467588">"Tworzenie i przywracanie kopii zapasowej"</string>
     <string name="personal_data_section_title" msgid="7815209034443782061">"Dane osobiste"</string>
     <string name="backup_data_title" msgid="1239105919852668016">"Utwórz kopię zapasową moich danych"</string>
-    <string name="backup_data_summary" msgid="5662190190240860035">"Utwórz kopię zapasową ustawień i innych danych aplikacji."</string>
+    <string name="backup_data_summary" msgid="6515285107793232815">"Utwórz na serwerach Google kopię zapasową danych aplikacji, haseł Wi-Fi oraz innych ustawień"</string>
     <string name="auto_restore_title" msgid="5397528966329126506">"Autoprzywracanie"</string>
-    <string name="auto_restore_summary" msgid="6867766474057290177">"W przypadku ponownej instalacji aplikacji przywróć kopię zapasową ustawień lub innych danych."</string>
+    <string name="auto_restore_summary" msgid="83177150536734378">"W przypadku ponownej instalacji aplikacji przywróć kopię zapasową ustawień lub innych danych"</string>
     <string name="backup_erase_dialog_title" msgid="3438255037256586237">"Kopia zapasowa"</string>
-    <string name="backup_erase_dialog_message" msgid="2948090854996352245">"Czy na pewno chcesz zakończyć tworzenie kopii zapasowych ustawień i danych aplikacji oraz usunąć wszystkie kopie z serwerów Google?"</string>
+    <string name="backup_erase_dialog_message" msgid="7766283133557587608">"Czy na pewno chcesz zakończyć tworzenie kopii zapasowych haseł Wi-Fi, zakładek oraz innych ustawień i danych aplikacji, a także usunąć wszystkie kopie z serwerów Google?"</string>
     <string name="device_admin_settings_title" msgid="1335557832906433309">"Ustawienia administracji"</string>
     <string name="active_device_admin_msg" msgid="6930903262612422111">"Administrator urządzenia"</string>
     <string name="remove_device_admin" msgid="3596845261596451437">"Dezaktywuj"</string>

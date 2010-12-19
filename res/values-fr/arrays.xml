@@ -115,19 +115,6 @@
     <item msgid="1549288661423279207">"Jamais si branché"</item>
     <item msgid="1986753720941888596">"Jamais"</item>
   </string-array>
-  <string-array name="battery_history_type_spinner">
-    <item msgid="2193799199027871385">"Utilisation de l\'UC"</item>
-    <item msgid="6401018715947316517">"Utilisation du réseau"</item>
-    <item msgid="188092590354892392">"Utilisation du GPS"</item>
-    <item msgid="8414109131222049141">"Utilisation du capteur"</item>
-    <item msgid="1327904325081257093">"Utilisation en activité partielle"</item>
-    <item msgid="4832254146664706277">"Autre utilisation"</item>
-  </string-array>
-  <string-array name="battery_history_which_spinner">
-    <item msgid="3451981114763440074">"Depuis le dernier débranchement"</item>
-    <item msgid="166936313535197598">"Total depuis le démarrage"</item>
-    <item msgid="4793941382744963893">"Total toutes périodes comprises"</item>
-  </string-array>
   <string-array name="usage_stats_display_order_types">
     <item msgid="9077371706468756228">"Temps d\'utilisation"</item>
     <item msgid="1908750532762193304">"Nombre de lancements"</item>

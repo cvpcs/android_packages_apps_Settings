@@ -45,13 +45,16 @@
     <string name="radioInfo_display_asu" msgid="1422248392727818082">"asu"</string>
     <string name="radioInfo_lac" msgid="8415219164758307156">"LAC"</string>
     <string name="radioInfo_cid" msgid="4362599198392643138">"CID"</string>
-    <string name="sdcard_unmount" msgid="3364184561355611897">"卸载 SD 卡"</string>
-    <string name="sdcard_format" msgid="362497552060004057">"格式化 SD 卡"</string>
+    <string name="sdcard_unmount" product="nosdcard" msgid="6325292633327972272">"卸载 USB 存储设备"</string>
+    <string name="sdcard_unmount" product="default" msgid="3364184561355611897">"卸载 SD 卡"</string>
+    <string name="sdcard_format" product="nosdcard" msgid="6285310523155166716">"格式化 USB 存储设备"</string>
+    <string name="sdcard_format" product="default" msgid="6713185532039187532">"格式化 SD 卡"</string>
     <string name="small_font" msgid="2295331917424072635">"小"</string>
     <string name="medium_font" msgid="2068475425515133701">"中"</string>
     <string name="large_font" msgid="599055175160971446">"大"</string>
     <string name="font_size_save" msgid="3450855718056759095">"确定"</string>
-    <string name="sdcard_setting" msgid="5922637503871474866">"SD 卡"</string>
+    <string name="sdcard_setting" product="nosdcard" msgid="8281011784066476192">"USB 存储设备"</string>
+    <string name="sdcard_setting" product="default" msgid="5922637503871474866">"SD 卡"</string>
     <string name="battery_info_status_label" msgid="8109155295509700309">"电池状态："</string>
     <string name="battery_info_power_label" msgid="7465140230991349382">"是否已插电："</string>
     <string name="battery_info_scale_label" msgid="3649763192389778437">"电池电量："</string>
@@ -178,29 +181,36 @@
     <string name="band_mode_failed" msgid="1495968863884716379">"失败"</string>
     <string name="band_mode_succeeded" msgid="2701016190055887575">"成功"</string>
     <string name="sdcard_changes_instructions" msgid="1364712901180556244">"重新连接 USB 线后更改生效"</string>
-    <string name="sdcard_settings_screen_mass_storage_text" msgid="3741220147296482474">"启用 USB 大容量存储模式"</string>
+    <string name="sdcard_settings_screen_mass_storage_text" msgid="3741220147296482474">"启用 USB 大容量存储设备"</string>
     <string name="sdcard_settings_total_bytes_label" msgid="9184160745785062144">"总字节数："</string>
-    <string name="sdcard_settings_not_present_status" msgid="6666688653496819947">"无 SD 卡"</string>
+    <string name="sdcard_settings_not_present_status" product="nosdcard" msgid="2902787003418172125">"未装载 USB 存储设备"</string>
+    <string name="sdcard_settings_not_present_status" product="default" msgid="6666688653496819947">"无 SD 卡"</string>
     <string name="sdcard_settings_available_bytes_label" msgid="763232429899373001">"可用的字节数："</string>
-    <string name="sdcard_settings_mass_storage_status" msgid="4786433969313661655">"SD 卡已被视为大容量存储设备"</string>
-    <string name="sdcard_settings_unmounted_status" msgid="3812022095683863087">"现在可以安全移除 SD 卡"</string>
-    <string name="sdcard_settings_bad_removal_status" msgid="5145797653495907970">"SD 卡仍在使用中便被移除！"</string>
+    <string name="sdcard_settings_mass_storage_status" product="nosdcard" msgid="2736378870889777857">"USB 存储设备已被用作大容量存储设备"</string>
+    <string name="sdcard_settings_mass_storage_status" product="default" msgid="4786433969313661655">"SD 卡已被视为大容量存储设备"</string>
+    <string name="sdcard_settings_unmounted_status" product="nosdcard" msgid="7503300818792750913">"现在可以安全移除 USB 存储设备了"</string>
+    <string name="sdcard_settings_unmounted_status" product="default" msgid="3812022095683863087">"现在可以安全移除 SD 卡"</string>
+    <string name="sdcard_settings_bad_removal_status" product="nosdcard" msgid="7761390725880773697">"USB 存储设备仍在使用中便被移除！"</string>
+    <string name="sdcard_settings_bad_removal_status" product="default" msgid="5145797653495907970">"SD 卡仍在使用中便被移除！"</string>
     <string name="sdcard_settings_used_bytes_label" msgid="8820289486001170836">"已使用的字节数："</string>
-    <string name="sdcard_settings_scanning_status" msgid="2763464949274455656">"正从 SD 卡扫描媒体..."</string>
-    <string name="sdcard_settings_read_only_status" msgid="5706115860484118911">"安装的 SD 卡为只读状态"</string>
+    <string name="sdcard_settings_scanning_status" product="nosdcard" msgid="7503429447676219564">"正在扫描 USB 存储设备中的媒体..."</string>
+    <string name="sdcard_settings_scanning_status" product="default" msgid="2763464949274455656">"正从 SD 卡扫描媒体..."</string>
+    <string name="sdcard_settings_read_only_status" product="nosdcard" msgid="3771783090621312312">"已将 USB 存储设备装载为只读设备"</string>
+    <string name="sdcard_settings_read_only_status" product="default" msgid="5706115860484118911">"安装的 SD 卡为只读状态"</string>
     <string name="next_label" msgid="4693520878012668114">"下一步"</string>
     <string name="language_picker_title" msgid="4034157617842965844">"语言区域"</string>
     <string name="select_your_language" msgid="1146235168951906084">"选择您使用的语言"</string>
     <string name="activity_picker_label" msgid="4910700713930693329">"选择活动"</string>
     <string name="device_info_label" msgid="6551553813651711205">"设备信息"</string>
     <string name="battery_info_label" msgid="4132685016148679403">"电池信息"</string>
-    <string name="battery_history_label" msgid="8242244969757414501">"电池历史记录"</string>
     <string name="display_label" msgid="7403874003169865762">"显示"</string>
     <string name="phone_info_label" msgid="2127552523124277664">"手机信息"</string>
-    <string name="sd_card_settings_label" msgid="5743100901106177102">"SD 卡"</string>
+    <string name="sd_card_settings_label" product="nosdcard" msgid="8101475181301178428">"USB 存储设备"</string>
+    <string name="sd_card_settings_label" product="default" msgid="5743100901106177102">"SD 卡"</string>
     <string name="proxy_settings_label" msgid="3271174136184391743">"代理设置"</string>
     <string name="cancel" msgid="6859253417269739139">"取消"</string>
     <string name="settings_label" msgid="1626402585530130914">"设置"</string>
+    <string name="settings_label_launcher" msgid="8344735489639482340">"设置"</string>
     <string name="settings_shortcut" msgid="3672145147925639262">"设置"</string>
     <string name="airplane_mode" msgid="8837269988154128601">"飞行模式"</string>
     <string name="airplane_mode_summary" msgid="3154817401368780988">"停用所有无线连接"</string>
@@ -323,6 +333,11 @@
     <string name="bluetooth_dock_settings_headset" msgid="1001821426078644650">"将底座用作免提电话"</string>
     <string name="bluetooth_dock_settings_a2dp" msgid="8791004998846630574">"用于音乐和媒体"</string>
     <string name="bluetooth_dock_settings_remember" msgid="5551459057010609115">"记住设置"</string>
+    <string name="nfc_quick_toggle_title" msgid="6769159366307299004">"NFC"</string>
+    <string name="nfc_quick_toggle_summary" msgid="1988408027741447231">"使用近距离通信读取和交换标签"</string>
+    <!-- no translation found for nfc_toggle_error (2233172102497535522) -->
+    <!-- no translation found for nfc_toggle_error (8998642457947607263) -->
+    <skip />
     <string name="wifi_quick_toggle_title" msgid="874495178395350104">"Wi-Fi"</string>
     <string name="wifi_quick_toggle_summary" msgid="1047950931623694366">"打开 Wi-Fi"</string>
     <string name="wifi_settings" msgid="4746946030627213196">"Wi-Fi 设置"</string>
@@ -376,6 +391,7 @@
     <string name="wifi_setting_sleep_policy_summary" msgid="7573693311804602041">"指定何时要从 Wi-Fi 切换到手机数据"</string>
     <string name="wifi_setting_sleep_policy_error" msgid="5103670439972135148">"设置休眠策略时出现问题。"</string>
     <string name="wifi_advanced_mac_address_title" msgid="6571335466330978393">"MAC 地址"</string>
+    <string name="wifi_advanced_ip_address_title" msgid="6215297094363164846">"IP 地址"</string>
     <string name="wifi_ip_settings_titlebar" msgid="4345739031248760326">"IP 设置"</string>
     <string name="wifi_ip_settings_menu_save" msgid="7296724066102908366">"保存"</string>
     <string name="wifi_ip_settings_menu_cancel" msgid="6582567330136502340">"取消"</string>
@@ -496,9 +512,10 @@
     <string name="device_status_activity_title" msgid="1411201799384697904">"状态消息"</string>
     <string name="device_status" msgid="607405385799807324">"状态消息"</string>
     <string name="device_status_summary" msgid="2599162787451519618">"电话号码、信号等"</string>
-    <string name="storage_settings" msgid="6681164315506788024">"SD 卡和手机内存"</string>
-    <string name="storage_settings_title" msgid="5379463509034022773">"SD 卡和手机内存设置"</string>
-    <string name="storage_settings_summary" msgid="9176693537325988610">"卸载 SD 卡，查看可用存储设备"</string>
+    <string name="storage_settings" msgid="4211799979832404953">"存储"</string>
+    <string name="storage_settings_title" msgid="8746016738388094064">"存储设置"</string>
+    <string name="storage_settings_summary" product="nosdcard" msgid="3543813623294870759">"卸载 USB 存储设备，查看可用存储设备"</string>
+    <string name="storage_settings_summary" product="default" msgid="9176693537325988610">"卸载 SD 卡，查看可用存储设备"</string>
     <string name="status_number" msgid="5123197324870153205">"本机号码"</string>
     <string name="status_min_number" msgid="3519504522179420597">"MIN"</string>
     <string name="status_prl_version" msgid="8499039751817386529">"PRL 版本"</string>
@@ -514,24 +531,36 @@
     <string name="status_unavailable" msgid="7862009036663793314">"不可用"</string>
     <string name="status_up_time" msgid="7294859476816760399">"开机时间"</string>
     <string name="status_awake_time" msgid="2393949909051183652">"唤醒时间"</string>
-    <string name="internal_memory" msgid="1130932766236387454">"手机内存"</string>
-    <string name="sd_memory" msgid="151871913888051515">"SD 卡"</string>
+    <string name="internal_memory" msgid="9129595691484260784">"内部存储设备"</string>
+    <string name="sd_memory" product="nosdcard" msgid="2510246194083052841">"USB 存储设备"</string>
+    <string name="sd_memory" product="default" msgid="151871913888051515">"SD 卡"</string>
     <string name="memory_available" msgid="418542433817289474">"可用空间"</string>
     <string name="memory_size" msgid="6629067715017232195">"总容量"</string>
-    <string name="sd_eject" msgid="6915293408836853020">"卸载 SD 卡"</string>
-    <string name="sd_eject_summary" msgid="3315557796211542962">"必须先卸载 SD 卡，才能将其安全移除"</string>
-    <string name="sd_insert_summary" msgid="2048640010381803841">"插入 SD 卡进行安装"</string>
-    <string name="sd_mount" msgid="5940523765187704135">"安装 SD 卡"</string>
-    <string name="sd_mount_summary" msgid="4936591681679097699">"安装 SD 卡"</string>
-    <string name="sd_format" msgid="5448738337382712203">"格式化 SD 卡"</string>
-    <string name="sd_format_summary" msgid="6616491027883134004">"格式化（清除）SD 卡"</string>
+    <string name="sd_eject" product="default" msgid="6915293408836853020">"卸载 SD 卡"</string>
+    <string name="sd_eject_summary" product="nosdcard" msgid="5009296896648072891">"卸载内部 USB 存储设备"</string>
+    <string name="sd_eject_summary" product="default" msgid="3300599435073550246">"需要先卸载 SD 卡，然后才能将其安全移除"</string>
+    <string name="sd_insert_summary" product="nosdcard" msgid="5264016886409577313">"插入要装载的 USB 存储设备"</string>
+    <string name="sd_insert_summary" product="default" msgid="2048640010381803841">"插入 SD 卡进行安装"</string>
+    <string name="sd_mount" product="nosdcard" msgid="8966695015677343116">"装载 USB 存储设备"</string>
+    <string name="sd_mount" product="default" msgid="5940523765187704135">"安装 SD 卡"</string>
+    <!-- outdated translation 6733254203291665551 -->     <string name="sd_mount_summary" product="nosdcard" msgid="1794150364965145726">"装载内部 USB 存储设备"</string>
+    <string name="sd_mount_summary" product="default" msgid="4936591681679097699">"安装 SD 卡"</string>
+    <string name="sd_format" product="nosdcard" msgid="2148179271623099054">"格式化 USB 存储设备"</string>
+    <string name="sd_format" product="default" msgid="2576054280507119870">"格式化 SD 卡"</string>
+    <string name="sd_format_summary" product="nosdcard" msgid="1504606546865152514">"清除手机的内部 USB 存储设备中的全部数据，例如音乐和照片"</string>
+    <string name="sd_format_summary" product="default" msgid="915849621390821841">"清除手机的 SD 卡中的全部数据，例如音乐和照片"</string>
     <string name="sd_unavailable" msgid="8580107589533213904">"不可用"</string>
     <string name="read_only" msgid="6702420168629076340">" （只读）"</string>
-    <string name="dlg_confirm_unmount_title" msgid="8612140627310646730">"卸载 SD 卡"</string>
-    <string name="dlg_confirm_unmount_text" msgid="5851214273718817727">"如果您卸载 SD 卡，则您当前使用的某些应用程序会停止，而且在您重新安装 SD 卡前可能都无法使用。"</string>
-    <string name="dlg_error_unmount_title" msgid="4004106918266783081">"无法卸载 SD 卡"</string>
-    <string name="dlg_error_unmount_text" msgid="9188972789897713180">"无法卸载 SD 卡，请稍后重试。"</string>
-    <string name="unmount_inform_text" msgid="3213378327712151498">"系统将要卸载 SD 卡。请在通知区域查看状态。"</string>
+    <string name="dlg_confirm_unmount_title" product="nosdcard" msgid="2349876662428231297">"卸载 USB 存储设备"</string>
+    <string name="dlg_confirm_unmount_title" product="default" msgid="8612140627310646730">"卸载 SD 卡"</string>
+    <string name="dlg_confirm_unmount_text" product="nosdcard" msgid="3390169455621185223">"如果您卸载 USB 存储设备，则您当前使用的某些应用程序会停止，而且在您重新装载 USB 存储设备前可能都无法使用。"</string>
+    <string name="dlg_confirm_unmount_text" product="default" msgid="5851214273718817727">"如果您卸载 SD 卡，则您当前使用的某些应用程序会停止，而且在您重新安装 SD 卡前可能都无法使用。"</string>
+    <string name="dlg_error_unmount_title" product="nosdcard" msgid="7695491947411836733">"卸载 USB 存储设备时失败"</string>
+    <string name="dlg_error_unmount_title" product="default" msgid="4004106918266783081">"无法卸载 SD 卡"</string>
+    <string name="dlg_error_unmount_text" product="nosdcard" msgid="1450864147013376592">"无法卸载 USB 存储设备。请稍后再试。"</string>
+    <string name="dlg_error_unmount_text" product="default" msgid="9188972789897713180">"无法卸载 SD 卡，请稍后重试。"</string>
+    <string name="unmount_inform_text" product="nosdcard" msgid="7120241136790744265">"系统将会卸载 USB 存储设备。"</string>
+    <string name="unmount_inform_text" product="default" msgid="1904212716075458402">"系统将会卸载 SD 卡。"</string>
     <string name="sd_ejecting_title" msgid="8824572198034365468">"正在卸载"</string>
     <string name="sd_ejecting_summary" msgid="2028753069184908491">"正在卸载"</string>
     <string name="battery_status_title" msgid="9159414319574976203">"电池状态"</string>
@@ -571,21 +600,32 @@
     <string name="restore_default_apn_completed" msgid="3990449939234957281">"重置默认 APN 设置已完成"</string>
     <string name="master_clear_title" msgid="5907939616087039756">"恢复出厂设置"</string>
     <string name="master_clear_summary" msgid="4986154238001088492">"清除手机上的所有数据"</string>
-    <string name="master_clear_desc" msgid="7823268823499739178">"这会从手机中删除所有数据，包括："\n<li>"Google 帐户"</li>\n<li>"系统与应用程序的数据和设置"</li>\n<li>"下载的应用程序"</li>\n"不会删除："\n<li>"当前系统软件和捆绑的应用程序"</li>\n<li>"SD 卡文件，如音乐或照片"</li></string>
+    <string name="master_clear_desc" product="nosdcard" msgid="2163013814299528247">"这会清除您手机的"<b>"内部存储设备"</b>"中的全部数据，包括："\n\n<li>"您的 Google 帐户"</li>\n<li>"系统和应用程序数据和设置"</li>\n<li>"已下载的应用程序"</li>\n\n"要清除手机中的全部数据，请格式化 "<b>"USB 存储设备"</b>"。"\n\n</string>
+    <string name="master_clear_desc" product="default" msgid="1741944496458365969">"这会清除您手机的"<b>"内部存储设备"</b>"中的全部数据，包括："\n\n<li>"您的 Google 帐户"</li>\n<li>"系统和应用程序数据和设置"</li>\n<li>"已下载的应用程序"</li>\n\n"要清除音乐、照片和其他用户数据，请格式化 "<b>"SD 卡"</b>"。"\n\n</string>
+    <string name="erase_external_storage" product="nosdcard" msgid="969364037450286809">"格式化 USB 存储设备"</string>
+    <string name="erase_external_storage" product="default" msgid="1397239046334307625">"格式化 SD 卡"</string>
+    <string name="erase_external_storage_description" product="nosdcard" msgid="1657838142707381027">"清除手机的内部 USB 存储设备中的全部数据，例如音乐或照片。"</string>
+    <string name="erase_external_storage_description" product="default" msgid="8100175974635894073">"清除手机的 SD 卡中的全部数据，例如音乐或照片。"</string>
     <string name="master_clear_button_text" msgid="7550632653343157971">"重置手机"</string>
     <string name="master_clear_final_desc" msgid="6917971132484622696">"是否删除所有个人信息和下载的所有应用程序？此操作无法还原！"</string>
     <string name="master_clear_final_button_text" msgid="5390908019019242910">"清除全部内容"</string>
     <string name="master_clear_gesture_prompt" msgid="1428645764883536750">"绘制您的解锁图案"</string>
     <string name="master_clear_gesture_explanation" msgid="8901714274312707918">"您必须绘制解锁图案才能确认重置手机。"</string>
     <string name="master_clear_failed" msgid="8655202125010189406">"未执行重置，因为系统清除服务不可用。"</string>
-    <string name="media_format_title" msgid="4671276096695789895">"格式化 SD 卡。"</string>
-    <string name="media_format_summary" msgid="3805714639375830120">"清除 SD 卡上的所有数据"</string>
-    <string name="media_format_desc" msgid="1142563222357820834">"该操作会清除手机中 SD 卡上的数据。卡上的所有数据都将丢失。"</string>
-    <string name="media_format_button_text" msgid="370856400090190151">"格式化 SD 卡"</string>
-    <string name="media_format_final_desc" msgid="1776666694910717198">"确定要将 SD 卡格式化、清除所有媒体吗？该操作将不能撤消！"</string>
+    <string name="media_format_title" product="nosdcard" msgid="3999653431422767156">"格式化 USB 存储设备"</string>
+    <string name="media_format_title" product="default" msgid="4427528440306787972">"格式化 SD 卡"</string>
+    <string name="media_format_summary" product="nosdcard" msgid="776603298628082065">"清除 USB 存储设备中的全部数据"</string>
+    <string name="media_format_summary" product="default" msgid="3805714639375830120">"清除 SD 卡上的所有数据"</string>
+    <string name="media_format_desc" product="nosdcard" msgid="4553860683952763905">"此操作会格式化 USB 存储设备，会让您丢失其中存储的"<b>"全部"</b>"数据！"</string>
+    <string name="media_format_desc" product="default" msgid="1598627584181935513">"此操作会格式化 SD 卡，会让您丢失其中存储的"<b>"全部"</b>"数据！"</string>
+    <string name="media_format_button_text" product="nosdcard" msgid="6293669371185352810">"格式化 USB 存储设备"</string>
+    <string name="media_format_button_text" product="default" msgid="6721544380069373626">"格式化 SD 卡"</string>
+    <string name="media_format_final_desc" product="nosdcard" msgid="8094635533378487255">"确定要格式化 USB 存储设备，删除其中存储的全部文件吗？该操作将无法撤消！"</string>
+    <string name="media_format_final_desc" product="default" msgid="9015504991522581434">"确定要格式化 SD 卡，删除其中存储的全部文件吗？该操作将无法撤消！"</string>
     <string name="media_format_final_button_text" msgid="4881713344315923175">"清除全部内容"</string>
     <string name="media_format_gesture_prompt" msgid="3109349468816856670">"绘制您的解锁图案"</string>
-    <string name="media_format_gesture_explanation" msgid="4239529439389660159">"您必须绘制解锁图案以确认将 SD 卡格式化。"</string>
+    <string name="media_format_gesture_explanation" product="nosdcard" msgid="1379736318750958338">"您必须绘制解锁图案，以确认对 USB 存储设备执行格式化操作。"</string>
+    <string name="media_format_gesture_explanation" product="default" msgid="1681213416497647321">"您必须绘制解锁图案，以确认对 SD 卡执行格式化操作。"</string>
     <string name="call_settings_title" msgid="5188713413939232801">"通话设置"</string>
     <string name="call_settings_summary" msgid="7291195704801002886">"设置语音信箱、来电转接、来电等待和本机号码显示"</string>
     <string name="tether_settings_title_usb" msgid="4315031513434087777">"绑定"</string>
@@ -609,7 +649,7 @@
     <string name="location_networks_disabled" msgid="2708968452901433980">"使用无线网络在应用程序（例如 Google 地图）中查看位置"</string>
     <string name="location_neighborhood_level" msgid="4656658097932515921">"通过 Wi-Fi 和/或移动网络确定的位置"</string>
     <string name="location_gps" msgid="6296125378829097831">"使用 GPS 卫星"</string>
-    <string name="location_street_level" msgid="6460740847018275745">"定位时，精确度设定为街道级别（取消选中可节约电量）"</string>
+    <string name="location_street_level" msgid="7456259025474443314">"定位级别可精确到街道"</string>
     <string name="location_gps_disabled" msgid="6632537158777308128">"定位到街道级别（需要消耗更多电量以及天气允许）"</string>
     <string name="assisted_gps" msgid="4649317129586736885">"使用增强型 GPS"</string>
     <string name="assisted_gps_enabled" msgid="8751899609589792803">"使用服务器来辅助 GPS（取消选中可降低网络使用率）"</string>
@@ -692,22 +732,31 @@
     <string name="application_size_label" msgid="5055196275624686382">"应用程序"</string>
     <string name="data_size_label" msgid="8679376373625710107">"数据"</string>
     <string name="uninstall_text" msgid="3644892466144802466">"卸载"</string>
+    <string name="disable_text" msgid="6544054052049395202">"停用"</string>
+    <string name="enable_text" msgid="9217362512327828987">"启用"</string>
     <string name="clear_user_data_text" msgid="5597622864770098388">"清除数据"</string>
     <string name="app_factory_reset" msgid="6635744722502563022">"卸载更新"</string>
     <string name="auto_launch_enable_text" msgid="2630656657744196691">"您已选择在默认情况下对某些操作启动此应用程序。"</string>
     <string name="auto_launch_disable_text" msgid="7800385822185540166">"无默认设置。"</string>
     <string name="clear_activities" msgid="7408923511535174430">"清除默认设置"</string>
     <string name="unknown" msgid="1592123443519355854">"未知"</string>
-    <string name="sort_order_alpha" msgid="8622029358896599842">"排序"</string>
+    <string name="sort_order_alpha" msgid="1410278099123670628">"按姓名排序"</string>
     <string name="sort_order_size" msgid="7024513286636502362">"按大小排序"</string>
+    <string name="show_running_services" msgid="5736278767975544570">"显示当前运行的服务"</string>
+    <string name="show_background_processes" msgid="2009840211972293429">"显示缓存进程"</string>
     <string name="manage_space_text" msgid="8852711522447794676">"管理空间"</string>
     <string name="filter" msgid="2018011724373033887">"过滤"</string>
     <string name="filter_dlg_title" msgid="6507663329723966854">"选择过滤选项"</string>
     <string name="filter_apps_all" msgid="5142129378749391876">"全部"</string>
     <string name="filter_apps_third_party" msgid="7786348047690140979">"已下载"</string>
     <string name="filter_apps_running" msgid="7767071454371350486">"正在运行"</string>
-    <string name="filter_apps_onsdcard" msgid="1477351142334784771">"SD 卡中"</string>
-    <string name="loading" msgid="3200408047793887917">"正在载入..."</string>
+    <string name="filter_apps_onsdcard" product="nosdcard" msgid="4843063154701023349">"USB 存储设备"</string>
+    <string name="filter_apps_onsdcard" product="default" msgid="1477351142334784771">"SD 卡中"</string>
+    <string name="disabled" msgid="9206776641295849915">"已停用"</string>
+    <string name="no_applications" msgid="5190227407135243904">"无应用程序。"</string>
+    <string name="internal_storage" msgid="1584700623164275282">"内部存储设备"</string>
+    <string name="sd_card_storage" product="nosdcard" msgid="2673203150465132465">"USB 存储设备"</string>
+    <string name="sd_card_storage" product="default" msgid="7623513618171928235">"SD 卡存储设备"</string>
     <string name="recompute_size" msgid="7722567982831691718">"正在重新计算大小..."</string>
     <string name="clear_data_dlg_title" msgid="4470209520936375508">"删除"</string>
     <string name="clear_data_dlg_text" msgid="8368035073300828451">"此应用程序的所有数据将被永久删除。删除的内容包括所有文件、设置、帐户、数据库等。"</string>
@@ -727,7 +776,8 @@
     <string name="version_text" msgid="9189073826278676425">"版本 <xliff:g id="VERSION_NUM">%1$s</xliff:g>"</string>
     <string name="move_app" msgid="5042838441401731346">"移动"</string>
     <string name="move_app_to_internal" msgid="3895430471913858185">"移至手机内存"</string>
-    <string name="move_app_to_sdcard" msgid="1143379049903056407">"移至 SD 卡"</string>
+    <string name="move_app_to_sdcard" product="nosdcard" msgid="4350451696315265420">"移至 USB 存储设备"</string>
+    <string name="move_app_to_sdcard" product="default" msgid="1143379049903056407">"移至 SD 卡"</string>
     <string name="moving" msgid="6431016143218876491">"正在移动"</string>
     <string name="insufficient_storage" msgid="8566913062094452962">"存储空间不足。"</string>
     <string name="does_not_exist" msgid="837163572898468245">"该应用程序不存在。"</string>
@@ -735,29 +785,49 @@
     <string name="invalid_location" msgid="4934491353200240499">"指定的安装位置无效。"</string>
     <string name="system_package" msgid="1030561474413022831">"无法在外部媒体上安装系统更新。"</string>
     <string name="force_stop_dlg_title" msgid="4289453224368188476">"强行停止"</string>
-    <string name="force_stop_dlg_text" msgid="3381302041569982075">"此应用程序将立即重新启动。您确定要强行停止应用程序吗？"</string>
+    <string name="force_stop_dlg_text" msgid="5157374701213502922">"强制关闭应用程序会导致其出现异常，您确定要这么做吗？"</string>
     <string name="move_app_failed_dlg_title" msgid="4337731903265156405">"移动应用程序"</string>
     <string name="move_app_failed_dlg_text" msgid="8824246817947643697">"无法移动应用程序。<xliff:g id="REASON">%1$s</xliff:g>"</string>
     <string name="app_install_location_title" msgid="2068975150026852168">"首选安装位置"</string>
     <string name="app_install_location_summary" msgid="879753854530300436">"更改安装新应用程序时使用的首选安装位置"</string>
+    <string name="storageuse_settings_title" msgid="5657014373502630403">"存储空间使用情况"</string>
+    <string name="storageuse_settings_summary" msgid="2556057379120846792">"查看应用程序所用的存储空间"</string>
     <string name="runningservices_settings_title" msgid="8097287939865165213">"正在运行的服务"</string>
     <string name="runningservices_settings_summary" msgid="854608995821032748">"查看和控制当前正在运行的服务"</string>
     <string name="service_restarting" msgid="2242747937372354306">"正在重新启动"</string>
-    <string name="no_running_services" msgid="6981216347270280598">"当前未运行任何服务"</string>
-    <string name="confirm_stop_service" msgid="5700448757318301681">"是否停止服务？"</string>
-    <string name="confirm_stop_service_msg" msgid="1166661293369421272">"服务只有在重新启动后，才可以继续运行。但这可能会给<xliff:g id="APPLICATION">%1$s</xliff:g>应用程序带来意想不到的结果。"</string>
-    <string name="confirm_stop_stop" msgid="7382363913280993331">"停止"</string>
-    <string name="confirm_stop_cancel" msgid="206495326622692381">"取消"</string>
-    <string name="service_started_by_app" msgid="8432097226392386802">"由应用程序启动：触摸可停止"</string>
-    <string name="service_client_name" msgid="2337664610975074717">"<xliff:g id="CLIENT_NAME">%1$s</xliff:g>：触摸可进行管理"</string>
-    <string name="service_background_processes" msgid="5158600475629177758">"可用：<xliff:g id="FREE">%2$s</xliff:g>+<xliff:g id="MEMORY">%3$s</xliff:g>，合计 <xliff:g id="COUNT">%1$d</xliff:g>"</string>
-    <string name="service_foreground_processes" msgid="4013890350284680796">"其他：<xliff:g id="MEMORY">%2$s</xliff:g>，合计 <xliff:g id="COUNT">%1$d</xliff:g>"</string>
-    <string name="service_process_name" msgid="8630408984456958400">"进程：<xliff:g id="PROCESS">%1$s</xliff:g>"</string>
+    <string name="cached" msgid="1059590879740175019">"缓存的后台进程"</string>
+    <string name="no_running_services" msgid="2059536495597645347">"当前未运行任何服务。"</string>
+    <string name="service_started_by_app" msgid="6575184738671598131">"已由应用程序启动。"</string>
+    <!-- no translation found for service_client_name (4037193625611815517) -->
+    <skip />
+    <string name="service_background_processes" msgid="6844156253576174488">"可用空间：<xliff:g id="MEMORY">%1$s</xliff:g>"</string>
+    <string name="service_foreground_processes" msgid="7583975676795574276">"已用空间：<xliff:g id="MEMORY">%1$s</xliff:g>"</string>
+    <string name="memory" msgid="6609961111091483458">"RAM"</string>
+    <!-- no translation found for service_process_name (4098932168654826656) -->
+    <skip />
+    <string name="running_processes_item_description_s_s" msgid="5790575965282023145">"<xliff:g id="NUMPROCESS">%1$d</xliff:g> 个进程和 <xliff:g id="NUMSERVICES">%2$d</xliff:g> 个服务"</string>
+    <string name="running_processes_item_description_s_p" msgid="8019860457123222953">"<xliff:g id="NUMPROCESS">%1$d</xliff:g> 个进程和 <xliff:g id="NUMSERVICES">%2$d</xliff:g> 个服务"</string>
+    <string name="running_processes_item_description_p_s" msgid="744424668287252915">"<xliff:g id="NUMPROCESS">%1$d</xliff:g> 个进程和 <xliff:g id="NUMSERVICES">%2$d</xliff:g> 个服务"</string>
+    <string name="running_processes_item_description_p_p" msgid="1607384595790852782">"<xliff:g id="NUMPROCESS">%1$d</xliff:g> 个进程和 <xliff:g id="NUMSERVICES">%2$d</xliff:g> 个服务"</string>
+    <string name="runningservicedetails_settings_title" msgid="6188692418986988288">"正在运行的应用程序"</string>
+    <string name="no_services" msgid="7133900764462288263">"无活动服务"</string>
+    <string name="runningservicedetails_services_title" msgid="391168243725357375">"服务"</string>
+    <string name="runningservicedetails_processes_title" msgid="928115582044655268">"进程"</string>
+    <string name="service_stop" msgid="6369807553277527248">"停止"</string>
+    <string name="service_manage" msgid="1876642087421959194">"设置"</string>
+    <string name="service_stop_description" msgid="3261798282116866961">"此服务由其应用程序启动。停止服务可能会导致应用程序失败。"</string>
+    <string name="heavy_weight_stop_description" msgid="6855241582643136019">"无法安全地停止该应用程序。强行停止可能会导致您目前的部分工作内容丢失。"</string>
+    <string name="background_process_stop_description" msgid="1728354083304746737">"这是旧应用程序进程，用于保持手机的快速运行，以防随时需要。通常不建议停止。"</string>
+    <string name="service_manage_description" msgid="7050092269951613102">"目前正在使用“<xliff:g id="CLIENT_NAME">%1$s</xliff:g>”。触摸“设置”可以对其进行控制。"</string>
+    <string name="main_running_process_description" msgid="929204645380391397">"正在使用的主要进程。"</string>
+    <string name="process_service_in_use_description" msgid="8993335064403217080">"正在使用服务<xliff:g id="COMP_NAME">%1$s</xliff:g>。"</string>
+    <string name="process_provider_in_use_description" msgid="5586603325677678940">"正在使用提供商<xliff:g id="COMP_NAME">%1$s</xliff:g>。"</string>
+    <string name="runningservicedetails_stop_dlg_title" msgid="4253292537154337233">"要停止系统服务吗？"</string>
+    <string name="runningservicedetails_stop_dlg_text" msgid="6929716497425738387">"确定要停止此系统服务吗？如果停止，您手机上的某些功能也会立即停止工作，除非您将其关闭后再重新打开。"</string>
     <string name="language_settings" msgid="502219872342167227">"语言和键盘"</string>
     <string name="language_keyboard_settings_title" msgid="3455826933385341107">"语言和键盘设置"</string>
-    <string name="language_settings_summary" msgid="595647729475399987">"设置语言区域（语言和区域）、文字输入和自动更正选项"</string>
-    <string name="language_category" msgid="3391756582724541530">"语言区域设置"</string>
-    <string name="text_category" msgid="6342540511465136739">"文字设置"</string>
+    <string name="language_settings_category" msgid="2288258489940617043">"语言设置"</string>
+    <string name="keyboard_settings_category" msgid="7060453865544070642">"键盘设置"</string>
     <string name="phone_language" msgid="1165758957501090679">"选择语言"</string>
     <string name="phone_language_summary" msgid="3871309445655554211"></string>
     <string name="auto_replace" msgid="6199184757891937822">"自动替换"</string>
@@ -782,7 +852,6 @@
     <string name="testing" msgid="6584352735303604146">"测试"</string>
     <string name="testing_phone_info" msgid="8656693364332840056">"手机信息"</string>
     <string name="testing_battery_info" msgid="3497865525976497848">"电池信息"</string>
-    <string name="testing_battery_history" msgid="3043329445810695647">"电池历史记录"</string>
     <string name="quick_launch_title" msgid="7904609846945905306">"快速启动"</string>
     <string name="quick_launch_summary" msgid="3453825712466417452">"设置启动应用程序的键盘快捷键"</string>
     <string name="quick_launch_assign_application" msgid="4521368464929956350">"分配应用程序"</string>
@@ -798,8 +867,8 @@
     <string name="input_methods_settings_summary" msgid="7571173442946675205">"管理文字输入选项"</string>
     <string name="input_methods_settings_label_format" msgid="6002887604815693322">"<xliff:g id="IME_NAME">%1$s</xliff:g> 设置"</string>
     <string name="onscreen_keyboard_settings_summary" msgid="5841558383556238653">"屏幕键盘设置"</string>
-    <string name="builtin_keyboard_settings_title" msgid="8169889453770863227">"设备键盘"</string>
-    <string name="builtin_keyboard_settings_summary" msgid="6404687907454621637">"内置键盘设置"</string>
+    <string name="builtin_keyboard_settings_title" msgid="5274990495405941804">"内置键盘"</string>
+    <string name="builtin_keyboard_settings_summary" msgid="7990296351888096836">"内置物理键盘设置"</string>
     <string name="development_settings_title" msgid="6719732334835420989">"开发"</string>
     <string name="development_settings_summary" msgid="2151320488701538355">"设置应用程序开发选项"</string>
     <string name="enable_adb" msgid="7982306934419797485">"USB 调试"</string>
@@ -812,36 +881,10 @@
     <string name="adb_warning_message" msgid="5352555112049663033">"USB 调试仅用于开发工作。使用该功能可在计算机和移动设备之间复制数据、在移动设备上安装应用程序而不进行通知，以及读取日志数据。"</string>
     <string name="gadget_picker_title" msgid="98374951396755811">"选择小工具"</string>
     <string name="widget_picker_title" msgid="9130684134213467557">"选择窗口小部件"</string>
-    <string name="battery_history_details_for" msgid="5924639922153109669">"有关用户 ID <xliff:g id="NUMBER">%d</xliff:g> 的详情"</string>
-    <string name="battery_history_uid" msgid="1016606150528436298">"用户 ID <xliff:g id="USER_ID">%1$d</xliff:g>"</string>
-    <string name="battery_history_network_usage" msgid="8010852371665217020">"有关<xliff:g id="APP_NAME">%1$s</xliff:g>的网络使用详情："</string>
-    <string name="battery_history_bytes_received" msgid="980307569180518302">"收到的字节数：<xliff:g id="BYTES">%1$d</xliff:g>"</string>
-    <string name="battery_history_bytes_sent" msgid="2501748768602119159">"发送的字节数：<xliff:g id="BYTES">%1$d</xliff:g>"</string>
-    <string name="battery_history_bytes_total" msgid="4444807574361642753">"总字节数：<xliff:g id="BYTES">%1$d</xliff:g>"</string>
-    <string name="battery_history_cpu_usage" msgid="2597353713014790877">"有关<xliff:g id="APP_NAME">%1$s</xliff:g>的 CPU 使用详情："</string>
-    <string name="battery_history_user_time" msgid="6227507614894791359">"用户时间："</string>
-    <string name="battery_history_system_time" msgid="2015862072724507547">"系统时间："</string>
-    <string name="battery_history_total_time" msgid="3618703970098556104">"合计时间："</string>
-    <string name="battery_history_starts" msgid="9137453931978571696">"启动次数：<xliff:g id="STARTS">%1$d</xliff:g>"</string>
     <string name="battery_history_days" msgid="7110262897769622564">"<xliff:g id="DAYS">%1$d</xliff:g> 天 <xliff:g id="HOURS">%2$d</xliff:g> 小时 <xliff:g id="MINUTES">%3$d</xliff:g> 分 <xliff:g id="SECONDS">%4$d</xliff:g> 秒"</string>
     <string name="battery_history_hours" msgid="7525170329826274999">"<xliff:g id="HOURS">%1$d</xliff:g> 小时 <xliff:g id="MINUTES">%2$d</xliff:g> 分 <xliff:g id="SECONDS">%3$d</xliff:g> 秒"</string>
     <string name="battery_history_minutes" msgid="1467775596084148610">"<xliff:g id="MINUTES">%1$d</xliff:g> 分 <xliff:g id="SECONDS">%2$d</xliff:g> 秒"</string>
     <string name="battery_history_seconds" msgid="4283492130945761685">"<xliff:g id="SECONDS">%1$d</xliff:g> 秒"</string>
-    <string name="battery_history_packages_sharing_this_uid" msgid="4101596071379250050">"共享该用户 ID 的数据包："</string>
-    <string name="battery_history_no_data" msgid="1177238743237067617">"没有可用的电池使用数据"</string>
-    <string name="battery_history_sensor" msgid="2333488996028993982">"传感器："</string>
-    <string name="battery_history_wakelock" msgid="608683447522396293">"部分激活锁定："</string>
-    <string name="battery_history_used_by_packages" msgid="3000711380023436470">"包使用的传感器："</string>
-    <string name="battery_history_sensor_usage" msgid="3593133338613209024">"<xliff:g id="PACKAGE">%2$s</xliff:g>使用了 <xliff:g id="COUNT">%1$d</xliff:g> 次"</string>
-    <string name="battery_history_sensor_usage_multi" msgid="4536084375991014508">"由以下某项使用过 <xliff:g id="COUNT">%1$d</xliff:g> 次："</string>
-    <string name="battery_history_awake_label" msgid="8449792868990080882">"正在运行"</string>
-    <string name="battery_history_screen_on_label" msgid="1848936521786339362">"屏幕已开启"</string>
-    <string name="battery_history_phone_on_label" msgid="700191958853142297">"手机已开启"</string>
-    <string name="battery_history_awake" msgid="4350886665719031057">"除睡眠状态以外的时间"</string>
-    <string name="battery_history_screen_on" msgid="1377240025275657277">"屏幕开启所花费的时间："</string>
-    <string name="battery_history_phone_on" msgid="4891504401623839532">"手机处于开机状态的时间："</string>
-    <string name="battery_history_screen_on_battery" msgid="536058210445081888">"正在使用电池："</string>
-    <string name="battery_history_screen_on_plugged" msgid="5019127390021871260">"充电时间："</string>
     <string name="usage_stats_label" msgid="5890846333487083609">"使用情况统计数据"</string>
     <string name="testing_usage_stats" msgid="7823048598893937339">"使用情况统计数据"</string>
     <string name="display_order_text" msgid="8592776965827565271">"排序方式："</string>
@@ -865,12 +908,19 @@
     <string name="power_usage_summary" msgid="7237084831082848168">"耗电情况"</string>
     <string name="battery_since_unplugged" msgid="338073389740738437">"拔下电源后的电量消耗情况"</string>
     <string name="battery_since_reset" msgid="7464546661121187045">"重置后的电量消耗情况"</string>
+    <string name="battery_stats_on_battery" msgid="4970762168505236033">"电池仍可持续 <xliff:g id="TIME">%1$s</xliff:g>"</string>
     <string name="battery_stats_duration" msgid="7464501326709469282">"拔下电源后已过 <xliff:g id="TIME">%1$s</xliff:g>"</string>
+    <string name="battery_stats_charging_label" msgid="4223311142875178785">"正在充电"</string>
+    <string name="battery_stats_screen_on_label" msgid="7150221809877509708">"屏幕已开启"</string>
+    <string name="battery_stats_gps_on_label" msgid="1193657533641951256">"GPS 已启用"</string>
+    <string name="battery_stats_wifi_running_label" msgid="3093545080361658269">"Wi-Fi"</string>
+    <string name="battery_stats_wake_lock_label" msgid="1908942681902324095">"唤醒"</string>
+    <string name="battery_stats_phone_signal_label" msgid="6822042940376636775">"手机信号强度"</string>
     <!-- no translation found for battery_stats_last_duration (1535831453827905957) -->
     <skip />
     <string name="awake" msgid="387122265874485088">"设备唤醒时间"</string>
-    <string name="wifi_on_time" msgid="4630925382578609056">"WiFi 开启时间"</string>
-    <string name="bluetooth_on_time" msgid="4478515071957280711">"WiFi 开启时间"</string>
+    <string name="wifi_on_time" msgid="6310209835617490616">"Wi-Fi 开启时间"</string>
+    <string name="bluetooth_on_time" msgid="6157799524996162271">"Wi-Fi 开启时间"</string>
     <string name="usage_name_percent" msgid="7976919382448235858">"<xliff:g id="NAME">%1$s</xliff:g> - <xliff:g id="NUMBER">%2$s</xliff:g><xliff:g id="PERCENT">%%</xliff:g>"</string>
     <string name="details_title" msgid="7564809986329021063">"电量使用详情"</string>
     <string name="details_subtitle" msgid="32593908269911734">"详细使用情况"</string>
@@ -884,7 +934,9 @@
     <string name="power_idle" msgid="9055659695602194990">"手机待机"</string>
     <string name="usage_type_cpu" msgid="715162150698338714">"CPU 总使用时间"</string>
     <string name="usage_type_cpu_foreground" msgid="6500579611933211831">"CPU（前台）"</string>
+    <string name="usage_type_wake_lock" msgid="5125438890233677880">"保持唤醒状态"</string>
     <string name="usage_type_gps" msgid="7989688715128160790">"GPS"</string>
+    <string name="usage_type_wifi_running" msgid="8234997940652067049">"Wi-Fi 正在运行"</string>
     <string name="usage_type_phone" msgid="9108247984998041853">"通话"</string>
     <string name="usage_type_data_send" msgid="2857401966985425427">"数据已发送"</string>
     <string name="usage_type_data_recv" msgid="7251090882025234185">"数据已收到"</string>
@@ -896,7 +948,7 @@
     <string name="battery_action_app_details" msgid="3275013531871113681">"应用程序信息"</string>
     <string name="battery_action_app_settings" msgid="350562653472577250">"应用程序设置"</string>
     <string name="battery_action_display" msgid="5302763261448580102">"显示设置"</string>
-    <string name="battery_action_wifi" msgid="5452076674659927993">"WiFi 设置"</string>
+    <string name="battery_action_wifi" msgid="2272741639606146903">"Wi-Fi 设置"</string>
     <string name="battery_action_bluetooth" msgid="8374789049507723142">"蓝牙设置"</string>
     <string name="battery_desc_voice" msgid="8980322055722959211">"语音通话所耗的电量"</string>
     <string name="battery_desc_standby" msgid="3009080001948091424">"手机待机时所耗的电量"</string>
@@ -909,9 +961,9 @@
     <string name="battery_desc_bluetooth" msgid="7535520658674621902">"蓝牙所耗的电量"</string>
     <string name="battery_sugg_bluetooth_basic" msgid="817276933922157788">"请在未使用蓝牙功能时将其关闭"</string>
     <string name="battery_sugg_bluetooth_headset" msgid="8214816222115517479">"正在尝试连接另一蓝牙设备"</string>
-    <string name="battery_desc_apps" msgid="8123202939321333639">"运行应用程序时所耗的电量"</string>
+    <string name="battery_desc_apps" msgid="6665712811746233450">"应用程序所耗的电量"</string>
     <string name="battery_sugg_apps_info" msgid="6065882899391322442">"停止或卸载应用程序"</string>
-    <string name="battery_sugg_apps_gps" msgid="4145005297393800223">"不使用 GPS 时将其关闭"</string>
+    <string name="battery_sugg_apps_gps" msgid="4545056413090932541">"手动控制 GPS，以阻止应用程序使用它"</string>
     <string name="battery_sugg_apps_settings" msgid="8021302847272481168">"该应用程序中可能有用于减少耗电量的设置"</string>
     <string name="menu_stats_unplugged" msgid="8296577130840261624">"拔下电源后已过 <xliff:g id="UNPLUGGED">%1$s</xliff:g>"</string>
     <string name="menu_stats_last_unplugged" msgid="5922246077592434526">"上次拔下电源 <xliff:g id="UNPLUGGED">%1$s</xliff:g> 时"</string>
@@ -961,6 +1013,8 @@
     <string name="pico_not_installed" msgid="6266845418419994311">"未安装"</string>
     <string name="pico_voice_summary_female" msgid="8047327176247727492">"女声"</string>
     <string name="pico_voice_summary_male" msgid="8331266854058577610">"男声"</string>
+    <string name="tts_notif_engine_install_title" msgid="7000346872482649034">"语音合成引擎已安装"</string>
+    <string name="tts_notif_engine_install_message" msgid="5304661142202662693">"启用新引擎后才能使用"</string>
     <string name="gadget_title" msgid="7455548605888590466">"电量控制"</string>
     <string name="gadget_toggle_wifi" msgid="2382963973155082629">"正在更新 Wi-Fi 设置"</string>
     <string name="gadget_toggle_bluetooth" msgid="7538903239807020826">"正在更新蓝牙设置"</string>
@@ -1047,8 +1101,10 @@
     <string name="credentials_access_summary" msgid="319662078718574168">"允许应用程序访问安全凭证和其他凭证"</string>
     <string name="credentials_unlock" msgid="1463040326264133844">"输入密码"</string>
     <string name="credentials_unlock_hint" msgid="594679530407918031">"输入凭证存储密码。"</string>
-    <string name="credentials_install_certificates" msgid="177337517568022236">"从 SD 卡安装"</string>
-    <string name="credentials_install_certificates_summary" msgid="7737001268684193093">"从 SD 卡安装加密的证书"</string>
+    <string name="credentials_install_certificates" product="nosdcard" msgid="619171634797689906">"从 USB 存储设备安装"</string>
+    <string name="credentials_install_certificates" product="default" msgid="177337517568022236">"从 SD 卡安装"</string>
+    <string name="credentials_install_certificates_summary" product="nosdcard" msgid="8920330112631198575">"从 USB 存储设备安装已加密的证书"</string>
+    <string name="credentials_install_certificates_summary" product="default" msgid="7737001268684193093">"从 SD 卡安装加密的证书"</string>
     <string name="credentials_set_password" msgid="9104473585811899989">"设置密码"</string>
     <string name="credentials_set_password_summary" msgid="8287876917562085701">"设置或更改凭证存储密码"</string>
     <string name="credentials_reset" msgid="9170150870552453457">"清除存储"</string>
@@ -1068,6 +1124,16 @@
     <string name="credentials_erased" msgid="7700309135582200849">"该凭证存储已删除。"</string>
     <string name="credentials_enabled" msgid="7588607413349978930">"凭证存储已启用。"</string>
     <string name="credentials_disabled" msgid="7453188089059045380">"凭证存储已停用。"</string>
+    <string name="encrypted_fs_category" msgid="1841367653663913956">"加密文件系统"</string>
+    <string name="encrypted_fs_enable" msgid="3884033081603327729">"加密用户私人数据"</string>
+    <string name="encrypted_fs_enable_summary" msgid="5635188119509076089">"在此设备中针对用户私人数据启用加密文件系统存储"</string>
+    <string name="encrypted_fs_enable_dialog" msgid="919487211207214266">"必须清除设备数据才能启用加密文件系统。"</string>
+    <string name="encrypted_fs_disable_dialog" msgid="6960413613985682501">"必须清除设备数据才能停用加密文件系统。"</string>
+    <string name="encrypted_fs_enable_button" msgid="8453841319751433751">"启用"</string>
+    <string name="encrypted_fs_disable_button" msgid="8468354944060220496">"停用"</string>
+    <string name="encrypted_fs_cancel_button" msgid="4785921255266305799">"取消"</string>
+    <string name="encrypted_fs_cancel_confirm" msgid="853572431153803557">"已取消加密文件系统的模式更改。"</string>
+    <string name="encrypted_fs_alert_dialog_title" msgid="583462447886934755">"加密文件系统警告。"</string>
     <string name="emergency_tone_title" msgid="1055954530111587114">"紧急提示音"</string>
     <string name="emergency_tone_summary" msgid="722259232924572153">"设置进行紧急呼救时的行为"</string>
     <string name="privacy_settings" msgid="9206631214140954954">"隐私权"</string>
@@ -1075,11 +1141,11 @@
     <string name="backup_section_title" msgid="8856083167469467588">"备份和还原"</string>
     <string name="personal_data_section_title" msgid="7815209034443782061">"个人数据"</string>
     <string name="backup_data_title" msgid="1239105919852668016">"备份我的数据"</string>
-    <string name="backup_data_summary" msgid="5662190190240860035">"备份我的设置和其他应用程序数据。"</string>
+    <string name="backup_data_summary" msgid="6515285107793232815">"将应用程序数据、Wi-Fi 密码和其他设置备份至 Google 服务器"</string>
     <string name="auto_restore_title" msgid="5397528966329126506">"自动还原"</string>
-    <string name="auto_restore_summary" msgid="6867766474057290177">"重新安装某个应用程序后，系统会还原已经备份的设置或其他数据。"</string>
+    <string name="auto_restore_summary" msgid="83177150536734378">"重新安装某个应用程序后，系统会还原已经备份的设置或其他数据"</string>
     <string name="backup_erase_dialog_title" msgid="3438255037256586237">"备份"</string>
-    <string name="backup_erase_dialog_message" msgid="2948090854996352245">"您是否确定要停止备份您的设置和应用程序数据，并清除 Google 服务器上的所有副本？"</string>
+    <string name="backup_erase_dialog_message" msgid="7766283133557587608">"确定要停止备份您的 Wi-Fi 密码、书签以及其他设置和应用程序数据，并清除 Google 服务器上的所有副本吗？"</string>
     <string name="device_admin_settings_title" msgid="1335557832906433309">"设备管理设置"</string>
     <string name="active_device_admin_msg" msgid="6930903262612422111">"设备管理器"</string>
     <string name="remove_device_admin" msgid="3596845261596451437">"取消激活"</string>

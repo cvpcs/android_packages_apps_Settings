@@ -31,14 +31,14 @@
     <ImageView android:id="@+id/app_icon"
         android:layout_width="@android:dimen/app_icon_size"
         android:layout_height="@android:dimen/app_icon_size"
-        android:layout_marginLeft="5dip"
         android:layout_marginRight="11dip"
         android:layout_gravity="center_vertical"
         android:scaleType="fitCenter"/>
 
     <LinearLayout
         android:orientation="vertical"
-        android:layout_width="match_parent"
+        android:layout_width="0px"
+        android:layout_weight="1"
         android:layout_height="wrap_content" >
         <TextView android:id="@+id/app_name"
             android:layout_width="wrap_content"
@@ -48,12 +48,36 @@
             android:singleLine="true"
             android:ellipsize="marquee"
             android:layout_marginBottom="2dip" />
-        <TextView android:id="@+id/app_size"
-            android:layout_marginTop="-4dip"
-            android:layout_gravity="center_vertical"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:baselineAlignedChildIndex="0" >
+            <TextView android:id="@+id/app_size"
+                android:layout_marginTop="-4dip"
+                android:layout_gravity="center_vertical|left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+            <TextView android:id="@+id/app_disabled"
+                android:layout_marginTop="-4dip"
+                android:layout_gravity="center_vertical|right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:visibility="gone"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/disabled" />
+        </LinearLayout>
     </LinearLayout>
+    
+    <CheckBox android:id="@+id/app_on_sdcard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dip"
+        android:layout_gravity="center_vertical"
+        android:visibility="gone"
+        android:clickable="false"
+        android:focusable="false" />
 </LinearLayout>
-

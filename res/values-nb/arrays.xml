@@ -115,19 +115,6 @@
     <item msgid="1549288661423279207">"Aldri når tilkoblet"</item>
     <item msgid="1986753720941888596">"Aldri"</item>
   </string-array>
-  <string-array name="battery_history_type_spinner">
-    <item msgid="2193799199027871385">"CPU-bruk"</item>
-    <item msgid="6401018715947316517">"Nettverksbruk"</item>
-    <item msgid="188092590354892392">"GPS-bruk"</item>
-    <item msgid="8414109131222049141">"Sensorbruk"</item>
-    <item msgid="1327904325081257093">"Delvis våken bruk"</item>
-    <item msgid="4832254146664706277">"Annen bruk"</item>
-  </string-array>
-  <string-array name="battery_history_which_spinner">
-    <item msgid="3451981114763440074">"Siden sist uten strøm"</item>
-    <item msgid="166936313535197598">"Totalt siden oppstart"</item>
-    <item msgid="4793941382744963893">"Totalt hele tiden"</item>
-  </string-array>
   <string-array name="usage_stats_display_order_types">
     <item msgid="9077371706468756228">"Brukstid"</item>
     <item msgid="1908750532762193304">"Start telling"</item>

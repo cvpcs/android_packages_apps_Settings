@@ -115,19 +115,6 @@
     <item msgid="1549288661423279207">"Nooit indien aangesloten"</item>
     <item msgid="1986753720941888596">"Nooit"</item>
   </string-array>
-  <string-array name="battery_history_type_spinner">
-    <item msgid="2193799199027871385">"CPU-gebruik"</item>
-    <item msgid="6401018715947316517">"Netwerkgebruik"</item>
-    <item msgid="188092590354892392">"GPS-gebruik"</item>
-    <item msgid="8414109131222049141">"Sensorgebruik"</item>
-    <item msgid="1327904325081257093">"Gedeeltelijk wake-gebruik"</item>
-    <item msgid="4832254146664706277">"Ander gebruik"</item>
-  </string-array>
-  <string-array name="battery_history_which_spinner">
-    <item msgid="3451981114763440074">"Sinds laatste keer losgekoppeld"</item>
-    <item msgid="166936313535197598">"Totaal sinds opstarten"</item>
-    <item msgid="4793941382744963893">"Totaal voor altijd"</item>
-  </string-array>
   <string-array name="usage_stats_display_order_types">
     <item msgid="9077371706468756228">"Gebruikstijd"</item>
     <item msgid="1908750532762193304">"Aantal keer gestart"</item>

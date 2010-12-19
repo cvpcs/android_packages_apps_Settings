@@ -115,19 +115,6 @@
     <item msgid="1549288661423279207">"Никогда, если есть питание от сети"</item>
     <item msgid="1986753720941888596">"Никогда"</item>
   </string-array>
-  <string-array name="battery_history_type_spinner">
-    <item msgid="2193799199027871385">"Использование процессора"</item>
-    <item msgid="6401018715947316517">"Использование сети"</item>
-    <item msgid="188092590354892392">"Использование GPS"</item>
-    <item msgid="8414109131222049141">"Использование сенсора"</item>
-    <item msgid="1327904325081257093">"Использование частичного включения"</item>
-    <item msgid="4832254146664706277">"Прочее использование"</item>
-  </string-array>
-  <string-array name="battery_history_which_spinner">
-    <item msgid="3451981114763440074">"После последнего отключения питания"</item>
-    <item msgid="166936313535197598">"Всего с момента загрузки"</item>
-    <item msgid="4793941382744963893">"Всего за все время"</item>
-  </string-array>
   <string-array name="usage_stats_display_order_types">
     <item msgid="9077371706468756228">"Время использования"</item>
     <item msgid="1908750532762193304">"Начать подсчет"</item>

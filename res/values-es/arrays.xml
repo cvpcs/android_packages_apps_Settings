@@ -115,19 +115,6 @@
     <item msgid="1549288661423279207">"Nunca si se está cargando la batería"</item>
     <item msgid="1986753720941888596">"Nunca"</item>
   </string-array>
-  <string-array name="battery_history_type_spinner">
-    <item msgid="2193799199027871385">"Uso de CPU"</item>
-    <item msgid="6401018715947316517">"Uso de red"</item>
-    <item msgid="188092590354892392">"Uso de GPS"</item>
-    <item msgid="8414109131222049141">"Uso del sensor"</item>
-    <item msgid="1327904325081257093">"Uso de actividad parcial"</item>
-    <item msgid="4832254146664706277">"Otro uso"</item>
-  </string-array>
-  <string-array name="battery_history_which_spinner">
-    <item msgid="3451981114763440074">"Desde la última vez que se cargó"</item>
-    <item msgid="166936313535197598">"Total desde inicio"</item>
-    <item msgid="4793941382744963893">"Total durante todo el tiempo"</item>
-  </string-array>
   <string-array name="usage_stats_display_order_types">
     <item msgid="9077371706468756228">"Tiempo de uso"</item>
     <item msgid="1908750532762193304">"Número de inicios"</item>

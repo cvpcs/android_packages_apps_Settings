@@ -115,19 +115,6 @@
     <item msgid="1549288661423279207">"電源接続時はスリープにしない"</item>
     <item msgid="1986753720941888596">"スリープにしない"</item>
   </string-array>
-  <string-array name="battery_history_type_spinner">
-    <item msgid="2193799199027871385">"CPU使用状況"</item>
-    <item msgid="6401018715947316517">"ネットワーク使用状況"</item>
-    <item msgid="188092590354892392">"GPS使用状況"</item>
-    <item msgid="8414109131222049141">"センサー使用状況"</item>
-    <item msgid="1327904325081257093">"部分起動状況"</item>
-    <item msgid="4832254146664706277">"その他の使用状況"</item>
-  </string-array>
-  <string-array name="battery_history_which_spinner">
-    <item msgid="3451981114763440074">"充電池使用時間"</item>
-    <item msgid="166936313535197598">"起動時間合計"</item>
-    <item msgid="4793941382744963893">"総時間"</item>
-  </string-array>
   <string-array name="usage_stats_display_order_types">
     <item msgid="9077371706468756228">"使用時間"</item>
     <item msgid="1908750532762193304">"起動回数"</item>

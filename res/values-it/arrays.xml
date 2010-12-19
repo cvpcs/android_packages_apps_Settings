@@ -115,19 +115,6 @@
     <item msgid="1549288661423279207">"Mai quando collegato"</item>
     <item msgid="1986753720941888596">"Mai"</item>
   </string-array>
-  <string-array name="battery_history_type_spinner">
-    <item msgid="2193799199027871385">"Utilizzo CPU"</item>
-    <item msgid="6401018715947316517">"Utilizzo della rete"</item>
-    <item msgid="188092590354892392">"Utilizzo GPS"</item>
-    <item msgid="8414109131222049141">"Utilizzo sensore"</item>
-    <item msgid="1327904325081257093">"Utilizzo riattivazione parziale"</item>
-    <item msgid="4832254146664706277">"Altro utilizzo"</item>
-  </string-array>
-  <string-array name="battery_history_which_spinner">
-    <item msgid="3451981114763440074">"Da ultimo scollegamento"</item>
-    <item msgid="166936313535197598">"Totale dall\'avvio"</item>
-    <item msgid="4793941382744963893">"Totale generale"</item>
-  </string-array>
   <string-array name="usage_stats_display_order_types">
     <item msgid="9077371706468756228">"Tempo di utilizzo"</item>
     <item msgid="1908750532762193304">"Conteggio avvii"</item>

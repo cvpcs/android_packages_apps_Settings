@@ -45,13 +45,16 @@
     <string name="radioInfo_display_asu" msgid="1422248392727818082">"asu"</string>
     <string name="radioInfo_lac" msgid="8415219164758307156">"LAC"</string>
     <string name="radioInfo_cid" msgid="4362599198392643138">"CID"</string>
-    <string name="sdcard_unmount" msgid="3364184561355611897">"Avmonter minnekort"</string>
-    <string name="sdcard_format" msgid="362497552060004057">"Formater minnekort"</string>
+    <string name="sdcard_unmount" product="nosdcard" msgid="6325292633327972272">"Koble fra USB-lagring"</string>
+    <string name="sdcard_unmount" product="default" msgid="3364184561355611897">"Avmonter minnekort"</string>
+    <string name="sdcard_format" product="nosdcard" msgid="6285310523155166716">"Slett USB-lagring"</string>
+    <string name="sdcard_format" product="default" msgid="6713185532039187532">"Slett SD-kort"</string>
     <string name="small_font" msgid="2295331917424072635">"Liten"</string>
     <string name="medium_font" msgid="2068475425515133701">"Middels"</string>
     <string name="large_font" msgid="599055175160971446">"Stor"</string>
     <string name="font_size_save" msgid="3450855718056759095">"OK"</string>
-    <string name="sdcard_setting" msgid="5922637503871474866">"Minnekort"</string>
+    <string name="sdcard_setting" product="nosdcard" msgid="8281011784066476192">"USB-lagring"</string>
+    <string name="sdcard_setting" product="default" msgid="5922637503871474866">"Minnekort"</string>
     <string name="battery_info_status_label" msgid="8109155295509700309">"Batteristatus:"</string>
     <string name="battery_info_power_label" msgid="7465140230991349382">"Strømplugg:"</string>
     <string name="battery_info_scale_label" msgid="3649763192389778437">"Batteriskala:"</string>
@@ -178,29 +181,36 @@
     <string name="band_mode_failed" msgid="1495968863884716379">"Mislykket"</string>
     <string name="band_mode_succeeded" msgid="2701016190055887575">"Vellykket"</string>
     <string name="sdcard_changes_instructions" msgid="1364712901180556244">"Endringene vil tre i kraft når USB-kabelen kobles til på nytt"</string>
-    <string name="sdcard_settings_screen_mass_storage_text" msgid="3741220147296482474">"Skru på USB-masselagring"</string>
+    <string name="sdcard_settings_screen_mass_storage_text" msgid="3741220147296482474">"Aktiver USB-masselagring"</string>
     <string name="sdcard_settings_total_bytes_label" msgid="9184160745785062144">"Totalt antall byte:"</string>
-    <string name="sdcard_settings_not_present_status" msgid="6666688653496819947">"Minnekort mangler"</string>
+    <string name="sdcard_settings_not_present_status" product="nosdcard" msgid="2902787003418172125">"USB-lagring ikke tilkoblet"</string>
+    <string name="sdcard_settings_not_present_status" product="default" msgid="6666688653496819947">"Minnekort mangler"</string>
     <string name="sdcard_settings_available_bytes_label" msgid="763232429899373001">"Tilgjengelig antall byte:"</string>
-    <string name="sdcard_settings_mass_storage_status" msgid="4786433969313661655">"Minnekortet blir brukt som en masselagringsenhet"</string>
-    <string name="sdcard_settings_unmounted_status" msgid="3812022095683863087">"Det er trygt å fjerne minnekortet"</string>
-    <string name="sdcard_settings_bad_removal_status" msgid="5145797653495907970">"Minnekortet ble fjernet mens det fortsatt var i bruk!"</string>
+    <string name="sdcard_settings_mass_storage_status" product="nosdcard" msgid="2736378870889777857">"USB-lagr. brukt til masselagr."</string>
+    <string name="sdcard_settings_mass_storage_status" product="default" msgid="4786433969313661655">"Minnekortet blir brukt som en masselagringsenhet"</string>
+    <string name="sdcard_settings_unmounted_status" product="nosdcard" msgid="7503300818792750913">"USB-lagring kan nå fjernes"</string>
+    <string name="sdcard_settings_unmounted_status" product="default" msgid="3812022095683863087">"Det er trygt å fjerne minnekortet"</string>
+    <string name="sdcard_settings_bad_removal_status" product="nosdcard" msgid="7761390725880773697">"USB-lagr. fjernet under bruk!"</string>
+    <string name="sdcard_settings_bad_removal_status" product="default" msgid="5145797653495907970">"Minnekortet ble fjernet mens det fortsatt var i bruk!"</string>
     <string name="sdcard_settings_used_bytes_label" msgid="8820289486001170836">"Brukt antall byte:"</string>
-    <string name="sdcard_settings_scanning_status" msgid="2763464949274455656">"Leter etter media på minnekortet…"</string>
-    <string name="sdcard_settings_read_only_status" msgid="5706115860484118911">"Minnekortet ble montert skrivebeskyttet"</string>
+    <string name="sdcard_settings_scanning_status" product="nosdcard" msgid="7503429447676219564">"Skanner USB-lagr. for medier"</string>
+    <string name="sdcard_settings_scanning_status" product="default" msgid="2763464949274455656">"Leter etter media på minnekortet…"</string>
+    <string name="sdcard_settings_read_only_status" product="nosdcard" msgid="3771783090621312312">"USB-lagr. har kun lesetilg."</string>
+    <string name="sdcard_settings_read_only_status" product="default" msgid="5706115860484118911">"Minnekortet ble montert skrivebeskyttet"</string>
     <string name="next_label" msgid="4693520878012668114">"Neste"</string>
     <string name="language_picker_title" msgid="4034157617842965844">"Regionsinnstillinger"</string>
     <string name="select_your_language" msgid="1146235168951906084">"Språk"</string>
     <string name="activity_picker_label" msgid="4910700713930693329">"Velg aktivitet"</string>
     <string name="device_info_label" msgid="6551553813651711205">"Enhetsinformasjon"</string>
     <string name="battery_info_label" msgid="4132685016148679403">"Batteriinformasjon"</string>
-    <string name="battery_history_label" msgid="8242244969757414501">"Batterihistorikk"</string>
     <string name="display_label" msgid="7403874003169865762">"Skjerm"</string>
     <string name="phone_info_label" msgid="2127552523124277664">"Telefoninformasjon"</string>
-    <string name="sd_card_settings_label" msgid="5743100901106177102">"Minnekort"</string>
+    <string name="sd_card_settings_label" product="nosdcard" msgid="8101475181301178428">"USB-lagring"</string>
+    <string name="sd_card_settings_label" product="default" msgid="5743100901106177102">"Minnekort"</string>
     <string name="proxy_settings_label" msgid="3271174136184391743">"Mellomtjener-innstillinger"</string>
     <string name="cancel" msgid="6859253417269739139">"Avbryt"</string>
     <string name="settings_label" msgid="1626402585530130914">"Innstillinger"</string>
+    <string name="settings_label_launcher" msgid="8344735489639482340">"Innstillinger"</string>
     <string name="settings_shortcut" msgid="3672145147925639262">"Innstillinger"</string>
     <string name="airplane_mode" msgid="8837269988154128601">"Flymodus"</string>
     <string name="airplane_mode_summary" msgid="3154817401368780988">"Slå av alle trådløse tilkoblinger"</string>
@@ -323,6 +333,11 @@
     <string name="bluetooth_dock_settings_headset" msgid="1001821426078644650">"Som høyttalertelefon"</string>
     <string name="bluetooth_dock_settings_a2dp" msgid="8791004998846630574">"For musikk og medier"</string>
     <string name="bluetooth_dock_settings_remember" msgid="5551459057010609115">"Husk innstillinger"</string>
+    <string name="nfc_quick_toggle_title" msgid="6769159366307299004">"NFC"</string>
+    <string name="nfc_quick_toggle_summary" msgid="1988408027741447231">"Bruk NFC-teknologi for å lese og utveksle koder"</string>
+    <!-- no translation found for nfc_toggle_error (2233172102497535522) -->
+    <!-- no translation found for nfc_toggle_error (8998642457947607263) -->
+    <skip />
     <string name="wifi_quick_toggle_title" msgid="874495178395350104">"Trådløst nett"</string>
     <string name="wifi_quick_toggle_summary" msgid="1047950931623694366">"Slå på trådløst nett"</string>
     <string name="wifi_settings" msgid="4746946030627213196">"Trådløsinnstillinger"</string>
@@ -376,6 +391,7 @@
     <string name="wifi_setting_sleep_policy_summary" msgid="7573693311804602041">"Spesifiser når telefonen skal bytte fra trådløsnett til mobiltelefonidata"</string>
     <string name="wifi_setting_sleep_policy_error" msgid="5103670439972135148">"Det oppsto et problem under setting av soveinnstilling."</string>
     <string name="wifi_advanced_mac_address_title" msgid="6571335466330978393">"MAC-adresse"</string>
+    <string name="wifi_advanced_ip_address_title" msgid="6215297094363164846">"IP-adresse"</string>
     <string name="wifi_ip_settings_titlebar" msgid="4345739031248760326">"IP-innstillinger"</string>
     <string name="wifi_ip_settings_menu_save" msgid="7296724066102908366">"Lagre"</string>
     <string name="wifi_ip_settings_menu_cancel" msgid="6582567330136502340">"Avbryt"</string>
@@ -444,7 +460,7 @@
     <string name="dock_audio_summary_unknown" msgid="4465059868974255693">"Innstillinger for festet forankring"</string>
     <string name="dock_not_found_title" msgid="3290961741828952424">"Finner ikke forankringsstasjon"</string>
     <string name="dock_not_found_text" msgid="3035260358985111855">"Telefonen må være plassert i forankringsstasjonen for å konfigurere forankringslyden"</string>
-    <string name="dock_sounds_enable_title" msgid="3659084028644948905">"Lyd ved innsetting i forankringsstasjon"</string>
+    <string name="dock_sounds_enable_title" msgid="3659084028644948905">"Lyd ved innsetting"</string>
     <string name="dock_sounds_enable_summary_on" msgid="8491180514199743771">"Spill av lyd når telefonen settes inn eller tas ut av forankringsstasjonen"</string>
     <string name="dock_sounds_enable_summary_off" msgid="3151046599205265919">"Ikke spill av lyd når telefonen settes inn eller tas ut av forankringsstasjonen"</string>
     <string name="sync_settings" msgid="9186125469300013491">"Kontoer/synkronisering"</string>
@@ -496,9 +512,10 @@
     <string name="device_status_activity_title" msgid="1411201799384697904">"Status"</string>
     <string name="device_status" msgid="607405385799807324">"Status"</string>
     <string name="device_status_summary" msgid="2599162787451519618">"Telefonnummer, signalstyrke, osv."</string>
-    <string name="storage_settings" msgid="6681164315506788024">"Minnekort og telefonlager"</string>
-    <string name="storage_settings_title" msgid="5379463509034022773">"Minnekort og telefonlager"</string>
-    <string name="storage_settings_summary" msgid="9176693537325988610">"Avmonter minnekort, vis ledig plass"</string>
+    <string name="storage_settings" msgid="4211799979832404953">"Lagring"</string>
+    <string name="storage_settings_title" msgid="8746016738388094064">"Innstillinger for lagring"</string>
+    <string name="storage_settings_summary" product="nosdcard" msgid="3543813623294870759">"Koble fra USB-lagring og vis tilgjengelig lagringsplass"</string>
+    <string name="storage_settings_summary" product="default" msgid="9176693537325988610">"Avmonter minnekort, vis ledig plass"</string>
     <string name="status_number" msgid="5123197324870153205">"Telefonnummer"</string>
     <string name="status_min_number" msgid="3519504522179420597">"MIN"</string>
     <string name="status_prl_version" msgid="8499039751817386529">"PRL-versjon"</string>
@@ -514,24 +531,36 @@
     <string name="status_unavailable" msgid="7862009036663793314">"Ikke tilgjengelig"</string>
     <string name="status_up_time" msgid="7294859476816760399">"Oppetid"</string>
     <string name="status_awake_time" msgid="2393949909051183652">"Våken tid"</string>
-    <string name="internal_memory" msgid="1130932766236387454">"Intern lagringsplass"</string>
-    <string name="sd_memory" msgid="151871913888051515">"Minnekort"</string>
+    <string name="internal_memory" msgid="9129595691484260784">"Intern lagring"</string>
+    <string name="sd_memory" product="nosdcard" msgid="2510246194083052841">"USB-lagring"</string>
+    <string name="sd_memory" product="default" msgid="151871913888051515">"Minnekort"</string>
     <string name="memory_available" msgid="418542433817289474">"Tilgjengelig plass"</string>
     <string name="memory_size" msgid="6629067715017232195">"Total plass"</string>
-    <string name="sd_eject" msgid="6915293408836853020">"Avmonter/løs ut minnekort"</string>
-    <string name="sd_eject_summary" msgid="3315557796211542962">"Løs ut minnekortet for trygg fjerning"</string>
-    <string name="sd_insert_summary" msgid="2048640010381803841">"Sett inn et minnekort for å koble til"</string>
-    <string name="sd_mount" msgid="5940523765187704135">"Koble til minnekort"</string>
-    <string name="sd_mount_summary" msgid="4936591681679097699">"Koble til minnekortet"</string>
-    <string name="sd_format" msgid="5448738337382712203">"Formater minnekort"</string>
-    <string name="sd_format_summary" msgid="6616491027883134004">"Formater (fjern alt fra) minnekortet"</string>
+    <string name="sd_eject" product="default" msgid="6915293408836853020">"Avmonter/løs ut minnekort"</string>
+    <string name="sd_eject_summary" product="nosdcard" msgid="5009296896648072891">"Koble fra intern USB-lagring"</string>
+    <string name="sd_eject_summary" product="default" msgid="3300599435073550246">"Koble fra SD-kortet for trygg fjerning"</string>
+    <string name="sd_insert_summary" product="nosdcard" msgid="5264016886409577313">"Sett inn USB-lagring"</string>
+    <string name="sd_insert_summary" product="default" msgid="2048640010381803841">"Sett inn et minnekort for å koble til"</string>
+    <string name="sd_mount" product="nosdcard" msgid="8966695015677343116">"Koble til USB-lagring"</string>
+    <string name="sd_mount" product="default" msgid="5940523765187704135">"Koble til minnekort"</string>
+    <!-- outdated translation 6733254203291665551 -->     <string name="sd_mount_summary" product="nosdcard" msgid="1794150364965145726">"Koble fra intern USB-lagring"</string>
+    <string name="sd_mount_summary" product="default" msgid="4936591681679097699">"Koble til minnekortet"</string>
+    <string name="sd_format" product="nosdcard" msgid="2148179271623099054">"Slett USB-lagring"</string>
+    <string name="sd_format" product="default" msgid="2576054280507119870">"Slett SD-kort"</string>
+    <string name="sd_format_summary" product="nosdcard" msgid="1504606546865152514">"Sletter intern USB-lagring."</string>
+    <string name="sd_format_summary" product="default" msgid="915849621390821841">"Sletter alle data på telefonens SD-kort, som for eksempel musikk og bilder"</string>
     <string name="sd_unavailable" msgid="8580107589533213904">"Ikke tilgjengelig"</string>
     <string name="read_only" msgid="6702420168629076340">" (skrivebeskyttet)"</string>
-    <string name="dlg_confirm_unmount_title" msgid="8612140627310646730">"Koble fra minnekort"</string>
-    <string name="dlg_confirm_unmount_text" msgid="5851214273718817727">"Hvis du kobler fra minnekortet, vil ikke lenger alle programmene virke, og de kan være utilgjengelige inntil du kobler til minnekortet på nytt."</string>
-    <string name="dlg_error_unmount_title" msgid="4004106918266783081">"Fikk ikke koblet fra minnekort"</string>
-    <string name="dlg_error_unmount_text" msgid="9188972789897713180">"Får ikke koblet fra minnekort. Prøv på nytt senere."</string>
-    <string name="unmount_inform_text" msgid="3213378327712151498">"Minnekortet kobles fra. Kontroller status i varslingsfeltet."</string>
+    <string name="dlg_confirm_unmount_title" product="nosdcard" msgid="2349876662428231297">"Koble fra USB-lagring"</string>
+    <string name="dlg_confirm_unmount_title" product="default" msgid="8612140627310646730">"Koble fra minnekort"</string>
+    <string name="dlg_confirm_unmount_text" product="nosdcard" msgid="3390169455621185223">"Hvis du kobler fra USB-lagring, vil ikke lenger alle programmene virke, og de kan være utilgjengelige inntil du kobler til USB-lagring på nytt."</string>
+    <string name="dlg_confirm_unmount_text" product="default" msgid="5851214273718817727">"Hvis du kobler fra minnekortet, vil ikke lenger alle programmene virke, og de kan være utilgjengelige inntil du kobler til minnekortet på nytt."</string>
+    <string name="dlg_error_unmount_title" product="nosdcard" msgid="7695491947411836733">"Frakobl. av USB-lagr. misl."</string>
+    <string name="dlg_error_unmount_title" product="default" msgid="4004106918266783081">"Fikk ikke koblet fra minnekort"</string>
+    <string name="dlg_error_unmount_text" product="nosdcard" msgid="1450864147013376592">"Kan ikke koble fra USB-lagring. Prøv på nytt senere."</string>
+    <string name="dlg_error_unmount_text" product="default" msgid="9188972789897713180">"Får ikke koblet fra minnekort. Prøv på nytt senere."</string>
+    <string name="unmount_inform_text" product="nosdcard" msgid="7120241136790744265">"USB-lagring kobles fra."</string>
+    <string name="unmount_inform_text" product="default" msgid="1904212716075458402">"SD-kort kobles fra."</string>
     <string name="sd_ejecting_title" msgid="8824572198034365468">"Kobler fra minnekort"</string>
     <string name="sd_ejecting_summary" msgid="2028753069184908491">"Frakobling pågår"</string>
     <string name="battery_status_title" msgid="9159414319574976203">"Batteristatus"</string>
@@ -571,26 +600,37 @@
     <string name="restore_default_apn_completed" msgid="3990449939234957281">"Ferdig med å gjenopprette standardvalg for APN"</string>
     <string name="master_clear_title" msgid="5907939616087039756">"Fabrikkinnstillinger"</string>
     <string name="master_clear_summary" msgid="4986154238001088492">"Fjern alle data fra telefonen"</string>
-    <string name="master_clear_desc" msgid="7823268823499739178">"Dette vil fjerne alle data fra telefonen, herunder:"\n<li>"Google-kontoen din"</li>\n<li>"System- og programdata og -innstillinger"</li>\n<li>"Nedlastede programmer"</li>\n"Det vil ikke slette:"\n<li>"Gjeldende systemprogramvare og medfølgende programmer"</li>\n<li>"Filer på minnekortet, eksempelvis musikk eller bilder"</li></string>
+    <string name="master_clear_desc" product="nosdcard" msgid="2163013814299528247">"Dette sletter alle data fra telefonens "<b>"interne lagring"</b>", herunder:"\n\n<li>"Google-kontoen"</li>\n<li>"System- og programdata og innstillinger"</li>\n<li>"Nedlastede programmer"</li>\n\n"Hvis du vil slette alle data på telefonen, må "<b>"USB-kortet"</b>" slettes."\n\n</string>
+    <string name="master_clear_desc" product="default" msgid="1741944496458365969">"Dette sletter alle data fra telefonens "<b>"interne lagring"</b>", herunder:"\n\n<li>"Google-kontoen"</li>\n<li>"System- og programdata og innstillinger"</li>\n<li>"Nedlastede programmer"</li>\n\n"Hvis du også vil slette musikk, bilder og andre brukerdata, må "<b>"SD-kortet"</b>" slettes."\n\n</string>
+    <string name="erase_external_storage" product="nosdcard" msgid="969364037450286809">"Slett USB-lagring"</string>
+    <string name="erase_external_storage" product="default" msgid="1397239046334307625">"Slett SD-kort"</string>
+    <string name="erase_external_storage_description" product="nosdcard" msgid="1657838142707381027">"Slett all intern USB-lagring."</string>
+    <string name="erase_external_storage_description" product="default" msgid="8100175974635894073">"Slett alle data på SD-kort."</string>
     <string name="master_clear_button_text" msgid="7550632653343157971">"Tilbakestill telefonen"</string>
     <string name="master_clear_final_desc" msgid="6917971132484622696">"Fjern all personlig informasjon og nedlastede applikasjoner? Dette kan ikke gjøres om!"</string>
     <string name="master_clear_final_button_text" msgid="5390908019019242910">"Fjern alt"</string>
     <string name="master_clear_gesture_prompt" msgid="1428645764883536750">"Tegn opplåsingsmønsteret"</string>
     <string name="master_clear_gesture_explanation" msgid="8901714274312707918">"Du må tegne opplåsingsmønsteret for å bekrefte tilbakestilling av telefonen."</string>
     <string name="master_clear_failed" msgid="8655202125010189406">"Telefonen ble ikke tilbakestilt fordi tilbakestillingstjenesten ikke er tilgjengelig."</string>
-    <string name="media_format_title" msgid="4671276096695789895">"Formater minnekort"</string>
-    <string name="media_format_summary" msgid="3805714639375830120">"Sletter alle data fra minnekortet"</string>
-    <string name="media_format_desc" msgid="1142563222357820834">"Dette valget vil slette alle data fra minnekortet i telefonen. Du vil miste ALLE data på kortet!"</string>
-    <string name="media_format_button_text" msgid="370856400090190151">"Formater minnekort"</string>
-    <string name="media_format_final_desc" msgid="1776666694910717198">"Formater minnekortet? Dette vil fjerne alle data, og kan ikke gjøres om!"</string>
+    <string name="media_format_title" product="nosdcard" msgid="3999653431422767156">"Slett USB-lagring"</string>
+    <string name="media_format_title" product="default" msgid="4427528440306787972">"Slett SD-kort"</string>
+    <string name="media_format_summary" product="nosdcard" msgid="776603298628082065">"Sletter alle data i USB-lagr."</string>
+    <string name="media_format_summary" product="default" msgid="3805714639375830120">"Sletter alle data fra minnekortet"</string>
+    <string name="media_format_desc" product="nosdcard" msgid="4553860683952763905">"Handlingen sletter USB-lagring. "<b>"Alle"</b>" data i USB-lagring vil gå tapt!"</string>
+    <string name="media_format_desc" product="default" msgid="1598627584181935513">"Handlingen sletter SD-kortet. "<b>"Alle"</b>" data på kortet vil gå tapt!"</string>
+    <string name="media_format_button_text" product="nosdcard" msgid="6293669371185352810">"Slett USB-lagring"</string>
+    <string name="media_format_button_text" product="default" msgid="6721544380069373626">"Slett SD-kort"</string>
+    <string name="media_format_final_desc" product="nosdcard" msgid="8094635533378487255">"Vil du formatere USB-lagring og slette alle lagrede filer? Handlingen kan ikke angres!"</string>
+    <string name="media_format_final_desc" product="default" msgid="9015504991522581434">"Vil du formatere SD-kortet og slette alle lagrede filer? Handlingen kan ikke angres!"</string>
     <string name="media_format_final_button_text" msgid="4881713344315923175">"Slett alt"</string>
     <string name="media_format_gesture_prompt" msgid="3109349468816856670">"Tegn opplåsingsmønsteret"</string>
-    <string name="media_format_gesture_explanation" msgid="4239529439389660159">"Du må tegne opplåsingsmønsteret for å bekrefte formatering av minnekortet."</string>
+    <string name="media_format_gesture_explanation" product="nosdcard" msgid="1379736318750958338">"Du må tegne opplåsingsmønsteret for å bekrefte formateringen av USB-lagring."</string>
+    <string name="media_format_gesture_explanation" product="default" msgid="1681213416497647321">"Du må tegne opplåsingsmønsteret for å bekrefte slettingen av SD-kortet."</string>
     <string name="call_settings_title" msgid="5188713413939232801">"Samtaleinnstillinger"</string>
     <string name="call_settings_summary" msgid="7291195704801002886">"Telefonsvarer, viderekobling, samtale venter, nummervisning"</string>
     <string name="tether_settings_title_usb" msgid="4315031513434087777">"Tilknytning"</string>
     <string name="tether_settings_title_wifi" msgid="3277144155960302049">"Flyttbar trådløs sone"</string>
-    <string name="tether_settings_title_both" msgid="2734066355556891504">"Tilknytning og flyttbar trådløs sone"</string>
+    <string name="tether_settings_title_both" msgid="2734066355556891504">"Tilknytning og trådløs sone"</string>
     <string name="tether_settings_summary_usb" msgid="3562431455625637370">"Del mobilens datatilkobling via USB-tilknytning"</string>
     <string name="tether_settings_summary_wifi" msgid="4690912027002467246">"Del telefonens datatilkobling via en flyttbar trådløs sone"</string>
     <string name="tether_settings_summary_both" msgid="7460063951190682635">"Del telefonens datatilkobling via USB eller en flyttbar trådløs sone"</string>
@@ -609,7 +649,7 @@
     <string name="location_networks_disabled" msgid="2708968452901433980">"Se plassering i applikasjoner (som kart) ved hjelp av trådløse nettverk"</string>
     <string name="location_neighborhood_level" msgid="4656658097932515921">"Plassering bestemmes ved hjelp av trådløse og/eller mobile nettverk"</string>
     <string name="location_gps" msgid="6296125378829097831">"Bruk GPS-satellitter"</string>
-    <string name="location_street_level" msgid="6460740847018275745">"Nøyaktig til gatenivå (slå av for å spare batteri)"</string>
+    <string name="location_street_level" msgid="7456259025474443314">"Nøyaktig til gatenivå"</string>
     <string name="location_gps_disabled" msgid="6632537158777308128">"Finn plassering på gatenivå (bruker mer batteri, og trenger fri sikt til himmelen)"</string>
     <string name="assisted_gps" msgid="4649317129586736885">"Aktiver GPS med hjelp"</string>
     <string name="assisted_gps_enabled" msgid="8751899609589792803">"Bruk tjener til å hjelpe GPS (opphev for å redusere nettverksbruken)"</string>
@@ -692,22 +732,31 @@
     <string name="application_size_label" msgid="5055196275624686382">"Applikasjon"</string>
     <string name="data_size_label" msgid="8679376373625710107">"Data"</string>
     <string name="uninstall_text" msgid="3644892466144802466">"Avinstaller"</string>
+    <string name="disable_text" msgid="6544054052049395202">"Deaktiver"</string>
+    <string name="enable_text" msgid="9217362512327828987">"Aktiver"</string>
     <string name="clear_user_data_text" msgid="5597622864770098388">"Fjern data"</string>
     <string name="app_factory_reset" msgid="6635744722502563022">"Avinstaller oppdateringer"</string>
     <string name="auto_launch_enable_text" msgid="2630656657744196691">"Du har valgt å starte denne applikasjonen som standard for noen handlinger."</string>
     <string name="auto_launch_disable_text" msgid="7800385822185540166">"Ingen standardvalg satt."</string>
     <string name="clear_activities" msgid="7408923511535174430">"Fjern standardvalg"</string>
     <string name="unknown" msgid="1592123443519355854">"Ukjent"</string>
-    <string name="sort_order_alpha" msgid="8622029358896599842">"Sorter"</string>
+    <string name="sort_order_alpha" msgid="1410278099123670628">"Sorter etter navn"</string>
     <string name="sort_order_size" msgid="7024513286636502362">"Sorter etter størrelse"</string>
+    <string name="show_running_services" msgid="5736278767975544570">"Vis kjørende tjenester"</string>
+    <string name="show_background_processes" msgid="2009840211972293429">"Vis bufrede prosesser"</string>
     <string name="manage_space_text" msgid="8852711522447794676">"Styr plass"</string>
     <string name="filter" msgid="2018011724373033887">"Filter"</string>
     <string name="filter_dlg_title" msgid="6507663329723966854">"Velg filtreringsinnstillinger"</string>
     <string name="filter_apps_all" msgid="5142129378749391876">"Alle"</string>
     <string name="filter_apps_third_party" msgid="7786348047690140979">"Tredjeparts"</string>
     <string name="filter_apps_running" msgid="7767071454371350486">"Kjører"</string>
-    <string name="filter_apps_onsdcard" msgid="1477351142334784771">"På minnekort"</string>
-    <string name="loading" msgid="3200408047793887917">"Laster…"</string>
+    <string name="filter_apps_onsdcard" product="nosdcard" msgid="4843063154701023349">"USB-lagring"</string>
+    <string name="filter_apps_onsdcard" product="default" msgid="1477351142334784771">"På minnekort"</string>
+    <string name="disabled" msgid="9206776641295849915">"Deaktivert"</string>
+    <string name="no_applications" msgid="5190227407135243904">"Ingen programmer."</string>
+    <string name="internal_storage" msgid="1584700623164275282">"Intern lagring"</string>
+    <string name="sd_card_storage" product="nosdcard" msgid="2673203150465132465">"USB-lagring"</string>
+    <string name="sd_card_storage" product="default" msgid="7623513618171928235">"SD-kortlagring"</string>
     <string name="recompute_size" msgid="7722567982831691718">"Beregner størrelse på nytt…"</string>
     <string name="clear_data_dlg_title" msgid="4470209520936375508">"Slett"</string>
     <string name="clear_data_dlg_text" msgid="8368035073300828451">"All informasjon du har lagret i denne applikasjonen vil bli fjernet permanent."</string>
@@ -727,7 +776,8 @@
     <string name="version_text" msgid="9189073826278676425">"versjon <xliff:g id="VERSION_NUM">%1$s</xliff:g>"</string>
     <string name="move_app" msgid="5042838441401731346">"Flytt"</string>
     <string name="move_app_to_internal" msgid="3895430471913858185">"Flytt til telefonen"</string>
-    <string name="move_app_to_sdcard" msgid="1143379049903056407">"Flytt til minnekort"</string>
+    <string name="move_app_to_sdcard" product="nosdcard" msgid="4350451696315265420">"Flytt til USB-lagring"</string>
+    <string name="move_app_to_sdcard" product="default" msgid="1143379049903056407">"Flytt til minnekort"</string>
     <string name="moving" msgid="6431016143218876491">"Flytter"</string>
     <string name="insufficient_storage" msgid="8566913062094452962">"Det er ikke nok lagringsminne."</string>
     <string name="does_not_exist" msgid="837163572898468245">"Programmet fins ikke."</string>
@@ -735,29 +785,49 @@
     <string name="invalid_location" msgid="4934491353200240499">"Den angitte installasjonsplasseringen er ikke gyldig."</string>
     <string name="system_package" msgid="1030561474413022831">"Systemoppdateringer kan ikke installeres på eksterne medier."</string>
     <string name="force_stop_dlg_title" msgid="4289453224368188476">"Tving avslutning"</string>
-    <string name="force_stop_dlg_text" msgid="3381302041569982075">"Programmet startes på nytt med en gang. Er du sikker på at du vil avslutte?"</string>
+    <string name="force_stop_dlg_text" msgid="5157374701213502922">"Hvis du slår av et program ved tvang, kan det slutte å fungere. Er du sikker på at du vil fortsette?"</string>
     <string name="move_app_failed_dlg_title" msgid="4337731903265156405">"Flytt program"</string>
     <string name="move_app_failed_dlg_text" msgid="8824246817947643697">"Fikk ikke flyttet programmet. <xliff:g id="REASON">%1$s</xliff:g>"</string>
     <string name="app_install_location_title" msgid="2068975150026852168">"Foretrukket installeringssted"</string>
     <string name="app_install_location_summary" msgid="879753854530300436">"Endre foretrukket plassering for installasjon av nye programmer."</string>
+    <string name="storageuse_settings_title" msgid="5657014373502630403">"Bruk av lagringsplass"</string>
+    <string name="storageuse_settings_summary" msgid="2556057379120846792">"Vis lagringsplass for programmer"</string>
     <string name="runningservices_settings_title" msgid="8097287939865165213">"Kjørende tjenester"</string>
     <string name="runningservices_settings_summary" msgid="854608995821032748">"Vis og kontroller tjenester som kjører for øyeblikket"</string>
     <string name="service_restarting" msgid="2242747937372354306">"Starter på nytt"</string>
-    <string name="no_running_services" msgid="6981216347270280598">"Ingen kjørende tjenester"</string>
-    <string name="confirm_stop_service" msgid="5700448757318301681">"Stoppe tjenesten?"</string>
-    <string name="confirm_stop_service_msg" msgid="1166661293369421272">"Tjenesten kjører ikke før den startes på nytt. Dette kan føre til uønskede konsekvenser for <xliff:g id="APPLICATION">%1$s</xliff:g>."</string>
-    <string name="confirm_stop_stop" msgid="7382363913280993331">"Stopp"</string>
-    <string name="confirm_stop_cancel" msgid="206495326622692381">"Avbryt"</string>
-    <string name="service_started_by_app" msgid="8432097226392386802">"Startet av applikasjon: trykk for å stoppe"</string>
-    <string name="service_client_name" msgid="2337664610975074717">"<xliff:g id="CLIENT_NAME">%1$s</xliff:g>: trykk for å endre"</string>
-    <string name="service_background_processes" msgid="5158600475629177758">"Tilgj.:<xliff:g id="FREE">%2$s</xliff:g> + <xliff:g id="MEMORY">%3$s</xliff:g> i <xliff:g id="COUNT">%1$d</xliff:g>"</string>
-    <string name="service_foreground_processes" msgid="4013890350284680796">"Andre: <xliff:g id="MEMORY">%2$s</xliff:g> (<xliff:g id="COUNT">%1$d</xliff:g> pros.)"</string>
-    <string name="service_process_name" msgid="8630408984456958400">"Prosess: <xliff:g id="PROCESS">%1$s</xliff:g>"</string>
+    <string name="cached" msgid="1059590879740175019">"Bufret bakgrunnsprosess"</string>
+    <string name="no_running_services" msgid="2059536495597645347">"Ingenting kjører."</string>
+    <string name="service_started_by_app" msgid="6575184738671598131">"Startet av program."</string>
+    <!-- no translation found for service_client_name (4037193625611815517) -->
+    <skip />
+    <string name="service_background_processes" msgid="6844156253576174488">"<xliff:g id="MEMORY">%1$s</xliff:g> grts."</string>
+    <string name="service_foreground_processes" msgid="7583975676795574276">"<xliff:g id="MEMORY">%1$s</xliff:g> brukt"</string>
+    <string name="memory" msgid="6609961111091483458">"RAM"</string>
+    <!-- no translation found for service_process_name (4098932168654826656) -->
+    <skip />
+    <string name="running_processes_item_description_s_s" msgid="5790575965282023145">"<xliff:g id="NUMPROCESS">%1$d</xliff:g> prosess og <xliff:g id="NUMSERVICES">%2$d</xliff:g> tjeneste"</string>
+    <string name="running_processes_item_description_s_p" msgid="8019860457123222953">"<xliff:g id="NUMPROCESS">%1$d</xliff:g> prosesser og <xliff:g id="NUMSERVICES">%2$d</xliff:g> tjenester"</string>
+    <string name="running_processes_item_description_p_s" msgid="744424668287252915">"<xliff:g id="NUMPROCESS">%1$d</xliff:g> prosesser og <xliff:g id="NUMSERVICES">%2$d</xliff:g> tjeneste"</string>
+    <string name="running_processes_item_description_p_p" msgid="1607384595790852782">"<xliff:g id="NUMPROCESS">%1$d</xliff:g><xliff:g id="NUMSERVICES">%2$d</xliff:g> prosesser og tjenester"</string>
+    <string name="runningservicedetails_settings_title" msgid="6188692418986988288">"Programmet som kjører"</string>
+    <string name="no_services" msgid="7133900764462288263">"Ikke aktiv"</string>
+    <string name="runningservicedetails_services_title" msgid="391168243725357375">"Tjenester"</string>
+    <string name="runningservicedetails_processes_title" msgid="928115582044655268">"Prosesser"</string>
+    <string name="service_stop" msgid="6369807553277527248">"Stopp"</string>
+    <string name="service_manage" msgid="1876642087421959194">"Innstillinger"</string>
+    <string name="service_stop_description" msgid="3261798282116866961">"Denne tjenesten ble startet av det tilhørende programmet. Hvis du stopper tjenesten, er det ikke sikkert programmet fungerer slik det skal."</string>
+    <string name="heavy_weight_stop_description" msgid="6855241582643136019">"Dette programmet kan ikke stoppes på en trygg måte. Noe av arbeidet ditt kan gå tapt."</string>
+    <string name="background_process_stop_description" msgid="1728354083304746737">"Denne er en gammel programprosess som beholdes for økt hastighet ved behov. Du trenger ikke stoppe den."</string>
+    <string name="service_manage_description" msgid="7050092269951613102">"<xliff:g id="CLIENT_NAME">%1$s</xliff:g>: for øyeblikket i bruk. Berør Innstillinger for å endre."</string>
+    <string name="main_running_process_description" msgid="929204645380391397">"Hovedprosess som er i bruk."</string>
+    <string name="process_service_in_use_description" msgid="8993335064403217080">"Tjenesten <xliff:g id="COMP_NAME">%1$s</xliff:g> er i bruk."</string>
+    <string name="process_provider_in_use_description" msgid="5586603325677678940">"Leverandøren <xliff:g id="COMP_NAME">%1$s</xliff:g> er i bruk."</string>
+    <string name="runningservicedetails_stop_dlg_title" msgid="4253292537154337233">"Vil du stoppe systemtjenesten?"</string>
+    <string name="runningservicedetails_stop_dlg_text" msgid="6929716497425738387">"Er du sikker på at du vil stoppe denne systemtjenesten? I så fall kan det hende at enkelte funksjoner på telefonen kan slutte å fungere slik de skal, inntil du slår telefonen av og på igjen."</string>
     <string name="language_settings" msgid="502219872342167227">"Språk og tastatur"</string>
     <string name="language_keyboard_settings_title" msgid="3455826933385341107">"Språk og tastatur"</string>
-    <string name="language_settings_summary" msgid="595647729475399987">"Innstillinger for språk, region, skriving av tekst og feilretting"</string>
-    <string name="language_category" msgid="3391756582724541530">"Innstillinger for språk"</string>
-    <string name="text_category" msgid="6342540511465136739">"Tekstinnstillinger"</string>
+    <string name="language_settings_category" msgid="2288258489940617043">"Språkinnstillinger"</string>
+    <string name="keyboard_settings_category" msgid="7060453865544070642">"Tastaturinnstillinger"</string>
     <string name="phone_language" msgid="1165758957501090679">"Velg språk"</string>
     <string name="phone_language_summary" msgid="3871309445655554211"></string>
     <string name="auto_replace" msgid="6199184757891937822">"Automatisk erstatting"</string>
@@ -782,7 +852,6 @@
     <string name="testing" msgid="6584352735303604146">"Testing"</string>
     <string name="testing_phone_info" msgid="8656693364332840056">"Telefoninformasjon"</string>
     <string name="testing_battery_info" msgid="3497865525976497848">"Batteriinformasjon"</string>
-    <string name="testing_battery_history" msgid="3043329445810695647">"Batterihistorikk"</string>
     <string name="quick_launch_title" msgid="7904609846945905306">"Hurtigtaster"</string>
     <string name="quick_launch_summary" msgid="3453825712466417452">"Tastatursnarveier for å starte applikasjoner"</string>
     <string name="quick_launch_assign_application" msgid="4521368464929956350">"Tilordne applikasjon"</string>
@@ -798,8 +867,8 @@
     <string name="input_methods_settings_summary" msgid="7571173442946675205">"Innstillinger for skriving av tekst"</string>
     <string name="input_methods_settings_label_format" msgid="6002887604815693322">"Innstillinger for <xliff:g id="IME_NAME">%1$s</xliff:g>"</string>
     <string name="onscreen_keyboard_settings_summary" msgid="5841558383556238653">"Innstillinger for skjermtastatur"</string>
-    <string name="builtin_keyboard_settings_title" msgid="8169889453770863227">"Fysisk tastatur"</string>
-    <string name="builtin_keyboard_settings_summary" msgid="6404687907454621637">"Innstillinger for innebygget tastatur"</string>
+    <string name="builtin_keyboard_settings_title" msgid="5274990495405941804">"Innebygd tastatur"</string>
+    <string name="builtin_keyboard_settings_summary" msgid="7990296351888096836">"Innstillinger for innebygd tastatur"</string>
     <string name="development_settings_title" msgid="6719732334835420989">"Utvikling"</string>
     <string name="development_settings_summary" msgid="2151320488701538355">"Innstillinger for applikasjonsutvikling"</string>
     <string name="enable_adb" msgid="7982306934419797485">"USB-debugging"</string>
@@ -812,36 +881,10 @@
     <string name="adb_warning_message" msgid="5352555112049663033">"USB-debugging er kun ment for utviklere. Det kan brukes for å kopiere data mellom datamaskinen og telefonen, installere applikasjoner på telefonen i det stille, og lese loggdata."</string>
     <string name="gadget_picker_title" msgid="98374951396755811">"Velg gadget"</string>
     <string name="widget_picker_title" msgid="9130684134213467557">"Velg skrivebordselement"</string>
-    <string name="battery_history_details_for" msgid="5924639922153109669">"Detaljer for UID <xliff:g id="NUMBER">%d</xliff:g>"</string>
-    <string name="battery_history_uid" msgid="1016606150528436298">"UID <xliff:g id="USER_ID">%1$d</xliff:g>"</string>
-    <string name="battery_history_network_usage" msgid="8010852371665217020">"Nettbruk av <xliff:g id="APP_NAME">%1$s</xliff:g>:"</string>
-    <string name="battery_history_bytes_received" msgid="980307569180518302">"Byte mottatt: <xliff:g id="BYTES">%1$d</xliff:g>"</string>
-    <string name="battery_history_bytes_sent" msgid="2501748768602119159">"Byte sendt: <xliff:g id="BYTES">%1$d</xliff:g>"</string>
-    <string name="battery_history_bytes_total" msgid="4444807574361642753">"Totalt antall byte: <xliff:g id="BYTES">%1$d</xliff:g>"</string>
-    <string name="battery_history_cpu_usage" msgid="2597353713014790877">"CPU-bruk av <xliff:g id="APP_NAME">%1$s</xliff:g>:"</string>
-    <string name="battery_history_user_time" msgid="6227507614894791359">"Brukertid:"</string>
-    <string name="battery_history_system_time" msgid="2015862072724507547">"Systemtid:"</string>
-    <string name="battery_history_total_time" msgid="3618703970098556104">"Total tid:"</string>
-    <string name="battery_history_starts" msgid="9137453931978571696">"Oppstarter: <xliff:g id="STARTS">%1$d</xliff:g>"</string>
     <string name="battery_history_days" msgid="7110262897769622564">"<xliff:g id="DAYS">%1$d</xliff:g>d <xliff:g id="HOURS">%2$d</xliff:g>t <xliff:g id="MINUTES">%3$d</xliff:g>m <xliff:g id="SECONDS">%4$d</xliff:g>s"</string>
     <string name="battery_history_hours" msgid="7525170329826274999">"<xliff:g id="HOURS">%1$d</xliff:g>t <xliff:g id="MINUTES">%2$d</xliff:g>m <xliff:g id="SECONDS">%3$d</xliff:g>s"</string>
     <string name="battery_history_minutes" msgid="1467775596084148610">"<xliff:g id="MINUTES">%1$d</xliff:g>m <xliff:g id="SECONDS">%2$d</xliff:g>s"</string>
     <string name="battery_history_seconds" msgid="4283492130945761685">"<xliff:g id="SECONDS">%1$d</xliff:g>s"</string>
-    <string name="battery_history_packages_sharing_this_uid" msgid="4101596071379250050">"Pakker som deler denne UID-en:"</string>
-    <string name="battery_history_no_data" msgid="1177238743237067617">"Ingen batterihistorikk tilgjengelig"</string>
-    <string name="battery_history_sensor" msgid="2333488996028993982">"Sensor:"</string>
-    <string name="battery_history_wakelock" msgid="608683447522396293">"Delvis våkelås:"</string>
-    <string name="battery_history_used_by_packages" msgid="3000711380023436470">"Sensor brukt av pakker:"</string>
-    <string name="battery_history_sensor_usage" msgid="3593133338613209024">"Brukt <xliff:g id="COUNT">%1$d</xliff:g> ganger av <xliff:g id="PACKAGE">%2$s</xliff:g>"</string>
-    <string name="battery_history_sensor_usage_multi" msgid="4536084375991014508">"Brukt <xliff:g id="COUNT">%1$d</xliff:g> ganger av en av:"</string>
-    <string name="battery_history_awake_label" msgid="8449792868990080882">"Kjørende"</string>
-    <string name="battery_history_screen_on_label" msgid="1848936521786339362">"Skjerm på"</string>
-    <string name="battery_history_phone_on_label" msgid="700191958853142297">"Telefon på"</string>
-    <string name="battery_history_awake" msgid="4350886665719031057">"Tid brukt uten å sove:"</string>
-    <string name="battery_history_screen_on" msgid="1377240025275657277">"Tid brukt med skjermen på:"</string>
-    <string name="battery_history_phone_on" msgid="4891504401623839532">"Tid brukt med telefonen på:"</string>
-    <string name="battery_history_screen_on_battery" msgid="536058210445081888">"På batteri:"</string>
-    <string name="battery_history_screen_on_plugged" msgid="5019127390021871260">"På nettstrøm:"</string>
     <string name="usage_stats_label" msgid="5890846333487083609">"Bruksstatistikk"</string>
     <string name="testing_usage_stats" msgid="7823048598893937339">"Bruksstatistikk"</string>
     <string name="display_order_text" msgid="8592776965827565271">"Sorter etter:"</string>
@@ -859,18 +902,25 @@
     <string name="accessibility_service_no_apps_title" msgid="898893674114288531">"Finner ingen tilgjengelighetsprogrammer"</string>
     <string name="accessibility_service_no_apps_message" msgid="2450056749545404807">"Du har ikke installert et tilgjengelighetsprogram."\n\n"Du kan laste ned en skjermleser for enheten på Android-markedet."\n\n"Klikk på OK for å installere skjermleseren."</string>
     <string name="accessibility_power_button_category" msgid="8545885236482339928">"På/av-knapp"</string>
-    <string name="accessibility_power_button_ends_call" msgid="7698764194501089533">"Avslutt samtale med på/av-knappen"</string>
+    <string name="accessibility_power_button_ends_call" msgid="7698764194501089533">"Legg på med på/av"</string>
     <string name="accessibility_power_button_ends_call_summary" msgid="8878097632186291462">"Ved å trykke på av-knappen under en samtale, avsluttes samtalen i stedet for at skjermen slås av"</string>
     <string name="power_usage_summary_title" msgid="5180282911164282324">"Batteribruk"</string>
     <string name="power_usage_summary" msgid="7237084831082848168">"Hva som har brukt batteri"</string>
     <string name="battery_since_unplugged" msgid="338073389740738437">"Batteribruk siden strømmen ble trukket ut"</string>
     <string name="battery_since_reset" msgid="7464546661121187045">"Batteribruk siden omstart"</string>
+    <string name="battery_stats_on_battery" msgid="4970762168505236033">"<xliff:g id="TIME">%1$s</xliff:g> på batteri"</string>
     <string name="battery_stats_duration" msgid="7464501326709469282">"<xliff:g id="TIME">%1$s</xliff:g> siden strømmen ble frakoblet"</string>
+    <string name="battery_stats_charging_label" msgid="4223311142875178785">"Lader"</string>
+    <string name="battery_stats_screen_on_label" msgid="7150221809877509708">"Skjerm på"</string>
+    <string name="battery_stats_gps_on_label" msgid="1193657533641951256">"GPS på"</string>
+    <string name="battery_stats_wifi_running_label" msgid="3093545080361658269">"Wi-Fi"</string>
+    <string name="battery_stats_wake_lock_label" msgid="1908942681902324095">"Aktiv"</string>
+    <string name="battery_stats_phone_signal_label" msgid="6822042940376636775">"Telefonsignal"</string>
     <!-- no translation found for battery_stats_last_duration (1535831453827905957) -->
     <skip />
     <string name="awake" msgid="387122265874485088">"Tid enheten har vært våken"</string>
-    <string name="wifi_on_time" msgid="4630925382578609056">"Tid trådløsnettet har vært aktivt"</string>
-    <string name="bluetooth_on_time" msgid="4478515071957280711">"Tid Bluetooth har vært aktivt"</string>
+    <string name="wifi_on_time" msgid="6310209835617490616">"Wi-Fi on time"</string>
+    <string name="bluetooth_on_time" msgid="6157799524996162271">"Wi-Fi on time"</string>
     <string name="usage_name_percent" msgid="7976919382448235858">"<xliff:g id="NAME">%1$s</xliff:g> – <xliff:g id="NUMBER">%2$s</xliff:g><xliff:g id="PERCENT">%%</xliff:g>"</string>
     <string name="details_title" msgid="7564809986329021063">"Detaljert batteribrukinformasjon"</string>
     <string name="details_subtitle" msgid="32593908269911734">"Bruksdetaljer"</string>
@@ -884,7 +934,9 @@
     <string name="power_idle" msgid="9055659695602194990">"Telefonen ikke i bruk"</string>
     <string name="usage_type_cpu" msgid="715162150698338714">"Prosessor totalt"</string>
     <string name="usage_type_cpu_foreground" msgid="6500579611933211831">"Prosessor i forgrunnen"</string>
+    <string name="usage_type_wake_lock" msgid="5125438890233677880">"Behold aktiv"</string>
     <string name="usage_type_gps" msgid="7989688715128160790">"GPS"</string>
+    <string name="usage_type_wifi_running" msgid="8234997940652067049">"WiFi kjører"</string>
     <string name="usage_type_phone" msgid="9108247984998041853">"Telefon"</string>
     <string name="usage_type_data_send" msgid="2857401966985425427">"Data sendt"</string>
     <string name="usage_type_data_recv" msgid="7251090882025234185">"Data mottatt"</string>
@@ -896,7 +948,7 @@
     <string name="battery_action_app_details" msgid="3275013531871113681">"Info om applikasjon"</string>
     <string name="battery_action_app_settings" msgid="350562653472577250">"Innstillinger for applikasjon"</string>
     <string name="battery_action_display" msgid="5302763261448580102">"Innstillinger for skjerm"</string>
-    <string name="battery_action_wifi" msgid="5452076674659927993">"Innstillinger for trådløsnett"</string>
+    <string name="battery_action_wifi" msgid="2272741639606146903">"Innstillinger for Wi-Fi"</string>
     <string name="battery_action_bluetooth" msgid="8374789049507723142">"Innstillinger for Bluetooth"</string>
     <string name="battery_desc_voice" msgid="8980322055722959211">"Batteri brukt av telefonsamtaler"</string>
     <string name="battery_desc_standby" msgid="3009080001948091424">"Batteri brukt når telefonen ikke er i bruk"</string>
@@ -909,9 +961,9 @@
     <string name="battery_desc_bluetooth" msgid="7535520658674621902">"Batteri brukt av Bluetooth"</string>
     <string name="battery_sugg_bluetooth_basic" msgid="817276933922157788">"Slå av Bluetooth når det ikke er i bruk"</string>
     <string name="battery_sugg_bluetooth_headset" msgid="8214816222115517479">"Prøv å koble til en annen Bluetooth-enhet"</string>
-    <string name="battery_desc_apps" msgid="8123202939321333639">"Batteri brukt av applikasjoner som ikke kjøres"</string>
+    <string name="battery_desc_apps" msgid="6665712811746233450">"Batteri brukt av program"</string>
     <string name="battery_sugg_apps_info" msgid="6065882899391322442">"Stopp eller avinstaller applikasjonen"</string>
-    <string name="battery_sugg_apps_gps" msgid="4145005297393800223">"Skru av GPS når den ikke er i bruk"</string>
+    <string name="battery_sugg_apps_gps" msgid="4545056413090932541">"Kontroller GPS manuelt, for å forhindre at programmer bruker funksjonen"</string>
     <string name="battery_sugg_apps_settings" msgid="8021302847272481168">"Applikasjonen har muligens innstillinger som kan redusere batteribruken"</string>
     <string name="menu_stats_unplugged" msgid="8296577130840261624">"<xliff:g id="UNPLUGGED">%1$s</xliff:g> siden strømmen ble frakoblet"</string>
     <string name="menu_stats_last_unplugged" msgid="5922246077592434526">"Siste gang uten strøm i <xliff:g id="UNPLUGGED">%1$s</xliff:g>"</string>
@@ -919,7 +971,7 @@
     <string name="menu_stats_refresh" msgid="1676215433344981075">"Oppdater"</string>
     <string name="process_kernel_label" msgid="3916858646836739323">"Android-operativsystem"</string>
     <string name="process_mediaserver_label" msgid="6500382062945689285">"Medietjener"</string>
-    <string name="voice_input_output_settings" msgid="1336135218350444783">"Talekommando og -styring"</string>
+    <string name="voice_input_output_settings" msgid="1336135218350444783">"Tale (inn/ut)"</string>
     <string name="voice_input_output_settings_title" msgid="2442850635048676991">"Innstillinger for talekommando og -styring"</string>
     <string name="voice_search_settings_title" msgid="2775469246913196536">"Talesøk"</string>
     <string name="keyboard_settings_title" msgid="5080115226780201234">"Android-tastatur"</string>
@@ -961,6 +1013,8 @@
     <string name="pico_not_installed" msgid="6266845418419994311">"Ikke installert"</string>
     <string name="pico_voice_summary_female" msgid="8047327176247727492">"Kvinne"</string>
     <string name="pico_voice_summary_male" msgid="8331266854058577610">"Mann"</string>
+    <string name="tts_notif_engine_install_title" msgid="7000346872482649034">"Talesyntesemotor installert"</string>
+    <string name="tts_notif_engine_install_message" msgid="5304661142202662693">"Aktiver ny motor før bruk"</string>
     <string name="gadget_title" msgid="7455548605888590466">"Strømkontroll"</string>
     <string name="gadget_toggle_wifi" msgid="2382963973155082629">"Oppdaterer innstilling for Wi-Fi"</string>
     <string name="gadget_toggle_bluetooth" msgid="7538903239807020826">"Oppdatere Bluetooth-innstilling"</string>
@@ -1047,8 +1101,10 @@
     <string name="credentials_access_summary" msgid="319662078718574168">"Gir applikasjoner tilgang til sikre sertifikater og andre akkreditiver"</string>
     <string name="credentials_unlock" msgid="1463040326264133844">"Velg passord"</string>
     <string name="credentials_unlock_hint" msgid="594679530407918031">"Skriv inn passordet for akkreditivlageret"</string>
-    <string name="credentials_install_certificates" msgid="177337517568022236">"Installer fra minnekort"</string>
-    <string name="credentials_install_certificates_summary" msgid="7737001268684193093">"Installer krypterte sertifikater fra minnekort"</string>
+    <string name="credentials_install_certificates" product="nosdcard" msgid="619171634797689906">"Installer fra USB-lagr."</string>
+    <string name="credentials_install_certificates" product="default" msgid="177337517568022236">"Installer fra minnekort"</string>
+    <string name="credentials_install_certificates_summary" product="nosdcard" msgid="8920330112631198575">"Inst. sert. fra USB-lagr."</string>
+    <string name="credentials_install_certificates_summary" product="default" msgid="7737001268684193093">"Installer krypterte sertifikater fra minnekort"</string>
     <string name="credentials_set_password" msgid="9104473585811899989">"Velg passord"</string>
     <string name="credentials_set_password_summary" msgid="8287876917562085701">"Velg eller endre passord for akkreditivlageret"</string>
     <string name="credentials_reset" msgid="9170150870552453457">"Tøm lager"</string>
@@ -1068,18 +1124,28 @@
     <string name="credentials_erased" msgid="7700309135582200849">"Akkreditivlageret ble tømt."</string>
     <string name="credentials_enabled" msgid="7588607413349978930">"Akkreditivlageret er aktivert."</string>
     <string name="credentials_disabled" msgid="7453188089059045380">"Akkreditivlageret er deaktivert."</string>
+    <string name="encrypted_fs_category" msgid="1841367653663913956">"Kryptert filsystem"</string>
+    <string name="encrypted_fs_enable" msgid="3884033081603327729">"Krypter private brukerdata"</string>
+    <string name="encrypted_fs_enable_summary" msgid="5635188119509076089">"Aktiver lagring av krypterte filer for private brukerdata på denne enheten"</string>
+    <string name="encrypted_fs_enable_dialog" msgid="919487211207214266">"Aktivering av krypterte filsystemer krever en fullstendig datarensing."</string>
+    <string name="encrypted_fs_disable_dialog" msgid="6960413613985682501">"Deaktivering av krypterte filsystemer krever en fullstendig datarensing."</string>
+    <string name="encrypted_fs_enable_button" msgid="8453841319751433751">"Aktiver"</string>
+    <string name="encrypted_fs_disable_button" msgid="8468354944060220496">"Deaktiver"</string>
+    <string name="encrypted_fs_cancel_button" msgid="4785921255266305799">"Avbryt"</string>
+    <string name="encrypted_fs_cancel_confirm" msgid="853572431153803557">"Endring av modus for kryptert filsystem er avbrutt."</string>
+    <string name="encrypted_fs_alert_dialog_title" msgid="583462447886934755">"Advarsel om kryptert filsystem."</string>
     <string name="emergency_tone_title" msgid="1055954530111587114">"Nødtone"</string>
     <string name="emergency_tone_summary" msgid="722259232924572153">"Velg oppførsel når en nødsamtale opprettes"</string>
     <string name="privacy_settings" msgid="9206631214140954954">"Personvern"</string>
     <string name="privacy_settings_title" msgid="1987089301293213705">"Personverninnstillinger"</string>
     <string name="backup_section_title" msgid="8856083167469467588">"Sikkerhetskopiering og gjenoppretting"</string>
     <string name="personal_data_section_title" msgid="7815209034443782061">"Personlige data"</string>
-    <string name="backup_data_title" msgid="1239105919852668016">"Sikkerhetskopier dataene"</string>
-    <string name="backup_data_summary" msgid="5662190190240860035">"Sikkerhetskopier innstillingene og andre programdata."</string>
+    <string name="backup_data_title" msgid="1239105919852668016">"Sikkerhetskopier data"</string>
+    <string name="backup_data_summary" msgid="6515285107793232815">"Sikkerhetskopier programdata, Wi-Fi-passord og andre innstillinger til Googles tjenere"</string>
     <string name="auto_restore_title" msgid="5397528966329126506">"Auto-gjenoppretting"</string>
-    <string name="auto_restore_summary" msgid="6867766474057290177">"Gjenopprett sikkerhetskopierte innstillinger og andre data hvis jeg installerer et program på nytt."</string>
+    <string name="auto_restore_summary" msgid="83177150536734378">"Gjenopprett sikkerhetskopierte innstillinger og andre data hvis jeg installerer et program på nytt"</string>
     <string name="backup_erase_dialog_title" msgid="3438255037256586237">"Sikkerhetskopi"</string>
-    <string name="backup_erase_dialog_message" msgid="2948090854996352245">"Er du sikker på at du ønsker å slutte med backup av innstillinger og programdata og fjerne alle kopier på Googles tjenere?"</string>
+    <string name="backup_erase_dialog_message" msgid="7766283133557587608">"Er du sikker på at du ønsker å avslutte sikkerhetskopiering av Wi-Fi-passord, bokmerker og andre innstillinger og programdata og slette alle kopier på Googles tjenere?"</string>
     <string name="device_admin_settings_title" msgid="1335557832906433309">"Innstillinger for enhetsadministrasjon"</string>
     <string name="active_device_admin_msg" msgid="6930903262612422111">"Enhetsadministrator"</string>
     <string name="remove_device_admin" msgid="3596845261596451437">"Deaktiver"</string>

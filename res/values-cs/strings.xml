@@ -45,13 +45,16 @@
     <string name="radioInfo_display_asu" msgid="1422248392727818082">"asu"</string>
     <string name="radioInfo_lac" msgid="8415219164758307156">"LAC"</string>
     <string name="radioInfo_cid" msgid="4362599198392643138">"CID"</string>
-    <string name="sdcard_unmount" msgid="3364184561355611897">"Odpojit kartu SD"</string>
-    <string name="sdcard_format" msgid="362497552060004057">"Formátovat kartu SD"</string>
+    <string name="sdcard_unmount" product="nosdcard" msgid="6325292633327972272">"Odpojit úložiště USB"</string>
+    <string name="sdcard_unmount" product="default" msgid="3364184561355611897">"Odpojit kartu SD"</string>
+    <string name="sdcard_format" product="nosdcard" msgid="6285310523155166716">"Smazat úložiště USB"</string>
+    <string name="sdcard_format" product="default" msgid="6713185532039187532">"Smazat kartu SD"</string>
     <string name="small_font" msgid="2295331917424072635">"Malá"</string>
     <string name="medium_font" msgid="2068475425515133701">"Střední"</string>
     <string name="large_font" msgid="599055175160971446">"Velká"</string>
     <string name="font_size_save" msgid="3450855718056759095">"OK"</string>
-    <string name="sdcard_setting" msgid="5922637503871474866">"Karta SD"</string>
+    <string name="sdcard_setting" product="nosdcard" msgid="8281011784066476192">"Úložiště USB"</string>
+    <string name="sdcard_setting" product="default" msgid="5922637503871474866">"Karta SD"</string>
     <string name="battery_info_status_label" msgid="8109155295509700309">"Stav baterie:"</string>
     <string name="battery_info_power_label" msgid="7465140230991349382">"Napájecí konektor:"</string>
     <string name="battery_info_scale_label" msgid="3649763192389778437">"Měřítko baterie:"</string>
@@ -180,27 +183,34 @@
     <string name="sdcard_changes_instructions" msgid="1364712901180556244">"Změna se projeví při příštím připojení kabelu USB."</string>
     <string name="sdcard_settings_screen_mass_storage_text" msgid="3741220147296482474">"Povolit velkokapacitní paměťové zařízení USB"</string>
     <string name="sdcard_settings_total_bytes_label" msgid="9184160745785062144">"Celková paměť (bajty):"</string>
-    <string name="sdcard_settings_not_present_status" msgid="6666688653496819947">"Žádná karta SD"</string>
+    <string name="sdcard_settings_not_present_status" product="nosdcard" msgid="2902787003418172125">"Úložiště USB není připojeno"</string>
+    <string name="sdcard_settings_not_present_status" product="default" msgid="6666688653496819947">"Žádná karta SD"</string>
     <string name="sdcard_settings_available_bytes_label" msgid="763232429899373001">"Dostupná paměť (bajty):"</string>
-    <string name="sdcard_settings_mass_storage_status" msgid="4786433969313661655">"Karta SD je využívána jako velkokapacitní paměťové zařízení."</string>
-    <string name="sdcard_settings_unmounted_status" msgid="3812022095683863087">"Nyní můžete kartu SD bezpečně odebrat."</string>
-    <string name="sdcard_settings_bad_removal_status" msgid="5145797653495907970">"Karta SD byla odstraněna za provozu."</string>
+    <string name="sdcard_settings_mass_storage_status" product="nosdcard" msgid="2736378870889777857">"Úložiště USB využíváno jako velkokapacitní paměťové zařízení"</string>
+    <string name="sdcard_settings_mass_storage_status" product="default" msgid="4786433969313661655">"Karta SD je využívána jako velkokapacitní paměťové zařízení."</string>
+    <string name="sdcard_settings_unmounted_status" product="nosdcard" msgid="7503300818792750913">"Úložiště USB lze nyní odebrat"</string>
+    <string name="sdcard_settings_unmounted_status" product="default" msgid="3812022095683863087">"Nyní můžete kartu SD bezpečně odebrat."</string>
+    <string name="sdcard_settings_bad_removal_status" product="nosdcard" msgid="7761390725880773697">"Úlož. USB odebráno za provozu."</string>
+    <string name="sdcard_settings_bad_removal_status" product="default" msgid="5145797653495907970">"Karta SD byla odstraněna za provozu."</string>
     <string name="sdcard_settings_used_bytes_label" msgid="8820289486001170836">"Obsazená paměť (bajty):"</string>
-    <string name="sdcard_settings_scanning_status" msgid="2763464949274455656">"Vyhledávání mediálních souborů na kartě SD..."</string>
-    <string name="sdcard_settings_read_only_status" msgid="5706115860484118911">"Karta SD byla připojena pouze pro čtení."</string>
+    <string name="sdcard_settings_scanning_status" product="nosdcard" msgid="7503429447676219564">"Hledání médií v úložišti USB…"</string>
+    <string name="sdcard_settings_scanning_status" product="default" msgid="2763464949274455656">"Vyhledávání mediálních souborů na kartě SD..."</string>
+    <string name="sdcard_settings_read_only_status" product="nosdcard" msgid="3771783090621312312">"Úlož. připojeno jen pro čtení"</string>
+    <string name="sdcard_settings_read_only_status" product="default" msgid="5706115860484118911">"Karta SD byla připojena pouze pro čtení."</string>
     <string name="next_label" msgid="4693520878012668114">"Další"</string>
     <string name="language_picker_title" msgid="4034157617842965844">"Národní prostředí"</string>
     <string name="select_your_language" msgid="1146235168951906084">"Zvolte jazyk"</string>
     <string name="activity_picker_label" msgid="4910700713930693329">"Zvolit činnost"</string>
     <string name="device_info_label" msgid="6551553813651711205">"Info o zařízení"</string>
     <string name="battery_info_label" msgid="4132685016148679403">"Info o baterii"</string>
-    <string name="battery_history_label" msgid="8242244969757414501">"Historie baterie"</string>
     <string name="display_label" msgid="7403874003169865762">"Zobrazení"</string>
     <string name="phone_info_label" msgid="2127552523124277664">"Info o telefonu"</string>
-    <string name="sd_card_settings_label" msgid="5743100901106177102">"Karta SD"</string>
+    <string name="sd_card_settings_label" product="nosdcard" msgid="8101475181301178428">"Úložiště USB"</string>
+    <string name="sd_card_settings_label" product="default" msgid="5743100901106177102">"Karta SD"</string>
     <string name="proxy_settings_label" msgid="3271174136184391743">"Nastavení proxy serveru"</string>
     <string name="cancel" msgid="6859253417269739139">"Zrušit"</string>
     <string name="settings_label" msgid="1626402585530130914">"Nastavení"</string>
+    <string name="settings_label_launcher" msgid="8344735489639482340">"Nastavení"</string>
     <string name="settings_shortcut" msgid="3672145147925639262">"Nastavení"</string>
     <string name="airplane_mode" msgid="8837269988154128601">"Režim V letadle"</string>
     <string name="airplane_mode_summary" msgid="3154817401368780988">"Vypne všechna bezdrátová připojení"</string>
@@ -323,6 +333,11 @@
     <string name="bluetooth_dock_settings_headset" msgid="1001821426078644650">"Jako telefon pro hlasitý poslech"</string>
     <string name="bluetooth_dock_settings_a2dp" msgid="8791004998846630574">"Pro hudbu a média"</string>
     <string name="bluetooth_dock_settings_remember" msgid="5551459057010609115">"Zapamatovat nastavení"</string>
+    <string name="nfc_quick_toggle_title" msgid="6769159366307299004">"NFC"</string>
+    <string name="nfc_quick_toggle_summary" msgid="1988408027741447231">"Použít technologii NFC ke čtení a výměně štítků"</string>
+    <!-- no translation found for nfc_toggle_error (2233172102497535522) -->
+    <!-- no translation found for nfc_toggle_error (8998642457947607263) -->
+    <skip />
     <string name="wifi_quick_toggle_title" msgid="874495178395350104">"WiFi"</string>
     <string name="wifi_quick_toggle_summary" msgid="1047950931623694366">"Zapnout WiFi"</string>
     <string name="wifi_settings" msgid="4746946030627213196">"Nastavení WiFi"</string>
@@ -376,6 +391,7 @@
     <string name="wifi_setting_sleep_policy_summary" msgid="7573693311804602041">"Určit, kdy přepnout ze sítě Wi-Fi na mobilní datový přenos"</string>
     <string name="wifi_setting_sleep_policy_error" msgid="5103670439972135148">"Při nastavení zásad pro režim spánku došlo k problému."</string>
     <string name="wifi_advanced_mac_address_title" msgid="6571335466330978393">"Adresa MAC"</string>
+    <string name="wifi_advanced_ip_address_title" msgid="6215297094363164846">"Adresa IP"</string>
     <string name="wifi_ip_settings_titlebar" msgid="4345739031248760326">"Nastavení adresy IP"</string>
     <string name="wifi_ip_settings_menu_save" msgid="7296724066102908366">"Uložit"</string>
     <string name="wifi_ip_settings_menu_cancel" msgid="6582567330136502340">"Zrušit"</string>
@@ -496,9 +512,10 @@
     <string name="device_status_activity_title" msgid="1411201799384697904">"Stav"</string>
     <string name="device_status" msgid="607405385799807324">"Stav"</string>
     <string name="device_status_summary" msgid="2599162787451519618">"Telefonní číslo, signál, atd."</string>
-    <string name="storage_settings" msgid="6681164315506788024">"Karta SD a paměť telefonu"</string>
-    <string name="storage_settings_title" msgid="5379463509034022773">"Nastavení karty SD a paměti telefonu"</string>
-    <string name="storage_settings_summary" msgid="9176693537325988610">"Umožňuje odpojit kartu SD a zobrazit dostupnou paměť"</string>
+    <string name="storage_settings" msgid="4211799979832404953">"Úložiště"</string>
+    <string name="storage_settings_title" msgid="8746016738388094064">"Nastavení úložiště"</string>
+    <string name="storage_settings_summary" product="nosdcard" msgid="3543813623294870759">"Odpojit úložiště USB a zobrazit dostupné úložiště"</string>
+    <string name="storage_settings_summary" product="default" msgid="9176693537325988610">"Umožňuje odpojit kartu SD a zobrazit dostupnou paměť"</string>
     <string name="status_number" msgid="5123197324870153205">"Moje telefonní číslo"</string>
     <string name="status_min_number" msgid="3519504522179420597">"MIN"</string>
     <string name="status_prl_version" msgid="8499039751817386529">"Verze PRL"</string>
@@ -514,24 +531,36 @@
     <string name="status_unavailable" msgid="7862009036663793314">"Nedostupný údaj"</string>
     <string name="status_up_time" msgid="7294859476816760399">"Doba provozu"</string>
     <string name="status_awake_time" msgid="2393949909051183652">"Doba provozu"</string>
-    <string name="internal_memory" msgid="1130932766236387454">"Interní paměť telefonu"</string>
-    <string name="sd_memory" msgid="151871913888051515">"Karta SD"</string>
+    <string name="internal_memory" msgid="9129595691484260784">"Interní úložiště"</string>
+    <string name="sd_memory" product="nosdcard" msgid="2510246194083052841">"Úložiště USB"</string>
+    <string name="sd_memory" product="default" msgid="151871913888051515">"Karta SD"</string>
     <string name="memory_available" msgid="418542433817289474">"Dostupná paměť"</string>
     <string name="memory_size" msgid="6629067715017232195">"Celková paměť"</string>
-    <string name="sd_eject" msgid="6915293408836853020">"Odpojit kartu SD"</string>
-    <string name="sd_eject_summary" msgid="3315557796211542962">"Odpojit kartu SD za účelem bezpečného odebrání"</string>
-    <string name="sd_insert_summary" msgid="2048640010381803841">"Vložte kartu SD, kterou chcete připojit."</string>
-    <string name="sd_mount" msgid="5940523765187704135">"Připojit kartu SD"</string>
-    <string name="sd_mount_summary" msgid="4936591681679097699">"Připojit kartu SD"</string>
-    <string name="sd_format" msgid="5448738337382712203">"Formátovat kartu SD"</string>
-    <string name="sd_format_summary" msgid="6616491027883134004">"Formátovat (vymazat) kartu SD"</string>
+    <string name="sd_eject" product="default" msgid="6915293408836853020">"Odpojit kartu SD"</string>
+    <string name="sd_eject_summary" product="nosdcard" msgid="5009296896648072891">"Odpojit interní úložiště USB"</string>
+    <string name="sd_eject_summary" product="default" msgid="3300599435073550246">"K bezpečnému odebrání karty SD je potřeba kartu nejprve odpojit"</string>
+    <string name="sd_insert_summary" product="nosdcard" msgid="5264016886409577313">"Vložte úložiště USB"</string>
+    <string name="sd_insert_summary" product="default" msgid="2048640010381803841">"Vložte kartu SD, kterou chcete připojit."</string>
+    <string name="sd_mount" product="nosdcard" msgid="8966695015677343116">"Připojit úložiště USB"</string>
+    <string name="sd_mount" product="default" msgid="5940523765187704135">"Připojit kartu SD"</string>
+    <!-- outdated translation 6733254203291665551 -->     <string name="sd_mount_summary" product="nosdcard" msgid="1794150364965145726">"Připojit interní úložiště USB"</string>
+    <string name="sd_mount_summary" product="default" msgid="4936591681679097699">"Připojit kartu SD"</string>
+    <string name="sd_format" product="nosdcard" msgid="2148179271623099054">"Smazat úložiště USB"</string>
+    <string name="sd_format" product="default" msgid="2576054280507119870">"Smazat kartu SD"</string>
+    <string name="sd_format_summary" product="nosdcard" msgid="1504606546865152514">"Smaže všechna data v interním úložišti USB telefonu, například hudbu a fotografie"</string>
+    <string name="sd_format_summary" product="default" msgid="915849621390821841">"Smaže všechna data na kartě SD telefonu, například hudbu a fotografie"</string>
     <string name="sd_unavailable" msgid="8580107589533213904">"Nedostupný údaj"</string>
     <string name="read_only" msgid="6702420168629076340">" (Pouze pro čtení)"</string>
-    <string name="dlg_confirm_unmount_title" msgid="8612140627310646730">"Odpojit kartu SD"</string>
-    <string name="dlg_confirm_unmount_text" msgid="5851214273718817727">"Pokud odpojíte kartu SD, dojde k zastavení některých používaných aplikací. Tyto aplikace pravděpodobně nebudou k dispozici až do opětovného připojení karty SD."</string>
-    <string name="dlg_error_unmount_title" msgid="4004106918266783081">"Odpojení karty SD se nezdařilo"</string>
-    <string name="dlg_error_unmount_text" msgid="9188972789897713180">"Kartu SD nelze odpojit. Zkuste to znovu později."</string>
-    <string name="unmount_inform_text" msgid="3213378327712151498">"Karta SD bude odpojena. Stav bude zobrazen v oznamovací oblasti."</string>
+    <string name="dlg_confirm_unmount_title" product="nosdcard" msgid="2349876662428231297">"Odpojit úložiště USB"</string>
+    <string name="dlg_confirm_unmount_title" product="default" msgid="8612140627310646730">"Odpojit kartu SD"</string>
+    <string name="dlg_confirm_unmount_text" product="nosdcard" msgid="3390169455621185223">"Pokud úložiště USB odpojíte, některé používané aplikace přestanou fungovat. Tyto aplikace pravděpodobně nebudou k dispozici, dokud úložiště USB znovu nepřipojíte."</string>
+    <string name="dlg_confirm_unmount_text" product="default" msgid="5851214273718817727">"Pokud odpojíte kartu SD, dojde k zastavení některých používaných aplikací. Tyto aplikace pravděpodobně nebudou k dispozici až do opětovného připojení karty SD."</string>
+    <string name="dlg_error_unmount_title" product="nosdcard" msgid="7695491947411836733">"Odpojení úložiště USB se nezdařilo"</string>
+    <string name="dlg_error_unmount_title" product="default" msgid="4004106918266783081">"Odpojení karty SD se nezdařilo"</string>
+    <string name="dlg_error_unmount_text" product="nosdcard" msgid="1450864147013376592">"Úložiště USB nelze odpojit. Zkuste to znovu později."</string>
+    <string name="dlg_error_unmount_text" product="default" msgid="9188972789897713180">"Kartu SD nelze odpojit. Zkuste to znovu později."</string>
+    <string name="unmount_inform_text" product="nosdcard" msgid="7120241136790744265">"Úložiště USB bude odpojeno."</string>
+    <string name="unmount_inform_text" product="default" msgid="1904212716075458402">"Karta SD bude odpojena."</string>
     <string name="sd_ejecting_title" msgid="8824572198034365468">"Odpojování"</string>
     <string name="sd_ejecting_summary" msgid="2028753069184908491">"Probíhá odpojování"</string>
     <string name="battery_status_title" msgid="9159414319574976203">"Stav baterie"</string>
@@ -571,21 +600,32 @@
     <string name="restore_default_apn_completed" msgid="3990449939234957281">"Obnovení výchozích nastavení názvu AP bylo dokončeno."</string>
     <string name="master_clear_title" msgid="5907939616087039756">"Obnovení továrních dat"</string>
     <string name="master_clear_summary" msgid="4986154238001088492">"Vymaže všechna data v telefonu"</string>
-    <string name="master_clear_desc" msgid="7823268823499739178">"Tento krok vymaže všechna data z vašeho telefonu včetně:"\n<li>"vašeho účtu Google,"</li>\n<li>"dat a nastavení systému a aplikací,"</li>\n<li>"stažených aplikací."</li>\n"Vymazány nebudou:"\n<li>"aktuální software systému a s ním dodané aplikace"</li>\n<li>"soubory na kartě SD, například hudba a fotky."</li></string>
+    <string name="master_clear_desc" product="nosdcard" msgid="2163013814299528247">"Tato akce smaže všechna data z "<b>"interního úložiště"</b>" telefonu, včetně:"\n\n<li>"účtu Google,"</li>\n<li>"dat a nastavení systému a aplikací,"</li>\n<li>"stažených aplikací."</li>\n\n"Chcete-li smazat všechna data v tomto telefonu, je potřeba smazat"<b>"úložiště USB"</b>"."\n\n</string>
+    <string name="master_clear_desc" product="default" msgid="1741944496458365969">"Tato akce smaže všechna data z "<b>"interního úložiště"</b>" telefonu, včetně:"\n\n<li>"účtu Google,"</li>\n<li>"dat a nastavení aplikací a systému,"</li>\n<li>"stažených aplikací."</li>\n\n"Chcete-li smazat také hudbu, obrázky a další uživatelská data, je potřeba smazat"<b>"kartu SD"</b>\n\n</string>
+    <string name="erase_external_storage" product="nosdcard" msgid="969364037450286809">"Smazat úložiště USB"</string>
+    <string name="erase_external_storage" product="default" msgid="1397239046334307625">"Smazat kartu SD"</string>
+    <string name="erase_external_storage_description" product="nosdcard" msgid="1657838142707381027">"Smazat všechna data v interním úložišti USB telefonu, například hudbu a fotografie."</string>
+    <string name="erase_external_storage_description" product="default" msgid="8100175974635894073">"Smazat všechna data na kartě SD telefonu, například hudbu a fotografie."</string>
     <string name="master_clear_button_text" msgid="7550632653343157971">"Resetovat telefon"</string>
     <string name="master_clear_final_desc" msgid="6917971132484622696">"Chcete smazat všechny osobní informace a stažené aplikace? Tuto akci nelze vrátit zpět."</string>
     <string name="master_clear_final_button_text" msgid="5390908019019242910">"Odstranit vše"</string>
     <string name="master_clear_gesture_prompt" msgid="1428645764883536750">"Proveďte gesto odemknutí"</string>
     <string name="master_clear_gesture_explanation" msgid="8901714274312707918">"Chcete-li potvrdit reset telefonu, musíte provést gesto odemknutí."</string>
     <string name="master_clear_failed" msgid="8655202125010189406">"Pokus o reset se nezdařil, protože služba System Clear není dostupná."</string>
-    <string name="media_format_title" msgid="4671276096695789895">"Formátovat kartu SD"</string>
-    <string name="media_format_summary" msgid="3805714639375830120">"Vymaže všechna data na kartě SD"</string>
-    <string name="media_format_desc" msgid="1142563222357820834">"Tato akce smaže kartu SD v telefonu. VŠECHNA data na kartě budou ztracena."</string>
-    <string name="media_format_button_text" msgid="370856400090190151">"Formátovat kartu SD"</string>
-    <string name="media_format_final_desc" msgid="1776666694910717198">"Formátování karty SD. Chcete smazat všechna svoje média? Akci nelze vrátit zpět."</string>
+    <string name="media_format_title" product="nosdcard" msgid="3999653431422767156">"Smazat úložiště USB"</string>
+    <string name="media_format_title" product="default" msgid="4427528440306787972">"Smazat kartu SD"</string>
+    <string name="media_format_summary" product="nosdcard" msgid="776603298628082065">"Smaže data v úložišti USB"</string>
+    <string name="media_format_summary" product="default" msgid="3805714639375830120">"Vymaže všechna data na kartě SD"</string>
+    <string name="media_format_desc" product="nosdcard" msgid="4553860683952763905">"Tato akce smaže úložiště USB. Ztratíte "<b>"všechna"</b>" data v něm uložená."</string>
+    <string name="media_format_desc" product="default" msgid="1598627584181935513">"Tato akce vymaže kartu SD. "<b>"Všechna"</b>" data na kartě budou ztracena."</string>
+    <string name="media_format_button_text" product="nosdcard" msgid="6293669371185352810">"Smazat úložiště USB"</string>
+    <string name="media_format_button_text" product="default" msgid="6721544380069373626">"Smazat kartu SD"</string>
+    <string name="media_format_final_desc" product="nosdcard" msgid="8094635533378487255">"Chcete úložiště USB smazat a odstranit tak všechny soubory, které jsou v něm uloženy? Tuto akci nelze vrátit zpět."</string>
+    <string name="media_format_final_desc" product="default" msgid="9015504991522581434">"Chcete kartu SD smazat a odstranit tak všechny soubory, které jsou na ní uloženy? Tuto akci nelze vrátit zpět."</string>
     <string name="media_format_final_button_text" msgid="4881713344315923175">"Odstranit vše"</string>
     <string name="media_format_gesture_prompt" msgid="3109349468816856670">"Proveďte gesto odemknutí"</string>
-    <string name="media_format_gesture_explanation" msgid="4239529439389660159">"Formátování karty SD je potřeba potvrdit nakreslením odemykacího obrazce."</string>
+    <string name="media_format_gesture_explanation" product="nosdcard" msgid="1379736318750958338">"Smazání úložiště USB je třeba potvrdit pomocí bezpečnostního gesta."</string>
+    <string name="media_format_gesture_explanation" product="default" msgid="1681213416497647321">"Smazání karty SD je třeba potvrdit pomocí bezpečnostního gesta."</string>
     <string name="call_settings_title" msgid="5188713413939232801">"Nastavení hovorů"</string>
     <string name="call_settings_summary" msgid="7291195704801002886">"Nastavení hlasové schránky, přesměrování a čekání hovorů a ID volajícího"</string>
     <string name="tether_settings_title_usb" msgid="4315031513434087777">"Tethering"</string>
@@ -609,7 +649,7 @@
     <string name="location_networks_disabled" msgid="2708968452901433980">"Zobrazuje polohu v aplikacích (jako Mapy) pomocí bezdrátových sítí"</string>
     <string name="location_neighborhood_level" msgid="4656658097932515921">"Poloha je zaměřena pomocí WiFi nebo mobilních sítí"</string>
     <string name="location_gps" msgid="6296125378829097831">"Použít satelity GPS"</string>
-    <string name="location_street_level" msgid="6460740847018275745">"Zaměření je s přesností na úrovni ulic (zrušením této volby lze šetřit baterii)"</string>
+    <string name="location_street_level" msgid="7456259025474443314">"Zaměření je s přesností na úrovni ulic."</string>
     <string name="location_gps_disabled" msgid="6632537158777308128">"Umožňuje zaměřit na úrovni ulic (vetší spotřeba baterie a nutný výhled na oblohu)"</string>
     <string name="assisted_gps" msgid="4649317129586736885">"Použít systém A-GPS"</string>
     <string name="assisted_gps_enabled" msgid="8751899609589792803">"Vylepšit funkčnost GPS pomocí serveru (deaktivací této funkce snížíte využití sítě)"</string>
@@ -692,22 +732,31 @@
     <string name="application_size_label" msgid="5055196275624686382">"Aplikace"</string>
     <string name="data_size_label" msgid="8679376373625710107">"Data"</string>
     <string name="uninstall_text" msgid="3644892466144802466">"Odinstalovat"</string>
+    <string name="disable_text" msgid="6544054052049395202">"Vypnout"</string>
+    <string name="enable_text" msgid="9217362512327828987">"Povolit"</string>
     <string name="clear_user_data_text" msgid="5597622864770098388">"Mazání dat"</string>
     <string name="app_factory_reset" msgid="6635744722502563022">"Odinstalovat aktualizace"</string>
     <string name="auto_launch_enable_text" msgid="2630656657744196691">"Aplikace byla nastavena, aby se pro některé akce spouštěla jako výchozí."</string>
     <string name="auto_launch_disable_text" msgid="7800385822185540166">"Není výchozí pro žádné akce."</string>
     <string name="clear_activities" msgid="7408923511535174430">"Vymazat výchozí nastavení"</string>
     <string name="unknown" msgid="1592123443519355854">"Neznámé"</string>
-    <string name="sort_order_alpha" msgid="8622029358896599842">"Řadit"</string>
+    <string name="sort_order_alpha" msgid="1410278099123670628">"Seřadit dle jména"</string>
     <string name="sort_order_size" msgid="7024513286636502362">"Řadit podle velikosti"</string>
+    <string name="show_running_services" msgid="5736278767975544570">"Zobrazit spuštěné služby"</string>
+    <string name="show_background_processes" msgid="2009840211972293429">"Zobrazit mezipaměť"</string>
     <string name="manage_space_text" msgid="8852711522447794676">"Správa paměti"</string>
     <string name="filter" msgid="2018011724373033887">"Filtrovat"</string>
     <string name="filter_dlg_title" msgid="6507663329723966854">"Vyberte možnosti filtru"</string>
     <string name="filter_apps_all" msgid="5142129378749391876">"Vše"</string>
     <string name="filter_apps_third_party" msgid="7786348047690140979">"Stažené"</string>
     <string name="filter_apps_running" msgid="7767071454371350486">"Spuštěné"</string>
-    <string name="filter_apps_onsdcard" msgid="1477351142334784771">"Na kartě SD"</string>
-    <string name="loading" msgid="3200408047793887917">"Načítání..."</string>
+    <string name="filter_apps_onsdcard" product="nosdcard" msgid="4843063154701023349">"Úložiště USB"</string>
+    <string name="filter_apps_onsdcard" product="default" msgid="1477351142334784771">"Na kartě SD"</string>
+    <string name="disabled" msgid="9206776641295849915">"Deaktivováno"</string>
+    <string name="no_applications" msgid="5190227407135243904">"Žádné aplikace."</string>
+    <string name="internal_storage" msgid="1584700623164275282">"Interní úložiště"</string>
+    <string name="sd_card_storage" product="nosdcard" msgid="2673203150465132465">"Úložiště USB"</string>
+    <string name="sd_card_storage" product="default" msgid="7623513618171928235">"Karta SD"</string>
     <string name="recompute_size" msgid="7722567982831691718">"Přepočítávání velikosti..."</string>
     <string name="clear_data_dlg_title" msgid="4470209520936375508">"Smazat"</string>
     <string name="clear_data_dlg_text" msgid="8368035073300828451">"Veškerá data (všechny soubory, nastavení, účty, databáze apod.) této aplikace budou trvale vymazána."</string>
@@ -727,7 +776,8 @@
     <string name="version_text" msgid="9189073826278676425">"verze <xliff:g id="VERSION_NUM">%1$s</xliff:g>"</string>
     <string name="move_app" msgid="5042838441401731346">"Přesunout"</string>
     <string name="move_app_to_internal" msgid="3895430471913858185">"Přesunout do telefonu"</string>
-    <string name="move_app_to_sdcard" msgid="1143379049903056407">"Přesunout na kartu SD"</string>
+    <string name="move_app_to_sdcard" product="nosdcard" msgid="4350451696315265420">"Přesunout do úlož. USB"</string>
+    <string name="move_app_to_sdcard" product="default" msgid="1143379049903056407">"Přesunout na kartu SD"</string>
     <string name="moving" msgid="6431016143218876491">"Přesouvání"</string>
     <string name="insufficient_storage" msgid="8566913062094452962">"V úložišti je nedostatek volného místa."</string>
     <string name="does_not_exist" msgid="837163572898468245">"Aplikace neexistuje."</string>
@@ -735,29 +785,49 @@
     <string name="invalid_location" msgid="4934491353200240499">"Zadané místo pro instalaci není platné."</string>
     <string name="system_package" msgid="1030561474413022831">"Aktualizace systému nelze nainstalovat na externí média."</string>
     <string name="force_stop_dlg_title" msgid="4289453224368188476">"Vynutit zastavení"</string>
-    <string name="force_stop_dlg_text" msgid="3381302041569982075">"Tato aplikace bude okamžitě restartována. Opravdu chcete vynutit její zastavení?"</string>
+    <string name="force_stop_dlg_text" msgid="5157374701213502922">"Vynucené zastavení může způsobit nepředvídatelné chování aplikace. Jste si jisti?"</string>
     <string name="move_app_failed_dlg_title" msgid="4337731903265156405">"Přesun aplikace"</string>
     <string name="move_app_failed_dlg_text" msgid="8824246817947643697">"Přesunutí aplikace se nezdařilo. <xliff:g id="REASON">%1$s</xliff:g>"</string>
     <string name="app_install_location_title" msgid="2068975150026852168">"Preferované umístění pro instalaci"</string>
     <string name="app_install_location_summary" msgid="879753854530300436">"Změna preferovaného umístění pro instalaci nových aplikací"</string>
+    <string name="storageuse_settings_title" msgid="5657014373502630403">"Využití úložiště"</string>
+    <string name="storageuse_settings_summary" msgid="2556057379120846792">"Zobrazit aplikacemi používané úložiště"</string>
     <string name="runningservices_settings_title" msgid="8097287939865165213">"Spuštěné služby"</string>
     <string name="runningservices_settings_summary" msgid="854608995821032748">"Umožňuje zobrazit a ovládat aktuálně spuštěné služby"</string>
     <string name="service_restarting" msgid="2242747937372354306">"Probíhá restartování"</string>
-    <string name="no_running_services" msgid="6981216347270280598">"Žádné spuštěné služby"</string>
-    <string name="confirm_stop_service" msgid="5700448757318301681">"Zastavit službu?"</string>
-    <string name="confirm_stop_service_msg" msgid="1166661293369421272">"Služba zůstane vypnutá, dokud nebude znovu spuštěna. To může mít nežádoucí vliv na aplikaci <xliff:g id="APPLICATION">%1$s</xliff:g>."</string>
-    <string name="confirm_stop_stop" msgid="7382363913280993331">"Zastavit"</string>
-    <string name="confirm_stop_cancel" msgid="206495326622692381">"Zrušit"</string>
-    <string name="service_started_by_app" msgid="8432097226392386802">"Spuštěno aplikací: dotykem zastavíte"</string>
-    <string name="service_client_name" msgid="2337664610975074717">"<xliff:g id="CLIENT_NAME">%1$s</xliff:g>: spravovat dotykem"</string>
-    <string name="service_background_processes" msgid="5158600475629177758">"K dispozici: <xliff:g id="FREE">%2$s</xliff:g> + <xliff:g id="MEMORY">%3$s</xliff:g> v <xliff:g id="COUNT">%1$d</xliff:g>"</string>
-    <string name="service_foreground_processes" msgid="4013890350284680796">"Ostatní: <xliff:g id="MEMORY">%2$s</xliff:g> v <xliff:g id="COUNT">%1$d</xliff:g>"</string>
-    <string name="service_process_name" msgid="8630408984456958400">"Proces: <xliff:g id="PROCESS">%1$s</xliff:g>"</string>
+    <string name="cached" msgid="1059590879740175019">"Proces na pozadí v mezipaměti"</string>
+    <string name="no_running_services" msgid="2059536495597645347">"Nic není spuštěno."</string>
+    <string name="service_started_by_app" msgid="6575184738671598131">"Spuštěno aplikací."</string>
+    <!-- no translation found for service_client_name (4037193625611815517) -->
+    <skip />
+    <string name="service_background_processes" msgid="6844156253576174488">"<xliff:g id="MEMORY">%1$s</xliff:g> volno"</string>
+    <string name="service_foreground_processes" msgid="7583975676795574276">"Využito <xliff:g id="MEMORY">%1$s</xliff:g>"</string>
+    <string name="memory" msgid="6609961111091483458">"RAM"</string>
+    <!-- no translation found for service_process_name (4098932168654826656) -->
+    <skip />
+    <string name="running_processes_item_description_s_s" msgid="5790575965282023145">"Počet procesů: <xliff:g id="NUMPROCESS">%1$d</xliff:g>; počet služeb: <xliff:g id="NUMSERVICES">%2$d</xliff:g>"</string>
+    <string name="running_processes_item_description_s_p" msgid="8019860457123222953">"Počet procesů: <xliff:g id="NUMPROCESS">%1$d</xliff:g>; počet služeb: <xliff:g id="NUMSERVICES">%2$d</xliff:g>"</string>
+    <string name="running_processes_item_description_p_s" msgid="744424668287252915">"Počet procesů: <xliff:g id="NUMPROCESS">%1$d</xliff:g>; počet služeb: <xliff:g id="NUMSERVICES">%2$d</xliff:g>"</string>
+    <string name="running_processes_item_description_p_p" msgid="1607384595790852782">"Počet procesů: <xliff:g id="NUMPROCESS">%1$d</xliff:g>; počet služeb: <xliff:g id="NUMSERVICES">%2$d</xliff:g>"</string>
+    <string name="runningservicedetails_settings_title" msgid="6188692418986988288">"Spuštěná aplikace"</string>
+    <string name="no_services" msgid="7133900764462288263">"Neaktivní"</string>
+    <string name="runningservicedetails_services_title" msgid="391168243725357375">"Služby"</string>
+    <string name="runningservicedetails_processes_title" msgid="928115582044655268">"Procesy"</string>
+    <string name="service_stop" msgid="6369807553277527248">"Zastavit"</string>
+    <string name="service_manage" msgid="1876642087421959194">"Nastavení"</string>
+    <string name="service_stop_description" msgid="3261798282116866961">"Tato služba byla spuštěna svou aplikací. Pokud ji zastavíte, může dojít k selhání aplikace."</string>
+    <string name="heavy_weight_stop_description" msgid="6855241582643136019">"Tuto aplikaci nelze bezpečně zastavit. Mohlo by dojít ke ztrátě části vaší aktuální práce."</string>
+    <string name="background_process_stop_description" msgid="1728354083304746737">"Toto je starý proces aplikace zachovaný pro rychlejší spuštění v případě, že bude znovu potřeba. Zpravidla není důvod jej zastavovat."</string>
+    <string name="service_manage_description" msgid="7050092269951613102">"<xliff:g id="CLIENT_NAME">%1$s</xliff:g>: právě se používá. Ovládací prvky zobrazte dotykem na Nastavení."</string>
+    <string name="main_running_process_description" msgid="929204645380391397">"Hlavní proces, který se používá."</string>
+    <string name="process_service_in_use_description" msgid="8993335064403217080">"Služba <xliff:g id="COMP_NAME">%1$s</xliff:g> se používá."</string>
+    <string name="process_provider_in_use_description" msgid="5586603325677678940">"Poskytovatel <xliff:g id="COMP_NAME">%1$s</xliff:g> se používá."</string>
+    <string name="runningservicedetails_stop_dlg_title" msgid="4253292537154337233">"Zastavit systémovou službu?"</string>
+    <string name="runningservicedetails_stop_dlg_text" msgid="6929716497425738387">"Opravdu tuto systémovou službu chcete zastavit? Může se stát, že telefon ztratí některé funkce. Ty nebudou fungovat, dokud telefon nevypnete a opět nezapnete."</string>
     <string name="language_settings" msgid="502219872342167227">"Jazyk a klávesnice"</string>
     <string name="language_keyboard_settings_title" msgid="3455826933385341107">"Nastavení jazyka a klávesnice"</string>
-    <string name="language_settings_summary" msgid="595647729475399987">"Nastavení jazyka a oblasti, způsobu zadávání textu a automatických oprav"</string>
-    <string name="language_category" msgid="3391756582724541530">"Nastavení národního prostředí"</string>
-    <string name="text_category" msgid="6342540511465136739">"Nastavení textu"</string>
+    <string name="language_settings_category" msgid="2288258489940617043">"Nastavení jazyka"</string>
+    <string name="keyboard_settings_category" msgid="7060453865544070642">"Nastavení klávesnice"</string>
     <string name="phone_language" msgid="1165758957501090679">"Vyberte jazyk"</string>
     <string name="phone_language_summary" msgid="3871309445655554211"></string>
     <string name="auto_replace" msgid="6199184757891937822">"Automatické nahrazování"</string>
@@ -782,7 +852,6 @@
     <string name="testing" msgid="6584352735303604146">"Testování"</string>
     <string name="testing_phone_info" msgid="8656693364332840056">"Info o telefonu"</string>
     <string name="testing_battery_info" msgid="3497865525976497848">"Info o baterii"</string>
-    <string name="testing_battery_history" msgid="3043329445810695647">"Historie baterie"</string>
     <string name="quick_launch_title" msgid="7904609846945905306">"Rychlé spuštění"</string>
     <string name="quick_launch_summary" msgid="3453825712466417452">"Umožňuje nastavit klávesové zkratky pro spouštění aplikací"</string>
     <string name="quick_launch_assign_application" msgid="4521368464929956350">"Přiřadit aplikaci"</string>
@@ -798,8 +867,8 @@
     <string name="input_methods_settings_summary" msgid="7571173442946675205">"Správa možností zadávání textu"</string>
     <string name="input_methods_settings_label_format" msgid="6002887604815693322">"Nastavení modulu <xliff:g id="IME_NAME">%1$s</xliff:g>"</string>
     <string name="onscreen_keyboard_settings_summary" msgid="5841558383556238653">"Nastavení klávesnice na obrazovce"</string>
-    <string name="builtin_keyboard_settings_title" msgid="8169889453770863227">"Klávesnice zařízení"</string>
-    <string name="builtin_keyboard_settings_summary" msgid="6404687907454621637">"Nastavení vestavěné klávesnice"</string>
+    <string name="builtin_keyboard_settings_title" msgid="5274990495405941804">"Vestavěná klávesnice"</string>
+    <string name="builtin_keyboard_settings_summary" msgid="7990296351888096836">"Nastavení vestavěné fyzické klávesnice"</string>
     <string name="development_settings_title" msgid="6719732334835420989">"Vývoj"</string>
     <string name="development_settings_summary" msgid="2151320488701538355">"Umožňuje nastavit možnosti pro vývoj aplikací"</string>
     <string name="enable_adb" msgid="7982306934419797485">"Ladění USB"</string>
@@ -812,36 +881,10 @@
     <string name="adb_warning_message" msgid="5352555112049663033">"Ladění USB je určeno pouze pro účely vývoje. Lze pomocí něho kopírovat data mezi počítačem a zařízením, instalovat aplikace do zařízení bez upozornění a číst data protokolů."</string>
     <string name="gadget_picker_title" msgid="98374951396755811">"Zvolte gadget"</string>
     <string name="widget_picker_title" msgid="9130684134213467557">"Zvolte widget"</string>
-    <string name="battery_history_details_for" msgid="5924639922153109669">"Podrobnosti pro UID <xliff:g id="NUMBER">%d</xliff:g>"</string>
-    <string name="battery_history_uid" msgid="1016606150528436298">"UID <xliff:g id="USER_ID">%1$d</xliff:g>"</string>
-    <string name="battery_history_network_usage" msgid="8010852371665217020">"Podrobnosti o používání sítě aplikací <xliff:g id="APP_NAME">%1$s</xliff:g>:"</string>
-    <string name="battery_history_bytes_received" msgid="980307569180518302">"Přijato bytů: <xliff:g id="BYTES">%1$d</xliff:g>"</string>
-    <string name="battery_history_bytes_sent" msgid="2501748768602119159">"Odesláno bytů: <xliff:g id="BYTES">%1$d</xliff:g>"</string>
-    <string name="battery_history_bytes_total" msgid="4444807574361642753">"Celkem bytů: <xliff:g id="BYTES">%1$d</xliff:g>"</string>
-    <string name="battery_history_cpu_usage" msgid="2597353713014790877">"Podrobnosti o využívání CPU aplikací <xliff:g id="APP_NAME">%1$s</xliff:g>:"</string>
-    <string name="battery_history_user_time" msgid="6227507614894791359">"Čas uživatele:"</string>
-    <string name="battery_history_system_time" msgid="2015862072724507547">"Systémový čas:"</string>
-    <string name="battery_history_total_time" msgid="3618703970098556104">"Celková doba:"</string>
-    <string name="battery_history_starts" msgid="9137453931978571696">"Počet spuštění: <xliff:g id="STARTS">%1$d</xliff:g>"</string>
     <string name="battery_history_days" msgid="7110262897769622564">"<xliff:g id="DAYS">%1$d</xliff:g> dní <xliff:g id="HOURS">%2$d</xliff:g> h <xliff:g id="MINUTES">%3$d</xliff:g> min <xliff:g id="SECONDS">%4$d</xliff:g> s"</string>
     <string name="battery_history_hours" msgid="7525170329826274999">"<xliff:g id="HOURS">%1$d</xliff:g> h <xliff:g id="MINUTES">%2$d</xliff:g> min <xliff:g id="SECONDS">%3$d</xliff:g> s"</string>
     <string name="battery_history_minutes" msgid="1467775596084148610">"<xliff:g id="MINUTES">%1$d</xliff:g> min <xliff:g id="SECONDS">%2$d</xliff:g> s"</string>
     <string name="battery_history_seconds" msgid="4283492130945761685">"<xliff:g id="SECONDS">%1$d</xliff:g> s"</string>
-    <string name="battery_history_packages_sharing_this_uid" msgid="4101596071379250050">"Balíčky sdílející toto UID:"</string>
-    <string name="battery_history_no_data" msgid="1177238743237067617">"Údaje o využití baterie nejsou k dispozici"</string>
-    <string name="battery_history_sensor" msgid="2333488996028993982">"Senzor:"</string>
-    <string name="battery_history_wakelock" msgid="608683447522396293">"Částečný zámek probuzení:"</string>
-    <string name="battery_history_used_by_packages" msgid="3000711380023436470">"Senzor je používán následujícími balíčky:"</string>
-    <string name="battery_history_sensor_usage" msgid="3593133338613209024">"Použito <xliff:g id="COUNT">%1$d</xliff:g>krát balíčkem <xliff:g id="PACKAGE">%2$s</xliff:g>\n"</string>
-    <string name="battery_history_sensor_usage_multi" msgid="4536084375991014508">"Použito <xliff:g id="COUNT">%1$d</xliff:g>krát některým z následujících:"</string>
-    <string name="battery_history_awake_label" msgid="8449792868990080882">"Spuštěné"</string>
-    <string name="battery_history_screen_on_label" msgid="1848936521786339362">"Obrazovka zapnutá"</string>
-    <string name="battery_history_phone_on_label" msgid="700191958853142297">"Telefon zapnutý"</string>
-    <string name="battery_history_awake" msgid="4350886665719031057">"Doba bez režimu spánku:"</string>
-    <string name="battery_history_screen_on" msgid="1377240025275657277">"Doba se zapnutou obrazovkou:"</string>
-    <string name="battery_history_phone_on" msgid="4891504401623839532">"Doba se zapnutým telefonem:"</string>
-    <string name="battery_history_screen_on_battery" msgid="536058210445081888">"Na baterii:"</string>
-    <string name="battery_history_screen_on_plugged" msgid="5019127390021871260">"Připojeno:"</string>
     <string name="usage_stats_label" msgid="5890846333487083609">"Statistika použití"</string>
     <string name="testing_usage_stats" msgid="7823048598893937339">"Statistika použití"</string>
     <string name="display_order_text" msgid="8592776965827565271">"Řadit podle:"</string>
@@ -865,12 +908,19 @@
     <string name="power_usage_summary" msgid="7237084831082848168">"Co využívá baterii"</string>
     <string name="battery_since_unplugged" msgid="338073389740738437">"Využití baterie od odpojení"</string>
     <string name="battery_since_reset" msgid="7464546661121187045">"Využití baterie od obnovení"</string>
+    <string name="battery_stats_on_battery" msgid="4970762168505236033">"doba provozu na baterii: <xliff:g id="TIME">%1$s</xliff:g>"</string>
     <string name="battery_stats_duration" msgid="7464501326709469282">"<xliff:g id="TIME">%1$s</xliff:g> od odpojení"</string>
+    <string name="battery_stats_charging_label" msgid="4223311142875178785">"Nabíjení"</string>
+    <string name="battery_stats_screen_on_label" msgid="7150221809877509708">"Obrazovka zapnutá"</string>
+    <string name="battery_stats_gps_on_label" msgid="1193657533641951256">"GPS aktivní"</string>
+    <string name="battery_stats_wifi_running_label" msgid="3093545080361658269">"Wi-Fi"</string>
+    <string name="battery_stats_wake_lock_label" msgid="1908942681902324095">"Probudit"</string>
+    <string name="battery_stats_phone_signal_label" msgid="6822042940376636775">"Signál telefonu"</string>
     <!-- no translation found for battery_stats_last_duration (1535831453827905957) -->
     <skip />
     <string name="awake" msgid="387122265874485088">"Doba provozu zařízení"</string>
-    <string name="wifi_on_time" msgid="4630925382578609056">"Doba provozu sítě WiFi"</string>
-    <string name="bluetooth_on_time" msgid="4478515071957280711">"Doba provozu sítě WiFi"</string>
+    <string name="wifi_on_time" msgid="6310209835617490616">"Doba provozu modulu Wi-Fi"</string>
+    <string name="bluetooth_on_time" msgid="6157799524996162271">"Doba provozu sítě Wi-Fi"</string>
     <string name="usage_name_percent" msgid="7976919382448235858">"<xliff:g id="NAME">%1$s</xliff:g> – <xliff:g id="NUMBER">%2$s</xliff:g> <xliff:g id="PERCENT">%%</xliff:g>"</string>
     <string name="details_title" msgid="7564809986329021063">"Podrobnosti využití baterie"</string>
     <string name="details_subtitle" msgid="32593908269911734">"Podrobnosti používání"</string>
@@ -884,7 +934,9 @@
     <string name="power_idle" msgid="9055659695602194990">"Telefon v pohotovostním režimu"</string>
     <string name="usage_type_cpu" msgid="715162150698338714">"Doba provozu procesoru"</string>
     <string name="usage_type_cpu_foreground" msgid="6500579611933211831">"CPU v popředí"</string>
+    <string name="usage_type_wake_lock" msgid="5125438890233677880">"Zakázat režim spánku"</string>
     <string name="usage_type_gps" msgid="7989688715128160790">"GPS"</string>
+    <string name="usage_type_wifi_running" msgid="8234997940652067049">"Připojení WiFi aktivní"</string>
     <string name="usage_type_phone" msgid="9108247984998041853">"Telefon"</string>
     <string name="usage_type_data_send" msgid="2857401966985425427">"Odeslaná data"</string>
     <string name="usage_type_data_recv" msgid="7251090882025234185">"Přijatá data"</string>
@@ -896,7 +948,7 @@
     <string name="battery_action_app_details" msgid="3275013531871113681">"Informace o aplikaci"</string>
     <string name="battery_action_app_settings" msgid="350562653472577250">"Nastavení aplikací"</string>
     <string name="battery_action_display" msgid="5302763261448580102">"Nastavení zobrazení"</string>
-    <string name="battery_action_wifi" msgid="5452076674659927993">"Nastavení WiFi"</string>
+    <string name="battery_action_wifi" msgid="2272741639606146903">"Nastavení Wi-Fi"</string>
     <string name="battery_action_bluetooth" msgid="8374789049507723142">"Nastavení Bluetooth"</string>
     <string name="battery_desc_voice" msgid="8980322055722959211">"Využití baterie hlasovými hovory"</string>
     <string name="battery_desc_standby" msgid="3009080001948091424">"Využití baterie v pohotovostním režimu telefonu"</string>
@@ -909,9 +961,9 @@
     <string name="battery_desc_bluetooth" msgid="7535520658674621902">"Využití baterie technologií Bluetooth"</string>
     <string name="battery_sugg_bluetooth_basic" msgid="817276933922157788">"Vypněte technologii Bluetooth, když ji nepoužíváte."</string>
     <string name="battery_sugg_bluetooth_headset" msgid="8214816222115517479">"Zkuste se připojit k jinému zařízení bluetooth"</string>
-    <string name="battery_desc_apps" msgid="8123202939321333639">"Využití baterie spuštěnými aplikacemi"</string>
+    <string name="battery_desc_apps" msgid="6665712811746233450">"Spotřeba energie podle aplikací"</string>
     <string name="battery_sugg_apps_info" msgid="6065882899391322442">"Ukončete aplikaci nebo ji odinstalujte"</string>
-    <string name="battery_sugg_apps_gps" msgid="4145005297393800223">"Nepoužíváte-li systém GPS, vypněte jej."</string>
+    <string name="battery_sugg_apps_gps" msgid="4545056413090932541">"GPS můžete ručně nastavit, aby jej aplikace nemohly používat."</string>
     <string name="battery_sugg_apps_settings" msgid="8021302847272481168">"Tato aplikace může nabízet nastavení pro snížení využití baterie"</string>
     <string name="menu_stats_unplugged" msgid="8296577130840261624">"<xliff:g id="UNPLUGGED">%1$s</xliff:g> od odpojení"</string>
     <string name="menu_stats_last_unplugged" msgid="5922246077592434526">"Při posledním odpojení pro <xliff:g id="UNPLUGGED">%1$s</xliff:g>"</string>
@@ -961,6 +1013,8 @@
     <string name="pico_not_installed" msgid="6266845418419994311">"Není nainstalováno"</string>
     <string name="pico_voice_summary_female" msgid="8047327176247727492">"Žena"</string>
     <string name="pico_voice_summary_male" msgid="8331266854058577610">"Muž"</string>
+    <string name="tts_notif_engine_install_title" msgid="7000346872482649034">"Nainstalován modul syntézy řeči"</string>
+    <string name="tts_notif_engine_install_message" msgid="5304661142202662693">"Před použitím nový modul povolte"</string>
     <string name="gadget_title" msgid="7455548605888590466">"Ovládací prvek napájení"</string>
     <string name="gadget_toggle_wifi" msgid="2382963973155082629">"Probíhá aktualizace nastavení Wi-Fi"</string>
     <string name="gadget_toggle_bluetooth" msgid="7538903239807020826">"Probíhá aktualizace nastavení Bluetooth"</string>
@@ -1047,8 +1101,10 @@
     <string name="credentials_access_summary" msgid="319662078718574168">"Povolit aplikacím přístup k zabezpečeným certifikátům a dalším pověřením"</string>
     <string name="credentials_unlock" msgid="1463040326264133844">"Zadejte heslo"</string>
     <string name="credentials_unlock_hint" msgid="594679530407918031">"Zadejte heslo úložiště pověření."</string>
-    <string name="credentials_install_certificates" msgid="177337517568022236">"Instalace z karty SD"</string>
-    <string name="credentials_install_certificates_summary" msgid="7737001268684193093">"Nainstalovat šifrované certifikáty z karty SD"</string>
+    <string name="credentials_install_certificates" product="nosdcard" msgid="619171634797689906">"Instalovat z úložiště USB"</string>
+    <string name="credentials_install_certificates" product="default" msgid="177337517568022236">"Instalace z karty SD"</string>
+    <string name="credentials_install_certificates_summary" product="nosdcard" msgid="8920330112631198575">"Instalovat šifrované certifikáty z úložiště USB"</string>
+    <string name="credentials_install_certificates_summary" product="default" msgid="7737001268684193093">"Nainstalovat šifrované certifikáty z karty SD"</string>
     <string name="credentials_set_password" msgid="9104473585811899989">"Nastavit heslo"</string>
     <string name="credentials_set_password_summary" msgid="8287876917562085701">"Nastavení nebo změna hesla úložiště pověření"</string>
     <string name="credentials_reset" msgid="9170150870552453457">"Vymazat úložiště"</string>
@@ -1068,6 +1124,16 @@
     <string name="credentials_erased" msgid="7700309135582200849">"Úložiště pověření je vymazáno."</string>
     <string name="credentials_enabled" msgid="7588607413349978930">"Úložiště pověření je aktivováno."</string>
     <string name="credentials_disabled" msgid="7453188089059045380">"Úložiště pověření je deaktivováno."</string>
+    <string name="encrypted_fs_category" msgid="1841367653663913956">"Systém souborů EFS (Encrypted File System)"</string>
+    <string name="encrypted_fs_enable" msgid="3884033081603327729">"Šifrovat soukromá uživatelská data"</string>
+    <string name="encrypted_fs_enable_summary" msgid="5635188119509076089">"Aktivovat v tomto zařízení úložiště pro soukromá uživatelská data, které využívá šifrovaný systém souborů"</string>
+    <string name="encrypted_fs_enable_dialog" msgid="919487211207214266">"Aktivace systému souborů EFS vyžaduje vymazání dat ze zařízení."</string>
+    <string name="encrypted_fs_disable_dialog" msgid="6960413613985682501">"Deaktivace systému souborů EFS vyžaduje vymazání dat ze zařízení."</string>
+    <string name="encrypted_fs_enable_button" msgid="8453841319751433751">"Povolit"</string>
+    <string name="encrypted_fs_disable_button" msgid="8468354944060220496">"Vypnout"</string>
+    <string name="encrypted_fs_cancel_button" msgid="4785921255266305799">"Zrušit"</string>
+    <string name="encrypted_fs_cancel_confirm" msgid="853572431153803557">"Změna režimu systému souborů EFS byla zrušena."</string>
+    <string name="encrypted_fs_alert_dialog_title" msgid="583462447886934755">"Upozornění systému souborů EFS."</string>
     <string name="emergency_tone_title" msgid="1055954530111587114">"Tísňové vyzvánění"</string>
     <string name="emergency_tone_summary" msgid="722259232924572153">"Nastavit chování při tísňovém volání"</string>
     <string name="privacy_settings" msgid="9206631214140954954">"Ochrana osobních údajů"</string>
@@ -1075,11 +1141,11 @@
     <string name="backup_section_title" msgid="8856083167469467588">"Zálohování a obnovení"</string>
     <string name="personal_data_section_title" msgid="7815209034443782061">"Osobní údaje"</string>
     <string name="backup_data_title" msgid="1239105919852668016">"Zálohovat moje data"</string>
-    <string name="backup_data_summary" msgid="5662190190240860035">"Zálohovat moje nastavení a další data aplikací."</string>
+    <string name="backup_data_summary" msgid="6515285107793232815">"Zálohovat data aplikací, hesla sítí Wi-Fi a další nastavení na serverech Google"</string>
     <string name="auto_restore_title" msgid="5397528966329126506">"Automatické obnovení"</string>
-    <string name="auto_restore_summary" msgid="6867766474057290177">"Pokud přeinstaluji aplikaci, chci obnovit zálohovaná nastavení a další data."</string>
+    <string name="auto_restore_summary" msgid="83177150536734378">"Pokud přeinstaluji aplikaci, chci obnovit zálohovaná nastavení a další data"</string>
     <string name="backup_erase_dialog_title" msgid="3438255037256586237">"Záloha"</string>
-    <string name="backup_erase_dialog_message" msgid="2948090854996352245">"Opravdu chcete zrušit zálohování nastavení a dat aplikací a vymazat všechny kopie těchto dat na serverech Google?"</string>
+    <string name="backup_erase_dialog_message" msgid="7766283133557587608">"Opravdu chcete zrušit zálohování hesel sítí Wi-Fi, záložek a dalších nastavení a dat aplikací a vymazat všechny kopie těchto dat na serverech Google?"</string>
     <string name="device_admin_settings_title" msgid="1335557832906433309">"Nastavení správce zařízení"</string>
     <string name="active_device_admin_msg" msgid="6930903262612422111">"Správce zařízení"</string>
     <string name="remove_device_admin" msgid="3596845261596451437">"Deaktivovat"</string>

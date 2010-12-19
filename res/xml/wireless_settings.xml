@@ -76,6 +76,12 @@
             android:targetClass="com.android.settings.vpn.VpnSettings" />
     </PreferenceScreen>
 
+    <CheckBoxPreference
+        android:key="toggle_nfc"
+        android:title="@string/nfc_quick_toggle_title"
+        android:summary="@string/nfc_quick_toggle_summary"
+        android:persistent="false" />
+
     <PreferenceScreen
         android:title="@string/network_settings_title"
         android:summary="@string/network_settings_summary"

@@ -18,17 +18,13 @@ package com.android.settings.fuelgauge;
 
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.ApplicationInfo;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
-import android.content.pm.PackageManager.NameNotFoundException;
-import android.graphics.drawable.Drawable;
 import android.hardware.SensorManager;
 import android.os.BatteryStats;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.os.Parcel;
+import android.os.Process;
 import android.os.RemoteException;
 import android.os.ServiceManager;
 import android.os.SystemClock;
@@ -53,7 +49,6 @@ import java.io.StringWriter;
 import java.io.Writer;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -72,11 +67,13 @@ public class PowerUsageSummary extends PreferenceActivity implements Runnable {
 
     IBatteryStats mBatteryInfo;
     BatteryStatsImpl mStats;
-    private List<BatterySipper> mUsageList = new ArrayList<BatterySipper>();
+    private final List<BatterySipper> mUsageList = new ArrayList<BatterySipper>();
+    private final List<BatterySipper> mWifiSippers = new ArrayList<BatterySipper>();
+    private final List<BatterySipper> mBluetoothSippers = new ArrayList<BatterySipper>();
 
     private PreferenceGroup mAppListGroup;
 
-    private int mStatsType = BatteryStats.STATS_UNPLUGGED;
+    private int mStatsType = BatteryStats.STATS_SINCE_CHARGED;
 
     private static final int MIN_POWER_THRESHOLD = 5;
     private static final int MAX_ITEMS_TO_LIST = 10;
@@ -84,30 +81,34 @@ public class PowerUsageSummary extends PreferenceActivity implements Runnable {
     private long mStatsPeriod = 0;
     private double mMaxPower = 1;
     private double mTotalPower;
+    private double mWifiPower;
+    private double mBluetoothPower;
     private PowerProfile mPowerProfile;
 
-    private HashMap<String,UidToDetail> mUidCache = new HashMap<String,UidToDetail>();
+    // How much the apps together have left WIFI running.
+    private long mAppWifiRunning;
 
     /** Queue for fetching name and icon for an application */
     private ArrayList<BatterySipper> mRequestQueue = new ArrayList<BatterySipper>();
     private Thread mRequestThread;
     private boolean mAbort;
     
-    static class UidToDetail {
-        String name;
-        String packageName;
-        Drawable icon;
-    }
-
     @Override
     protected void onCreate(Bundle icicle) {
         super.onCreate(icicle);
+
+        mStats = (BatteryStatsImpl)getLastNonConfigurationInstance();
 
         addPreferencesFromResource(R.xml.power_usage_summary);
         mBatteryInfo = IBatteryStats.Stub.asInterface(
                 ServiceManager.getService("batteryinfo"));
         mAppListGroup = (PreferenceGroup) findPreference("app_list");
         mPowerProfile = new PowerProfile(this);
+    }
+
+    @Override
+    public Object onRetainNonConfigurationInstance() {
+        return mStats;
     }
 
     @Override
@@ -128,6 +129,18 @@ public class PowerUsageSummary extends PreferenceActivity implements Runnable {
 
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
+        if (preference instanceof BatteryHistoryPreference) {
+            Parcel hist = Parcel.obtain();
+            mStats.writeToParcelWithoutUids(hist, 0);
+            byte[] histData = hist.marshall();
+            Intent intent = new Intent(this, BatteryHistoryDetail.class);
+            intent.putExtra(BatteryHistoryDetail.EXTRA_STATS, histData);
+            startActivity(intent);
+            return super.onPreferenceTreeClick(preferenceScreen, preference);
+        }
+        if (!(preference instanceof PowerGaugePreference)) {
+            return false;
+        }
         PowerGaugePreference pgp = (PowerGaugePreference) preference;
         BatterySipper sipper = pgp.getInfo();
         Intent intent = new Intent(this, PowerUsageDetail.class);
@@ -154,7 +167,9 @@ public class PowerUsageSummary extends PreferenceActivity implements Runnable {
                 types = new int[] {
                     R.string.usage_type_cpu,
                     R.string.usage_type_cpu_foreground,
+                    R.string.usage_type_wake_lock,
                     R.string.usage_type_gps,
+                    R.string.usage_type_wifi_running,
                     R.string.usage_type_data_send,
                     R.string.usage_type_data_recv,
                     R.string.usage_type_audio,
@@ -163,9 +178,11 @@ public class PowerUsageSummary extends PreferenceActivity implements Runnable {
                 values = new double[] {
                     sipper.cpuTime,
                     sipper.cpuFgTime,
+                    sipper.wakeLockTime,
                     sipper.gpsTime,
-                    uid != null? uid.getTcpBytesSent(mStatsType) : 0,
-                    uid != null? uid.getTcpBytesReceived(mStatsType) : 0,
+                    sipper.wifiRunningTime,
+                    sipper.tcpBytesSent,
+                    sipper.tcpBytesReceived,
                     0,
                     0
                 };
@@ -193,6 +210,44 @@ public class PowerUsageSummary extends PreferenceActivity implements Runnable {
                 };
             }
             break;
+            case WIFI:
+            {
+                types = new int[] {
+                    R.string.usage_type_wifi_running,
+                    R.string.usage_type_cpu,
+                    R.string.usage_type_cpu_foreground,
+                    R.string.usage_type_wake_lock,
+                    R.string.usage_type_data_send,
+                    R.string.usage_type_data_recv,
+                };
+                values = new double[] {
+                    sipper.usageTime,
+                    sipper.cpuTime,
+                    sipper.cpuFgTime,
+                    sipper.wakeLockTime,
+                    sipper.tcpBytesSent,
+                    sipper.tcpBytesReceived,
+                };
+            } break;
+            case BLUETOOTH:
+            {
+                types = new int[] {
+                    R.string.usage_type_on_time,
+                    R.string.usage_type_cpu,
+                    R.string.usage_type_cpu_foreground,
+                    R.string.usage_type_wake_lock,
+                    R.string.usage_type_data_send,
+                    R.string.usage_type_data_recv,
+                };
+                values = new double[] {
+                    sipper.usageTime,
+                    sipper.cpuTime,
+                    sipper.cpuFgTime,
+                    sipper.wakeLockTime,
+                    sipper.tcpBytesSent,
+                    sipper.tcpBytesReceived,
+                };
+            } break;
             default:
             {
                 types = new int[] {
@@ -226,7 +281,7 @@ public class PowerUsageSummary extends PreferenceActivity implements Runnable {
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
         if (DEBUG) {
-            menu.findItem(MENU_STATS_TYPE).setTitle(mStatsType == BatteryStats.STATS_TOTAL
+            menu.findItem(MENU_STATS_TYPE).setTitle(mStatsType == BatteryStats.STATS_SINCE_CHARGED
                     ? R.string.menu_stats_unplugged
                     : R.string.menu_stats_total);
         }
@@ -237,10 +292,10 @@ public class PowerUsageSummary extends PreferenceActivity implements Runnable {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case MENU_STATS_TYPE:
-                if (mStatsType == BatteryStats.STATS_TOTAL) {
-                    mStatsType = BatteryStats.STATS_UNPLUGGED;
+                if (mStatsType == BatteryStats.STATS_SINCE_CHARGED) {
+                    mStatsType = BatteryStats.STATS_SINCE_UNPLUGGED;
                 } else {
-                    mStatsType = BatteryStats.STATS_TOTAL;
+                    mStatsType = BatteryStats.STATS_SINCE_CHARGED;
                 }
                 refreshStats();
                 return true;
@@ -259,14 +314,23 @@ public class PowerUsageSummary extends PreferenceActivity implements Runnable {
         }
         mMaxPower = 0;
         mTotalPower = 0;
+        mWifiPower = 0;
+        mBluetoothPower = 0;
+        mAppWifiRunning = 0;
 
         mAppListGroup.removeAll();
         mUsageList.clear();
+        mWifiSippers.clear();
+        mBluetoothSippers.clear();
         processAppUsage();
         processMiscUsage();
 
         mAppListGroup.setOrderingAsAdded(false);
 
+        BatteryHistoryPreference hist = new BatteryHistoryPreference(this, mStats);
+        hist.setOrder(-1);
+        mAppListGroup.addPreference(hist);
+        
         Collections.sort(mUsageList);
         for (BatterySipper sipper : mUsageList) {
             if (sipper.getSortValue() < MIN_POWER_THRESHOLD) continue;
@@ -283,7 +347,7 @@ public class PowerUsageSummary extends PreferenceActivity implements Runnable {
                 pref.setKey(Integer.toString(sipper.uidObj.getUid()));
             }
             mAppListGroup.addPreference(pref);
-            if (mAppListGroup.getPreferenceCount() > MAX_ITEMS_TO_LIST) break;
+            if (mAppListGroup.getPreferenceCount() > (MAX_ITEMS_TO_LIST+1)) break;
         }
         if (DEBUG) setTitle("Battery total uAh = " + ((mTotalPower * 1000) / 3600));
         synchronized (mRequestQueue) {
@@ -330,6 +394,7 @@ public class PowerUsageSummary extends PreferenceActivity implements Runnable {
             Map<String, ? extends BatteryStats.Uid.Proc> processStats = u.getProcessStats();
             long cpuTime = 0;
             long cpuFgTime = 0;
+            long wakelockTime = 0;
             long gpsTime = 0;
             if (processStats.size() > 0) {
                 // Process CPU time
@@ -357,11 +422,15 @@ public class PowerUsageSummary extends PreferenceActivity implements Runnable {
                     }
                     cpuTime += tmpCpuTime;
                     power += processPower;
-                    if (highestDrain < processPower) {
+                    if (packageWithHighestDrain == null
+                            || packageWithHighestDrain.startsWith("*")) {
+                        highestDrain = processPower;
+                        packageWithHighestDrain = ent.getKey();
+                    } else if (highestDrain < processPower
+                            && !ent.getKey().startsWith("*")) {
                         highestDrain = processPower;
                         packageWithHighestDrain = ent.getKey();
                     }
-
                 }
                 if (DEBUG) Log.i(TAG, "Max drain of " + highestDrain 
                         + " by " + packageWithHighestDrain);
@@ -374,9 +443,34 @@ public class PowerUsageSummary extends PreferenceActivity implements Runnable {
             }
             power /= 1000;
 
+            // Process wake lock usage
+            Map<String, ? extends BatteryStats.Uid.Wakelock> wakelockStats = u.getWakelockStats();
+            for (Map.Entry<String, ? extends BatteryStats.Uid.Wakelock> wakelockEntry
+                    : wakelockStats.entrySet()) {
+                Uid.Wakelock wakelock = wakelockEntry.getValue();
+                // Only care about partial wake locks since full wake locks
+                // are canceled when the user turns the screen off.
+                BatteryStats.Timer timer = wakelock.getWakeTime(BatteryStats.WAKE_TYPE_PARTIAL);
+                if (timer != null) {
+                    wakelockTime += timer.getTotalTimeLocked(uSecTime, which);
+                }
+            }
+            wakelockTime /= 1000; // convert to millis
+
+            // Add cost of holding a wake lock
+            power += (wakelockTime
+                    * mPowerProfile.getAveragePower(PowerProfile.POWER_CPU_AWAKE)) / 1000;
+            
             // Add cost of data traffic
-            power += (u.getTcpBytesReceived(mStatsType) + u.getTcpBytesSent(mStatsType))
-                    * averageCostPerByte;
+            long tcpBytesReceived = u.getTcpBytesReceived(mStatsType);
+            long tcpBytesSent = u.getTcpBytesSent(mStatsType);
+            power += (tcpBytesReceived+tcpBytesSent) * averageCostPerByte;
+
+            // Add cost of keeping WIFI running.
+            long wifiRunningTimeMs = u.getWifiRunningTime(uSecTime, which) / 1000;
+            mAppWifiRunning += wifiRunningTimeMs;
+            power += (wifiRunningTimeMs
+                    * mPowerProfile.getAveragePower(PowerProfile.POWER_WIFI_ON)) / 1000;
 
             // Process Sensor usage
             Map<Integer, ? extends BatteryStats.Uid.Sensor> sensorStats = u.getSensorStats();
@@ -406,17 +500,36 @@ public class PowerUsageSummary extends PreferenceActivity implements Runnable {
                 power += (multiplier * sensorTime) / 1000;
             }
 
+            if (DEBUG) Log.i(TAG, "UID " + u.getUid() + ": power=" + power);
+
             // Add the app to the list if it is consuming power
             if (power != 0) {
-                BatterySipper app = new BatterySipper(packageWithHighestDrain, DrainType.APP, 0, u,
+                BatterySipper app = new BatterySipper(this, mRequestQueue, mHandler,
+                        packageWithHighestDrain, DrainType.APP, 0, u,
                         new double[] {power});
                 app.cpuTime = cpuTime;
                 app.gpsTime = gpsTime;
+                app.wifiRunningTime = wifiRunningTimeMs;
                 app.cpuFgTime = cpuFgTime;
-                mUsageList.add(app);
+                app.wakeLockTime = wakelockTime;
+                app.tcpBytesReceived = tcpBytesReceived;
+                app.tcpBytesSent = tcpBytesSent;
+                if (u.getUid() == Process.WIFI_UID) {
+                    mWifiSippers.add(app);
+                } else if (u.getUid() == Process.BLUETOOTH_GID) {
+                    mBluetoothSippers.add(app);
+                } else {
+                    mUsageList.add(app);
+                }
             }
-            if (power > mMaxPower) mMaxPower = power;
-            mTotalPower += power;
+            if (u.getUid() == Process.WIFI_UID) {
+                mWifiPower += power;
+            } else if (u.getUid() == Process.BLUETOOTH_GID) {
+                mBluetoothPower += power;
+            } else {
+                if (power > mMaxPower) mMaxPower = power;
+                mTotalPower += power;
+            }
             if (DEBUG) Log.i(TAG, "Added power = " + power);
         }
     }
@@ -472,14 +585,34 @@ public class PowerUsageSummary extends PreferenceActivity implements Runnable {
         }
     }
 
+    private void aggregateSippers(BatterySipper bs, List<BatterySipper> from, String tag) {
+        for (int i=0; i<from.size(); i++) {
+            BatterySipper wbs = from.get(i);
+            if (DEBUG) Log.i(TAG, tag + " adding sipper " + wbs + ": cpu=" + wbs.cpuTime);
+            bs.cpuTime += wbs.cpuTime;
+            bs.gpsTime += wbs.gpsTime;
+            bs.wifiRunningTime += wbs.wifiRunningTime;
+            bs.cpuFgTime += wbs.cpuFgTime;
+            bs.wakeLockTime += wbs.wakeLockTime;
+            bs.tcpBytesReceived += wbs.tcpBytesReceived;
+            bs.tcpBytesSent += wbs.tcpBytesSent;
+        }
+    }
+
     private void addWiFiUsage(long uSecNow) {
         long onTimeMs = mStats.getWifiOnTime(uSecNow, mStatsType) / 1000;
-        long runningTimeMs = mStats.getWifiRunningTime(uSecNow, mStatsType) / 1000;
+        long runningTimeMs = mStats.getGlobalWifiRunningTime(uSecNow, mStatsType) / 1000;
+        if (DEBUG) Log.i(TAG, "WIFI runningTime=" + runningTimeMs
+                + " app runningTime=" + mAppWifiRunning);
+        runningTimeMs -= mAppWifiRunning;
+        if (runningTimeMs < 0) runningTimeMs = 0;
         double wifiPower = (onTimeMs * 0 /* TODO */
                 * mPowerProfile.getAveragePower(PowerProfile.POWER_WIFI_ON)
             + runningTimeMs * mPowerProfile.getAveragePower(PowerProfile.POWER_WIFI_ON)) / 1000;
-        addEntry(getString(R.string.power_wifi), DrainType.WIFI, runningTimeMs,
-                R.drawable.ic_settings_wifi, wifiPower);
+        if (DEBUG) Log.i(TAG, "WIFI power=" + wifiPower + " from procs=" + mWifiPower);
+        BatterySipper bs = addEntry(getString(R.string.power_wifi), DrainType.WIFI, runningTimeMs,
+                R.drawable.ic_settings_wifi, wifiPower + mWifiPower);
+        aggregateSippers(bs, mWifiSippers, "WIFI");
     }
 
     private void addIdleUsage(long uSecNow) {
@@ -497,9 +630,9 @@ public class PowerUsageSummary extends PreferenceActivity implements Runnable {
         int btPingCount = mStats.getBluetoothPingCount();
         btPower += (btPingCount
                 * mPowerProfile.getAveragePower(PowerProfile.POWER_BLUETOOTH_AT_CMD)) / 1000;
-
-        addEntry(getString(R.string.power_bluetooth), DrainType.BLUETOOTH, btOnTimeMs,
-                R.drawable.ic_settings_bluetooth, btPower);
+        BatterySipper bs = addEntry(getString(R.string.power_bluetooth), DrainType.BLUETOOTH,
+                btOnTimeMs, R.drawable.ic_settings_bluetooth, btPower + mBluetoothPower);
+        aggregateSippers(bs, mBluetoothSippers, "Bluetooth");
     }
 
     private double getAverageDataCost() {
@@ -549,7 +682,8 @@ public class PowerUsageSummary extends PreferenceActivity implements Runnable {
             double power) {
         if (power > mMaxPower) mMaxPower = power;
         mTotalPower += power;
-        BatterySipper bs = new BatterySipper(label, drainType, iconId, null, new double[] {power});
+        BatterySipper bs = new BatterySipper(this, mRequestQueue, mHandler,
+                label, drainType, iconId, null, new double[] {power});
         bs.usageTime = time;
         bs.iconId = iconId;
         mUsageList.add(bs);
@@ -564,158 +698,9 @@ public class PowerUsageSummary extends PreferenceActivity implements Runnable {
             parcel.setDataPosition(0);
             mStats = com.android.internal.os.BatteryStatsImpl.CREATOR
                     .createFromParcel(parcel);
+            mStats.distributeWorkLocked(BatteryStats.STATS_SINCE_CHARGED);
         } catch (RemoteException e) {
             Log.e(TAG, "RemoteException:", e);
-        }
-    }
-
-    class BatterySipper implements Comparable<BatterySipper> {
-        String name;
-        Drawable icon;
-        int iconId; // For passing to the detail screen.
-        Uid uidObj;
-        double value;
-        double[] values;
-        DrainType drainType;
-        long usageTime;
-        long cpuTime;
-        long gpsTime;
-        long cpuFgTime;
-        double percent;
-        double noCoveragePercent;
-        String defaultPackageName;
-
-        BatterySipper(String label, DrainType drainType, int iconId, Uid uid, double[] values) {
-            this.values = values;
-            name = label;
-            this.drainType = drainType;
-            if (iconId > 0) {
-                icon = getResources().getDrawable(iconId);
-            }
-            if (values != null) value = values[0];
-            if ((label == null || iconId == 0) && uid != null) {
-                getQuickNameIconForUid(uid);
-            }
-            uidObj = uid;
-        }
-
-        double getSortValue() {
-            return value;
-        }
-
-        double[] getValues() {
-            return values;
-        }
-
-        Drawable getIcon() {
-            return icon;
-        }
-
-        public int compareTo(BatterySipper other) {
-            // Return the flipped value because we want the items in descending order
-            return (int) (other.getSortValue() - getSortValue());
-        }
-
-        void getQuickNameIconForUid(Uid uidObj) {
-            final int uid = uidObj.getUid();
-            final String uidString = Integer.toString(uid);
-            if (mUidCache.containsKey(uidString)) {
-                UidToDetail utd = mUidCache.get(uidString);
-                defaultPackageName = utd.packageName;
-                name = utd.name;
-                icon = utd.icon;
-                return;
-            }
-            PackageManager pm = getPackageManager();
-            final Drawable defaultActivityIcon = pm.getDefaultActivityIcon();
-            String[] packages = pm.getPackagesForUid(uid);
-            icon = pm.getDefaultActivityIcon();
-            if (packages == null) {
-                //name = Integer.toString(uid);
-                if (uid == 0) {
-                    name = getResources().getString(R.string.process_kernel_label);
-                } else if ("mediaserver".equals(name)) {
-                    name = getResources().getString(R.string.process_mediaserver_label);
-                }
-                iconId = R.drawable.ic_power_system;
-                icon = getResources().getDrawable(iconId);
-                return;
-            } else {
-                //name = packages[0];
-            }
-            synchronized (mRequestQueue) {
-                mRequestQueue.add(this);
-            }
-        }
-
-        /**
-         * Sets name and icon
-         * @param uid Uid of the application
-         */
-        void getNameIcon() {
-            PackageManager pm = getPackageManager();
-            final int uid = uidObj.getUid();
-            final Drawable defaultActivityIcon = pm.getDefaultActivityIcon();
-            String[] packages = pm.getPackagesForUid(uid);
-            if (packages == null) {
-                name = Integer.toString(uid);
-                return;
-            }
-
-            String[] packageLabels = new String[packages.length];
-            System.arraycopy(packages, 0, packageLabels, 0, packages.length);
-
-            int preferredIndex = -1;
-            // Convert package names to user-facing labels where possible
-            for (int i = 0; i < packageLabels.length; i++) {
-                // Check if package matches preferred package
-                if (packageLabels[i].equals(name)) preferredIndex = i;
-                try {
-                    ApplicationInfo ai = pm.getApplicationInfo(packageLabels[i], 0);
-                    CharSequence label = ai.loadLabel(pm);
-                    if (label != null) {
-                        packageLabels[i] = label.toString();
-                    }
-                    if (ai.icon != 0) {
-                        defaultPackageName = packages[i];
-                        icon = ai.loadIcon(pm);
-                        break;
-                    }
-                } catch (NameNotFoundException e) {
-                }
-            }
-            if (icon == null) icon = defaultActivityIcon;
-
-            if (packageLabels.length == 1) {
-                name = packageLabels[0];
-            } else {
-                // Look for an official name for this UID.
-                for (String pkgName : packages) {
-                    try {
-                        final PackageInfo pi = pm.getPackageInfo(pkgName, 0);
-                        if (pi.sharedUserLabel != 0) {
-                            final CharSequence nm = pm.getText(pkgName,
-                                    pi.sharedUserLabel, pi.applicationInfo);
-                            if (nm != null) {
-                                name = nm.toString();
-                                if (pi.applicationInfo.icon != 0) {
-                                    defaultPackageName = pkgName;
-                                    icon = pi.applicationInfo.loadIcon(pm);
-                                }
-                                break;
-                            }
-                        }
-                    } catch (PackageManager.NameNotFoundException e) {
-                    }
-                }
-            }
-            final String uidString = Integer.toString(uidObj.getUid());
-            UidToDetail utd = new UidToDetail();
-            utd.name = name;
-            utd.icon = icon;
-            utd.packageName = defaultPackageName;
-            mUidCache.put(uidString, utd);
-            mHandler.sendMessage(mHandler.obtainMessage(MSG_UPDATE_NAME_ICON, this));
         }
     }
 
@@ -733,7 +718,7 @@ public class PowerUsageSummary extends PreferenceActivity implements Runnable {
         }
     }
 
-    private static final int MSG_UPDATE_NAME_ICON = 1;
+    static final int MSG_UPDATE_NAME_ICON = 1;
 
     Handler mHandler = new Handler() {
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 /*
-** Copyright 2008, The Android Open Source Project
+** Copyright 2010, The Android Open Source Project
 **
 ** Licensed under the Apache License, Version 2.0 (the "License");
 ** you may not use this file except in compliance with the License.
@@ -24,11 +24,6 @@
     android:orientation="vertical"
     android:gravity="fill" >
 
-    <ImageView android:id="@+id/separator"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="?android:attr/listDivider"/>
-    
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -41,7 +36,6 @@
         <ImageView android:id="@+id/icon"
             android:layout_width="@android:dimen/app_icon_size"
             android:layout_height="@android:dimen/app_icon_size"
-            android:layout_marginLeft="5dip"
             android:layout_marginRight="11dip"
             android:layout_gravity="center_vertical"
             android:scaleType="fitCenter"/>
@@ -55,15 +49,16 @@
                 android:baselineAlignedChildIndex="0"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-	            <TextView android:id="@+id/name"
-	                android:layout_width="wrap_content"
-	                android:layout_height="wrap_content"
+                <TextView android:id="@+id/name"
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
-	                android:textAppearance="?android:attr/textAppearanceMedium"
-	                android:textStyle="bold"
-	                android:singleLine="true"
-	                android:ellipsize="marquee"
-	                android:layout_marginBottom="2dip" />
+                    android:paddingRight="4dip"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textStyle="bold"
+                    android:singleLine="true"
+                    android:ellipsize="marquee"
+                    android:layout_marginBottom="2dip" />
                 <TextView android:id="@+id/size"
                     android:layout_gravity="center_vertical|right"
                     android:layout_width="wrap_content"
@@ -72,15 +67,28 @@
                     android:singleLine="true"
                     android:textAppearance="?android:attr/textAppearanceSmall" />
             </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:baselineAlignedChildIndex="0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
                 <TextView android:id="@+id/description"
-                    android:layout_marginTop="-4dip"
                     android:layout_gravity="center_vertical|left"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0px"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:paddingRight="4dip"
                     android:singleLine="true"
                     android:ellipsize="marquee"
                     android:textAppearance="?android:attr/textAppearanceSmall" />
+                <TextView android:id="@+id/uptime"
+                    android:layout_gravity="center_vertical|right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:singleLine="true"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

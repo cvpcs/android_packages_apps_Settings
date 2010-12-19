@@ -115,19 +115,6 @@
     <item msgid="1549288661423279207">"Nunca quando ligado"</item>
     <item msgid="1986753720941888596">"Nunca"</item>
   </string-array>
-  <string-array name="battery_history_type_spinner">
-    <item msgid="2193799199027871385">"Utilização da CPU"</item>
-    <item msgid="6401018715947316517">"Utilização da rede"</item>
-    <item msgid="188092590354892392">"Utilização do GPS"</item>
-    <item msgid="8414109131222049141">"Utilização do sensor"</item>
-    <item msgid="1327904325081257093">"Utilização para reactivação parcial"</item>
-    <item msgid="4832254146664706277">"Outra utilização"</item>
-  </string-array>
-  <string-array name="battery_history_which_spinner">
-    <item msgid="3451981114763440074">"Desde a última vez que foi desligado"</item>
-    <item msgid="166936313535197598">"Total desde o arranque"</item>
-    <item msgid="4793941382744963893">"Total em todo o tempo"</item>
-  </string-array>
   <string-array name="usage_stats_display_order_types">
     <item msgid="9077371706468756228">"Tempo de utilização"</item>
     <item msgid="1908750532762193304">"Total de inícios"</item>

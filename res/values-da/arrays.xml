@@ -115,19 +115,6 @@
     <item msgid="1549288661423279207">"Aldrig når tilsluttet"</item>
     <item msgid="1986753720941888596">"Aldrig"</item>
   </string-array>
-  <string-array name="battery_history_type_spinner">
-    <item msgid="2193799199027871385">"CPU-brug"</item>
-    <item msgid="6401018715947316517">"Netværksbrug"</item>
-    <item msgid="188092590354892392">"GPS-brug"</item>
-    <item msgid="8414109131222049141">"Sensorbrug"</item>
-    <item msgid="1327904325081257093">"Delvis vågen brug"</item>
-    <item msgid="4832254146664706277">"Anden brug"</item>
-  </string-array>
-  <string-array name="battery_history_which_spinner">
-    <item msgid="3451981114763440074">"Siden sidste afbrydelse"</item>
-    <item msgid="166936313535197598">"I alt siden start"</item>
-    <item msgid="4793941382744963893">"I alt hele tiden"</item>
-  </string-array>
   <string-array name="usage_stats_display_order_types">
     <item msgid="9077371706468756228">"Brugstid"</item>
     <item msgid="1908750532762193304">"Start optælling"</item>

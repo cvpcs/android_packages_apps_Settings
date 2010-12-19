@@ -85,11 +85,15 @@
     <!-- Used for diagnostic info screens, precise translation isn't needed -->
     <string name="radioInfo_cid">CID</string>
 
+    <!-- Used for diagnostic info screens, precise translation isn't needed. Unmounts the SD card from the phone, meaning it will become available for an attached computer  [CHAR LIMIT=25] -->
+    <string name="sdcard_unmount" product="nosdcard">Unmount USB storage</string>
     <!-- Used for diagnostic info screens, precise translation isn't needed. Unmounts the SD card from the phone, meaning it will become available for an attached computer  -->
-    <string name="sdcard_unmount">Unmount SD card</string>
+    <string name="sdcard_unmount" product="default">Unmount SD card</string>
 
+    <!-- Used for diagnostic info screens, precise translation isn't needed. Formats the SD card in the phone, meaning it will be erased and reformatted [CHAR LIMIT=25] -->
+    <string name="sdcard_format" product="nosdcard">Erase USB storage</string>
     <!-- Used for diagnostic info screens, precise translation isn't needed. Formats the SD card in the phone, meaning it will be erased and reformatted -->
-    <string name="sdcard_format">Format SD card</string>
+    <string name="sdcard_format" product="default">Erase SD card</string>
 
     <!-- choice for the font size spinner -->
     <string name="small_font">Small</string>
@@ -103,8 +107,10 @@
     <!-- Button. Chosen when they want to save the chosen text size. -->
     <string name="font_size_save">OK</string>
 
+    <!-- Title for a notification shown. [CHAR LIMIT=25] -->
+    <string name="sdcard_setting" product="nosdcard">USB storage</string>
     <!-- Title for a notification shown. -->
-    <string name="sdcard_setting">SD card</string>
+    <string name="sdcard_setting" product="default">SD card</string>
 
 
     <!-- Battery Info screen. Label for a status item.  Used for diagnostic info screens, precise translation isn't needed -->
@@ -397,22 +403,34 @@
     <string name="sdcard_settings_screen_mass_storage_text">Enable USB mass storage</string>
     <!-- The label for total bytes on SD card -->
     <string name="sdcard_settings_total_bytes_label">Total bytes:</string>
+    <!-- Message when there is no SD card present [CHAR LIMIT=30] -->
+    <string name="sdcard_settings_not_present_status" product="nosdcard">USB storage not mounted</string>
     <!-- Message when there is no SD card present -->
-    <string name="sdcard_settings_not_present_status">No SD card</string>
+    <string name="sdcard_settings_not_present_status" product="default">No SD card</string>
     <!-- Th label for the available (free) sapce on the SD card -->
     <string name="sdcard_settings_available_bytes_label">Available bytes:</string>
+    <!-- Message when the SD card is being used by the computer as mass storage [CHAR LIMIT=30] -->
+    <string name="sdcard_settings_mass_storage_status" product="nosdcard">USB storage is being used as a mass storage device</string>
     <!-- Message when the SD card is being used by the computer as mass storage -->
-    <string name="sdcard_settings_mass_storage_status">SD card is being used as a mass storage device</string>
+    <string name="sdcard_settings_mass_storage_status" product="default">SD card is being used as a mass storage device</string>
+    <!-- Message when it is safe to remove the SD card [CHAR LIMIT=30] -->
+    <string name="sdcard_settings_unmounted_status" product="nosdcard">It is now safe to remove the USB storage</string>
     <!-- Message when it is safe to remove the SD card -->
-    <string name="sdcard_settings_unmounted_status">It is now safe to remove the SD card</string>
+    <string name="sdcard_settings_unmounted_status" product="default">It is now safe to remove the SD card</string>
+    <!-- Error message when the SD card was removed without properly unmounting [CHAR LIMIT=30] -->
+    <string name="sdcard_settings_bad_removal_status" product="nosdcard">USB storage was removed while still in use!</string>
     <!-- Error message when the SD card was removed without properly unmounting -->
-    <string name="sdcard_settings_bad_removal_status">SD card was removed while still in use!</string>
+    <string name="sdcard_settings_bad_removal_status" product="default">SD card was removed while still in use!</string>
     <!-- Label for used bytes on the SD card -->
     <string name="sdcard_settings_used_bytes_label">Used bytes:</string>
+    <!-- Message when it is scanning the SD card for new files [CHAR LIMIT=30]  -->
+    <string name="sdcard_settings_scanning_status" product="nosdcard">Scanning USB storage for media\u2026</string>
     <!-- Message when it is scanning the SD card for new files -->
-    <string name="sdcard_settings_scanning_status">Scanning SD card for media\u2026</string>
+    <string name="sdcard_settings_scanning_status" product="default">Scanning SD card for media\u2026</string>
+    <!-- Message when the SD card is mounted as read only [CHAR LIMIT=30] -->
+    <string name="sdcard_settings_read_only_status" product="nosdcard">USB storage mounted read-only</string>
     <!-- Message when the SD card is mounted as read only -->
-    <string name="sdcard_settings_read_only_status">SD card mounted read-only</string>
+    <string name="sdcard_settings_read_only_status" product="default">SD card mounted read-only</string>
 
     <!-- SetupWizard strings used by DateTimeSettingsSetupWizard.  The button label for going to the next screen. -->
     <string name="next_label">Next</string>
@@ -431,14 +449,14 @@
     <string name="device_info_label">Device info</string>
     <!-- The title of the activity to see battery info. -->
     <string name="battery_info_label">Battery info</string>
-    <!-- The title of the activity to see battery history. -->
-    <string name="battery_history_label">Battery history</string>
     <!-- The title of the activity to adjust display settings -->
     <string name="display_label">Display</string>
     <!-- The title of the activity to see phone info -->
     <string name="phone_info_label">Phone info</string>
+    <!-- The title of the activity to adjust SD card settings [CHAR LIMIT=25] -->
+    <string name="sd_card_settings_label" product="nosdcard">USB storage</string>
     <!-- The title of the activity to adjust SD card settings-->
-    <string name="sd_card_settings_label">SD card</string>
+    <string name="sd_card_settings_label" product="default">SD card</string>
     <!-- The title of the activity to adjust proxy settings -->
     <string name="proxy_settings_label">Proxy settings</string>
 
@@ -449,8 +467,10 @@
     <!-- Button label for generic cancel action -->
     <string name="cancel">Cancel</string>
 
-    <!-- Main Settings screen title -->
+    <!-- Title of the Settings activity shown within the application itself. -->
     <string name="settings_label">Settings</string>
+    <!-- Title of the Settings activity shown in the Launcher. [CHAR LIMIT=20] -->
+    <string name="settings_label_launcher">Settings</string>
     <!-- Label for option to select a settings panel as a shortcut -->
     <string name="settings_shortcut">Settings</string>
     <!-- Wireless controls settings screen, setting check box label -->
@@ -759,6 +779,13 @@
     <!-- Bluetooth settings.  Dock Setting Dialog - Remember setting and don't ask user again -->
     <string name="bluetooth_dock_settings_remember">Remember settings</string>
 
+    <!-- NFC settings -->
+    <!-- Used in the 1st-level settings screen to turn on NFC -->
+    <string name="nfc_quick_toggle_title">NFC</string>
+    <!-- Used in the 1st-level settings screen as the turn-on summary -->
+    <string name="nfc_quick_toggle_summary">Use Near Field Communication to read and exchange tags</string>
+    <string name="nfc_toggle_error" msgid="8998642457947607263">An error occurred.</string>
+
     <!-- Wi-Fi Settings --> <skip />
     <!-- Used in the 1st-level settings screen to turn on Wi-Fi -->
     <string name="wifi_quick_toggle_title">Wi-Fi</string>
@@ -871,6 +898,9 @@
     <!-- Wi-Fi settings screen, advanced, title of the item to show the Wi-Fi device's MAC address. -->
     <string name="wifi_advanced_mac_address_title">MAC address</string>
     <!-- Title of the screen to adjust IP settings -->
+    <!-- Wi-Fi settings screen, advanced, title of the item to show the Wi-Fi device's current IP address. -->
+    <string name="wifi_advanced_ip_address_title">IP address</string>
+
     <string name="wifi_ip_settings_titlebar">IP settings</string>
     <!-- Menu ietm to save the IP settings -->
     <string name="wifi_ip_settings_menu_save">Save</string>
@@ -930,16 +960,16 @@
     <string name="getConnectionInfo" translatable="false">getConnectionInfo</string>
     <!-- Do not translate. Used for diagnostic screens, precise translation is not necessary
          Menu item on Wifi information screen-->
-    <string name="wifi_api_test" translatable="false">Wifi API</string>
+    <string name="wifi_api_test" translatable="false">Wi-Fi API</string>
     <!-- Do not translate. Used for diagnostic screens, precise translation is not necessary
          Menu item on Wifi information screen-->
-    <string name="wifi_status_test" translatable="false">Wifi Status</string>
+    <string name="wifi_status_test" translatable="false">Wi-Fi Status</string>
     <!-- Do not translate. Used for diagnostic screens, precise translation is not necessary
          Button text on Wifi Status screen-->
     <string name="wifi_update" translatable="false">Refresh Stats</string>
     <!-- Do not translate. Used for diagnostic screens, precise translation is not necessary
          Label on Wifi Status screen-->
-    <string name="wifi_state_label" translatable="false">Wifi State :</string>
+    <string name="wifi_state_label" translatable="false">Wi-Fi State :</string>
     <!-- Do not translate. Used for diagnostic screens, precise translation is not necessary
          Label on Wifi Status screen-->
     <string name="network_state_label" translatable="false">Network State :</string>
@@ -988,7 +1018,7 @@
 
     <!-- Do not translate. Used for diagnostic screens, precise translation is not necessary
          Menu item on Wifi information screen-->
-    <string name="wifi_config_info" translatable="false">Wifi Config</string>
+    <string name="wifi_config_info" translatable="false">Wi-Fi Config</string>
     <!-- Do not translate. Used for diagnostic screens, precise translation is not necessary
          Label on Wifi Configuration screen-->
     <string name="config_list_label" translatable="false">Configured Networks</string>
@@ -1214,12 +1244,15 @@
     <string name="device_status">Status</string>
     <!-- About phone screen, summary of the item to go into the phone status screen -->
     <string name="device_status_summary">Phone number, signal, etc.</string>
-    <!-- Main settings screen item's title to go into the SD card and storage settings screen-->
-    <string name="storage_settings">SD card &amp; phone storage</string>
-    <!-- SD card and storage settings screen title -->
-    <string name="storage_settings_title">SD card &amp; phone storage settings</string>
-    <!-- Main settings screen item's summary for the SD card and storage settings -->
-    <string name="storage_settings_summary">Unmount SD card, view available storage</string>
+
+    <!-- Main settings screen item's title to go into the storage settings screen [CHAR LIMIT=25] -->
+    <string name="storage_settings">Storage</string>
+    <!-- Storage settings screen title [CHAR LIMIT=25] -->
+    <string name="storage_settings_title">Storage settings</string>
+    <!-- [CHAR LIMIT=100] Main settings screen item's summary for the SD card and storage settings -->
+    <string name="storage_settings_summary" product="nosdcard">Unmount USB storage, view available storage</string>
+    <!-- [CHAR LIMIT=100] Main settings screen item's summary for the SD card and storage settings -->
+    <string name="storage_settings_summary" product="default">Unmount SD card, view available storage</string>
     <!-- Do not translate. About phone, status item title -->
     <string name="status_imei">IMEI</string>
     <!-- Do not translate. About phone, status item title -->
@@ -1255,43 +1288,68 @@
     <!-- About phone, status item title.  How much time the device has had its main CPU awake. -->
     <string name="status_awake_time">Awake time</string>
     <!-- SD card & phone storage settings screen heading. This is displayed above items that pertain to the phone's internal storage  -->
-    <string name="internal_memory">Internal phone storage</string>
+    <string name="internal_memory">Internal storage</string>
+    <!-- SD card & phone storage settings screen heading. This is displayed above items that pertain to the SD card [CHAR LIMIT=30] -->
+    <string name="sd_memory" product="nosdcard">USB storage</string>
     <!-- SD card & phone storage settings screen heading. This is displayed above items that pertain to the SD card -->
-    <string name="sd_memory">SD card</string>
+    <string name="sd_memory" product="default">SD card</string>
     <!-- SD card & phone storage settings title. The amount of free space for some storage partition.  For example, this is listed under both the "Internal phone storage" section and the "SD card" section. -->
     <string name="memory_available">Available space</string>
     <!-- SD card & phone storage settings screen heading.  The total amount of storage space for some storage partition.  For example, this is listed under both the "Internal phone storage" section and the "SD card" section -->
     <string name="memory_size">Total space</string>
+    <!-- SD card & phone storage settings item title that will result in the phone unmounting the SD card.  This will be done before the user phyiscally removes the SD card from the phone.  Kind of like the "Safely remove" on some operating systems.   [CHAR LIMIT=25] -->
+    <string name="sd_eject" product="default">Unmount SD card</string>
+    <!-- SD card & phone storage settings item title that will result in the phone unmounting the SD card.  This will be done before the user phyiscally removes the SD card from the phone.  Kind of like the "Safely remove" on some operating systems.   [CHAR LIMIT=30] -->
+    <string name="sd_eject_summary" product="nosdcard">Unmount the internal USB storage</string>
     <!-- SD card & phone storage settings item title that will result in the phone unmounting the SD card.  This will be done before the user phyiscally removes the SD card from the phone.  Kind of like the "Safely remove" on some operating systems.   -->
-    <string name="sd_eject">Unmount SD card</string>
-    <!-- SD card & phone storage settings item title that will result in the phone unmounting the SD card.  This will be done before the user phyiscally removes the SD card from the phone.  Kind of like the "Safely remove" on some operating systems.   -->
-    <string name="sd_eject_summary">Unmount the SD card for safe removal</string>
+    <string name="sd_eject_summary" product="default">Unmount the SD card so you can safely remove it</string>
 
-
+    <!-- SD card & phone storage settings item summary that is displayed when no SD card is inserted.  This version of the string can probably never come up on current hardware. [CHAR LIMIT=25] -->
+    <string name="sd_insert_summary" product="nosdcard">Insert USB storage for mounting</string>
     <!-- SD card & phone storage settings item summary that is displayed when no SD card is inserted -->
-    <string name="sd_insert_summary">Insert an SD card for mounting</string>
+    <string name="sd_insert_summary" product="default">Insert an SD card for mounting</string>
+
+    <!-- Storage setting item that will mount USB storage if it unmounted. A user should never see this. [CHAR LIMIT=25] -->
+    <string name="sd_mount" product="nosdcard">Mount USB storage</string>
+    <!-- SD card & phone storage settings item title that will result in the phone mounting the SD card. [CHAR LIMIT=25] -->
+    <string name="sd_mount" product="default">Mount SD card</string>
+    <!-- Subtext for Mount USB storage in Storage settings. User should never see this. -->
+    <string name="sd_mount_summary" product="nosdcard">Mount the USB storage</string>
     <!-- SD card & phone storage settings item title that will result in the phone mounting the SD card. -->
-    <string name="sd_mount">Mount SD card</string>
-    <!-- SD card & phone storage settings item title that will result in the phone mounting the SD card. -->
-    <string name="sd_mount_summary">Mount the SD card</string>
-    <!-- SD card & phone storage settings item title that will result in the phone formatting the SD card.   -->
-    <string name="sd_format">Format SD card</string>
+    <string name="sd_mount_summary" product="default">Mount the SD card</string>
+
+    <!-- SD card & phone storage settings item title that will result in the phone formatting the USB storage.   [CHAR LIMIT=25] -->
+    <string name="sd_format" product="nosdcard">Erase USB storage</string>
+    <!-- SD card & phone storage settings item title that will result in the phone formatting the SD card.   [CHAR LIMIT=25] -->
+    <string name="sd_format" product="default">Erase SD card</string>
+    <!-- SD card & phone storage settings item title that will result in the phone unmounting the SD card.   [CHAR LIMIT=30] -->
+    <string name="sd_format_summary" product="nosdcard">Erases all data on the phone\'s internal USB storage, such as music and photos</string>
     <!-- SD card & phone storage settings item title that will result in the phone unmounting the SD card.   -->
-    <string name="sd_format_summary">Format (erase) the SD card</string>
+    <string name="sd_format_summary" product="default">Erases all data on the phone\'s SD card, such as music and photos</string>
     <!-- SD card status when it is not available status -->
     <string name="sd_unavailable">Unavailable</string>
     <!-- SD card status when it is mounted as read only  -->
     <string name="read_only">\u0020(Read-only)</string>
+    <!-- SD card eject confirmation dialog title   [CHAR LIMIT=25] -->
+    <string name="dlg_confirm_unmount_title" product="nosdcard">Unmount USB storage</string>
     <!-- SD card eject confirmation dialog title   -->
-    <string name="dlg_confirm_unmount_title">Unmount SD card</string>
+    <string name="dlg_confirm_unmount_title" product="default">Unmount SD card</string>
+    <!-- SD card eject confirmation dialog  [CHAR LIMIT=NONE] -->
+    <string name="dlg_confirm_unmount_text" product="nosdcard">If you unmount the USB storage, some applications you are using will stop and may be unavailable until you remount the USB storage.</string>
     <!-- SD card eject confirmation dialog  -->
-    <string name="dlg_confirm_unmount_text">If you unmount the SD card, some applications you are using will stop and may be unavailable until you remount the SD card.</string>
+    <string name="dlg_confirm_unmount_text" product="default">If you unmount the SD card, some applications you are using will stop and may be unavailable until you remount the SD card.</string>
+    <!-- SD card eject error dialog title   [CHAR LIMIT=30] -->
+    <string name="dlg_error_unmount_title" product="nosdcard">Unmounting USB storage failed</string>
     <!-- SD card eject error dialog title   -->
-    <string name="dlg_error_unmount_title">Unmount SD card failed</string>
+    <string name="dlg_error_unmount_title" product="default">Unmount SD card failed</string>
+    <!-- SD card eject error dialog text   [CHAR LIMIT=NONE] -->
+    <string name="dlg_error_unmount_text" product="nosdcard">Cannot unmount USB storage. Try again later.</string>
     <!-- SD card eject error dialog text   -->
-    <string name="dlg_error_unmount_text">Cannot unmount SD card. Try again later.</string>
-    <!-- SD card unmount informative text   -->
-    <string name="unmount_inform_text">SD card will be unmounted. Check the notification area for status.</string>
+    <string name="dlg_error_unmount_text" product="default">Cannot unmount SD card. Try again later.</string>
+    <!-- SD card unmount informative text   [CHAR LIMIT=NONE] -->
+    <string name="unmount_inform_text" product="nosdcard">USB storage will be unmounted.</string>
+    <!-- SD card unmount informative text   [CHAR LIMIT=NONE] -->
+    <string name="unmount_inform_text" product="default">SD card will be unmounted.</string>
     <!-- SD card eject progress title   -->
     <string name="sd_ejecting_title">Unmounting</string>
     <!-- SD card eject progress text   -->
@@ -1375,8 +1433,18 @@
     <string name="master_clear_title">Factory data reset</string>
     <!-- SD card & phone storage settings screen, setting option summary text under Internal phone storage heading -->
     <string name="master_clear_summary">Erases all data on phone</string>
+    <!-- SD card & phone storage settings screen, message on screen after user selects Factory data reset [CHAR LIMIT=NONE] -->
+    <string name="master_clear_desc" product="nosdcard">"This will erase all data from your phone\'s <b>internal storage</b>, including:\n\n<li>Your Google account</li>\n<li>System and application data and settings</li>\n<li>Downloaded applications</li>\n\nTo clear all data on this phone the <b>USB storage</b> needs to be erased.\n\n"</string>
     <!-- SD card & phone storage settings screen, message on screen after user selects Factory data reset -->
-    <string name="master_clear_desc">"This will erase all data from your phone, including:\n<li>Your Google account</li>\n<li>System and application data and settings</li>\n<li>Downloaded applications</li>\nIt will not erase:\n<li>Current system software and bundled applications</li>\n<li>SD card files, such as music or photos</li>"</string>
+    <string name="master_clear_desc" product="default" >"This will erase all data from your phone\'s <b>internal storage</b>, including:\n\n<li>Your Google account</li>\n<li>System and application data and settings</li>\n<li>Downloaded applications</li>\n\nTo also clear music, pictures, and other user data, the <b>SD card</b> needs to be erased.\n\n"</string>
+    <!-- SD card & phone storage settings screen, label for check box to erase USB storage [CHAR LIMIT=30] -->
+    <string name="erase_external_storage" product="nosdcard">Erase USB storage</string>
+    <!-- SD card & phone storage settings screen, label for check box to erase SD card [CHAR LIMIT=30] -->
+    <string name="erase_external_storage" product="default">Erase SD card</string>
+    <!-- SD card & phone storage settings screen, description for check box to erase USB storage [CHAR LIMIT=30] -->
+    <string name="erase_external_storage_description" product="nosdcard">Erase all the data on the phone\'s internal USB storage, such as music or photos.</string>
+    <!-- SD card & phone storage settings screen, description for check box to erase USB storage [CHAR LIMIT=30] -->
+    <string name="erase_external_storage_description" product="default">Erase all the data on the phone\'s SD card, such as music or photos.</string>
     <!-- SD card & phone storage settings screen, button on screen after user selects Factory data reset -->
     <string name="master_clear_button_text">Reset phone</string>
     <!-- SD card & phone storage settings screen, message on screen after user selects Reset phone button -->
@@ -1391,22 +1459,34 @@
     <string name="master_clear_failed">No reset was performed because the System Clear service is not available.</string>
 
     <!-- Media Format -->
+    <!-- SD card & phone storage settings screen, setting option name under Internal phone storage heading [CHAR LIMIT=25] -->
+    <string name="media_format_title" product="nosdcard">Erase USB storage</string>
     <!-- SD card & phone storage settings screen, setting option name under Internal phone storage heading -->
-    <string name="media_format_title">Format SD card.</string>
+    <string name="media_format_title" product="default">Erase SD card</string>
+    <!-- SD card & phone storage settings screen, setting option summary text under Internal phone storage heading [CHAR LIMIT=30] -->
+    <string name="media_format_summary" product="nosdcard">Erases all data in USB storage</string>
     <!-- SD card & phone storage settings screen, setting option summary text under Internal phone storage heading -->
-    <string name="media_format_summary">Erases all data on the SD card</string>
-    <!-- SD card & phone storage settings screen, message on screen after user selects Factory data reset -->
-    <string name="media_format_desc">This action will erase the SD card in the phone. You will lose ALL data on the card!</string>
+    <string name="media_format_summary" product="default">Erases all data on the SD card</string>
+    <!-- SD card & phone storage settings screen, message on screen after user selects Factory data reset [CHAR LIMIT=NONE] -->
+    <string name="media_format_desc" product="nosdcard">This action will erase the USB storage. You will lose <b>all</b> data stored there!</string>
+    <!-- SD card & phone storage settings screen, message on screen after user selects Factory data reset [CHAR LIMIT=NONE] -->
+    <string name="media_format_desc" product="default">This action will erase the SD card. You will lose <b>all</b> data on the card!</string>
+    <!-- SD card & phone storage settings screen, button on screen after user selects Factory data reset [CHAR LIMIT=25] -->
+    <string name="media_format_button_text" product="nosdcard">Erase USB storage</string>
     <!-- SD card & phone storage settings screen, button on screen after user selects Factory data reset -->
-    <string name="media_format_button_text">Format SD card</string>
-    <!-- SD card & phone storage settings screen, message on screen after user selects Format media button -->
-    <string name="media_format_final_desc">Format SD card, erasing all your media? Action cannot be reversed!</string>
+    <string name="media_format_button_text" product="default">Erase SD card</string>
+    <!-- SD card & phone storage settings screen, message on screen after user selects Format media button [CHAR LIMIT=NONE] -->
+    <string name="media_format_final_desc" product="nosdcard">Erase USB storage, deleting all files stored there? Action cannot be reversed!</string>
+    <!-- SD card & phone storage settings screen, message on screen after user selects Format media button [CHAR LIMIT=NONE] -->
+    <string name="media_format_final_desc" product="default">Erase SD card, deleting all files stored there? Action cannot be reversed!</string>
     <!-- SD card & phone storage settings screen, button on screen after user selects Format media button -->
     <string name="media_format_final_button_text">Erase everything</string>
     <!-- Message to draw an unlock pattern before clearing the device -->
     <string name="media_format_gesture_prompt">Draw your unlock pattern</string>
-    <!-- Explanation of drawing unlock pattern to format card -->
-    <string name="media_format_gesture_explanation">You must draw your unlock pattern to confirm an SD card format.</string>
+    <!-- Explanation of drawing unlock pattern to format card [CHAR LIMIT=NONE] -->
+    <string name="media_format_gesture_explanation" product="nosdcard">You must draw your unlock pattern to confirm that you want to erase the USB storage.</string>
+    <!-- Explanation of drawing unlock pattern to format card [CHAR LIMIT=NONE] -->
+    <string name="media_format_gesture_explanation" product="default">You must draw your unlock pattern to confirm that you want to erase the SD card.</string>
 
     <!-- Main settings screen, Call settings title for item to go into the call settings -->
     <string name="call_settings_title">Call settings</string>
@@ -1454,8 +1534,8 @@
     <string name="location_neighborhood_level">Location determined by Wi-Fi and/or mobile networks</string>
     <!-- Security & location settings screen, setting check box label if the GPS receiver should be enabled -->
     <string name="location_gps">Use GPS satellites</string>
-    <!-- Security & location settings screen, setting summary when Use GPS satellites check box is selected -->
-    <string name="location_street_level">When locating, accurate to street level (uncheck to conserve battery)</string>
+    <!-- [CHAR LIMIT=100] Security & location settings screen, setting summary when Use GPS satellites check box is selected -->
+    <string name="location_street_level">When locating, accurate to street level</string>
     <!-- Security & location settings screen, setting summary when Use GPS satellites check box is clear -->
     <string name="location_gps_disabled">Locate to street-level (requires more battery plus view of sky)</string>
     <!-- Security & location settings screen, setting check box label if Assisted GPS should be enabled -->
@@ -1652,6 +1732,10 @@
     <string name="data_size_label">Data</string>
     <!-- Manage applications, individual application info screen, button label under Storage heading. Button to remove the application from the system. -->
     <string name="uninstall_text">Uninstall</string>
+    <!-- [CHAR LIMIT=25] Manage applications, individual application info screen, button label under Storage heading. Button to disable an existing application. -->
+    <string name="disable_text">Disable</string>
+    <!-- [CHAR LIMIT=25] Manage applications, individual application info screen, button label under Storage heading. Button to re-enable an existing application. -->
+    <string name="enable_text">Enable</string>
     <!-- Manage applications, individual application info screen, button label under Storage heading. Button to clear all data associated with tis app (for exampel, remove all cached emails for an Email app) -->
     <string name="clear_user_data_text">Clear data</string>
     <!-- Manage applications, restore updated system application to factory version -->
@@ -1664,10 +1748,14 @@
     <string name="clear_activities">Clear defaults</string>
     <!-- Manage apps, individual app screen, substituted for the application's label when the app's label CAN NOT be determined.-->
     <string name="unknown">Unknown</string>
-    <!-- Manage applications screen, menu item.  Sorts all of the apps in the list alphabetically. -->
-    <string name="sort_order_alpha">Sort</string>
+    <!-- [CHAR LIMIT=25] Manage applications screen, menu item.  Sorts all of the apps in the list alphabetically. -->
+    <string name="sort_order_alpha">Sort by name</string>
     <!-- Manage applications screen, menu item. Sorts all of the apps in the list based on their file size.  This is used to uninstall when space is getting low. -->
     <string name="sort_order_size">Sort by size</string>
+    <!-- [CHAR LIMIT=25] Manage applications screen, menu item.  Show running services. -->
+    <string name="show_running_services">Show running services</string>
+    <!-- [CHAR LIMIT=25] Manage applications screen, menu item.  Show background cached processes. -->
+    <string name="show_background_processes">Show cached processes</string>
     <!-- Manage applications screen, individual app screen, button label when the user wants to manage the space taken up by an app. -->
     <string name="manage_space_text">Manage space</string>
     <!-- Text for menu option in ManageApps screen to present various menu options -->
@@ -1684,9 +1772,21 @@
     packages only. -->
     <string name="filter_apps_running">Running</string>
     <!-- Text for filter option in ManageApps screen to display list of
+    packages installed on sdcard. [CHAR LIMIT=30] -->
+    <string name="filter_apps_onsdcard" product="nosdcard">USB storage</string>
+    <!-- Text for filter option in ManageApps screen to display list of
     packages installed on sdcard. -->
-    <string name="filter_apps_onsdcard">On SD card</string>
-    <string name="loading">Loading\u2026</string>
+    <string name="filter_apps_onsdcard" product="default">On SD card</string>
+    <!-- [CHAR LIMIT=25] Manage applications, text telling using an application is disabled. -->
+    <string name="disabled">Disabled</string>
+    <!-- [CHAR LIMIT=25] Text shown when there are no applications to display. -->
+    <string name="no_applications">No applications.</string>
+    <!-- [CHAR LIMIT=15] Manage applications, label for chart showing internal storage use. -->
+    <string name="internal_storage">Internal storage</string>
+    <!-- [CHAR LIMIT=15] Manage applications, label for chart showing SD card storage use. -->
+    <string name="sd_card_storage" product="nosdcard">USB storage</string>
+    <!-- [CHAR LIMIT=15] Manage applications, label for chart showing SD card storage use. -->
+    <string name="sd_card_storage" product="default">SD card storage</string>
     <!-- Manage app screen, shown when the activity is busy recomputing the size of each app -->
     <string name="recompute_size">Recomputing size\u2026</string>
     <!-- Manage applications, individual application screen, confirmation dialog title. Displays when user selects to "Clear data". -->
@@ -1724,8 +1824,10 @@ found in the list of installed applications.</string>
     <string name="move_app">Move</string>
     <!-- Manage applications, text for Move button to move app to internal storage -->
     <string name="move_app_to_internal">Move to phone</string>
+    <!-- Manage applications, text for Move button  to move app to sdcard [CHAR LIMIT=25] -->
+    <string name="move_app_to_sdcard" product="nosdcard">Move to USB storage</string>
     <!-- Manage applications, text for Move button  to move app to sdcard -->
-    <string name="move_app_to_sdcard">Move to SD card</string>
+    <string name="move_app_to_sdcard" product="default">Move to SD card</string>
     <!-- Manage applications, title for dialog when killing persistent apps-->
     <!-- Manage applications, text for Move button when move is in progress -->
     <string name="moving">Moving</string>
@@ -1738,8 +1840,8 @@ found in the list of installed applications.</string>
     <string name="system_package">System updates cannot be installed on external media.</string>
 
     <string name="force_stop_dlg_title">Force stop</string>
-    <!-- Manage applications, text for dialog when killing persistent apps-->
-    <string name="force_stop_dlg_text">This application will be restarted right way. Are you sure you want to force stop?</string>
+    <!-- [CHAR LIMIT=200] Manage applications, text for dialog when killing persistent apps-->
+    <string name="force_stop_dlg_text">Force stopping an application can cause it to misbehave.  Are you sure?</string>
     <!-- Manage applications, text for dialog when moving an app -->
     <string name="move_app_failed_dlg_title">Move application</string>
     <!-- Manage applications, text for dialog moving an app -->
@@ -1749,47 +1851,95 @@ found in the list of installed applications.</string>
     <!-- Manage applications. application installation location summary -->
     <string name="app_install_location_summary">Change the preferred installation location for new applications.</string>
 
+    <!-- [CHAR LIMIT=25] Services settings screen, setting option name for the user to go to the screen to view app storage use -->
+    <string name="storageuse_settings_title">Storage use</string>
+    <!-- Services settings screen, setting option summary for the user to go to the screen to app storage use -->
+    <string name="storageuse_settings_summary">View storage used by applications</string>
+
     <!-- Services settings screen, setting option name for the user to go to the screen to view running services -->
     <string name="runningservices_settings_title">Running services</string>
     <!-- Services settings screen, setting option summary for the user to go to the screen to view running services  -->
     <string name="runningservices_settings_summary">View and control currently running services</string>
     <!-- Label for a service item when it is restarting -->
     <string name="service_restarting">Restarting</string>
-    <!-- Running services, body text when there are no services to show -->
-    <string name="no_running_services">No running services</string>
-    <!-- Running services, title of dialog to stop a service -->
-    <string name="confirm_stop_service">Stop service?</string>
-    <!-- Running services, message of dialog to stop a service -->
-    <string name="confirm_stop_service_msg">The service will no longer run until
-            started again.  This may have undesirable
-            consequences on the application
-            <xliff:g id="application">%1$s</xliff:g>.</string>
-    <!-- Running services, button to stop a service -->
-    <string name="confirm_stop_stop">Stop</string>
-    <!-- Running services, button to cancel stopping of a service -->
-    <string name="confirm_stop_cancel">Cancel</string>
+    <!-- Label for a process item representing a background process -->
+    <string name="cached">Cached background process</string>
+    <!-- [CHAR LIMIT=25] Text shown when there are no services running -->
+    <string name="no_running_services">Nothing running.</string>
     <!-- Running services, description for a service in the started state -->
-    <string name="service_started_by_app">Started by application: touch to stop</string>
+    <string name="service_started_by_app">Started by application.</string>
     <!-- Running services, description for a service in the started state -->
-    <string name="service_client_name"><xliff:g id="client_name">%1$s</xliff:g>: touch to manage</string>
-    <!-- Running services, summary of background processes -->
-    <string name="service_background_processes">Avail: <xliff:g id="free">%2$s</xliff:g>+<xliff:g id="memory">%3$s</xliff:g> in <xliff:g id="count">%1$d</xliff:g></string>
-    <!-- Running services, summary of foreground processes -->
-    <string name="service_foreground_processes">Other: <xliff:g id="memory">%2$s</xliff:g> in <xliff:g id="count">%1$d</xliff:g></string>
+    <string name="service_client_name"><xliff:g id="client_name">%1$s</xliff:g></string>
+    <!-- [CHAR LIMIT=10] Running services, summary of background processes -->
+    <string name="service_background_processes"><xliff:g id="memory">%1$s</xliff:g> free</string>
+    <!-- [CHAR LIMIT=10] Running services, summary of foreground processes -->
+    <string name="service_foreground_processes"><xliff:g id="memory">%1$s</xliff:g> used</string>
+    <!-- [CHAR LIMIT=10] Running services, label for chart showing memory use. -->
+    <string name="memory">RAM</string>
     <!-- Text to label a process entry with the process name. -->
-    <string name="service_process_name">Process: <xliff:g id="process">%1$s</xliff:g></string>
+    <string name="service_process_name"><xliff:g id="process">%1$s</xliff:g></string>
+    <!-- Descriptive text of a running process: singular process, singular service. -->
+    <string name="running_processes_item_description_s_s"><xliff:g id="numprocess">%1$d</xliff:g>
+        process and <xliff:g id="numservices">%2$d</xliff:g> service</string>
+    <!-- Descriptive text of a running process: singular process, plural service. -->
+    <string name="running_processes_item_description_s_p"><xliff:g id="numprocess">%1$d</xliff:g>
+        process and <xliff:g id="numservices">%2$d</xliff:g> services</string>
+     <!-- Descriptive text of a running process: plural process, singular service. -->
+    <string name="running_processes_item_description_p_s"><xliff:g id="numprocess">%1$d</xliff:g>
+        processes and <xliff:g id="numservices">%2$d</xliff:g> service</string>
+    <!-- Descriptive text of a running process: plural process, plural service. -->
+    <string name="running_processes_item_description_p_p"><xliff:g id="numprocess">%1$d</xliff:g>
+        processes and <xliff:g id="numservices">%2$d</xliff:g> services</string>
 
+    <!-- Details about an application's running services. -->
+    <string name="runningservicedetails_settings_title">Running application</string>
+    <!-- Message displayed when there are no active services in a process. -->
+    <string name="no_services">Not active</string>
+    <!-- Title for list of services. -->
+    <string name="runningservicedetails_services_title">Services</string>
+    <!-- Title for list of services. -->
+    <string name="runningservicedetails_processes_title">Processes</string>
+    <!-- Running service details, stop a service that has started itself. -->
+    <string name="service_stop">Stop</string>
+    <!-- Running service details, manage a service that is running for some other reason. -->
+    <string name="service_manage">Settings</string>
+    <!-- Running service details, default description for services that are started. -->
+    <string name="service_stop_description">This service was started by its
+        application.  Stopping it may cause the application to fail.</string>
+    <!-- Running service details, description for running heavy-weight process. -->
+    <string name="heavy_weight_stop_description">This application can not safely
+        be stopped.  Doing so may lose some of your current work.</string>
+    <!-- Running service details, description for background process. -->
+    <string name="background_process_stop_description">This is an old application
+        process that is being kept for better speed in case it is needed again.
+        There is usually no reason to stop it.</string>
+    <!-- Running service details, default description for services that are managed. -->
+    <string name="service_manage_description"><xliff:g id="client_name">%1$s</xliff:g>:
+        currently in use.  Touch Settings to control it.</string>
+    <!-- Description of the main process in the details. -->
+    <string name="main_running_process_description">Main process that is in use.</string>
+    <!-- Message that a process's service is in use. -->
+    <string name="process_service_in_use_description">Service <xliff:g id="comp_name">%1$s</xliff:g>
+        is in use.</string>
+    <!-- Message that a process's provider is in use. -->
+    <string name="process_provider_in_use_description">Provider <xliff:g id="comp_name">%1$s</xliff:g>
+        is in use.</string>
+    <!-- Running service details, stop confirmation dialog title. Displays when user selects selects to stop a system service. -->
+    <string name="runningservicedetails_stop_dlg_title">Stop system service?</string>
+    <!-- Running service details, stop confirmation descriptive text. Displays when user selects selects to stop a system service. -->
+    <string name="runningservicedetails_stop_dlg_text">Are you sure you want to stop this system service? If you do, some
+        features of your phone may stop working correctly until you power it off
+        and then on again.</string>
+    
     <!-- Language Settings --> <skip />
     <!-- Title of setting on main settings screen.  This item will take the user to the screen to tweak settings realted to locale and text -->
     <string name="language_settings">Language &amp; keyboard</string>
     <!-- Title of Language and keyboard settings screen -->
     <string name="language_keyboard_settings_title">Language &amp; keyboard settings</string>
-    <!-- Summary of setting on main settings screen.  This item will take the user to the screen to tweak settings realted to locale and text -->
-    <string name="language_settings_summary">Set locale (language and region), text input and auto-correction options</string>
-    <!-- On Text & language settings screen, heading. Inside the "Locale & text" screen, this is the header for settings that are for locale changes. -->
-    <string name="language_category">Locale setting</string>
-    <!-- On Text & language settings screen, heading. Inside the "Locale & text" screen, this is the header for settings that relate to text (autotext, autoreplace, autocapitalization). -->
-    <string name="text_category">Text settings</string>
+    <!-- On Language & keyboard settings screen, heading. Inside the "Language & keyboard settings" screen, this is the header for settings that relate to language (select the system language, user dictionary for the language). -->
+    <string name="language_settings_category">Language settings</string>
+    <!-- On Language & keyboard settings screen, heading. Inside the "Language & keyboard settings" screen, this is the header for settings that relate to keyboard (enable/disable each keyboard, settings for each keyboard). -->
+    <string name="keyboard_settings_category">Keyboard settings</string>
     <!-- On Text & language settings screen, setting option name. title of the setting to take the user to a screen to select the locale. -->
     <string name="phone_language">Select language</string>
     <!-- On Text & language settings screen, setting option name. summary of the setting to take the user to a screen to select the locale. -->
@@ -1846,8 +1996,6 @@ found in the list of installed applications.</string>
     <string name="testing_phone_info">Phone information</string>
     <!-- In the Testing screen. The item title of the activity that shows a bunch of battery-related information.  -->
     <string name="testing_battery_info">Battery information</string>
-    <!-- In the Testing screen. The item title of the activity that shows a bunch of historical battery-related information.  -->
-    <string name="testing_battery_history">Battery history</string>
     <!-- Do not translate. In the Testing screen. The item title of the activity that shows a bunch of SIM-related operations.  -->
     <string name="testing_sim_toolkit">SIM toolkit</string>
 
@@ -1882,9 +2030,9 @@ found in the list of installed applications.</string>
     <!-- Summary for on-screen keyboard settings -->
     <string name="onscreen_keyboard_settings_summary">Onscreen keyboard settings</string>
     <!-- Title for built-in keyboard settings -->
-    <string name="builtin_keyboard_settings_title">Device keyboard</string>
+    <string name="builtin_keyboard_settings_title">Built-in keyboard</string>
     <!-- Summary for built-in keyboard settings -->
-    <string name="builtin_keyboard_settings_summary">Built-in keyboard settings</string>
+    <string name="builtin_keyboard_settings_summary">Built-in, physical keyboard settings</string>
 
     <!-- Development Settings.  the title for the item to take the user to Development settings.  Development settings are settings meant for application developers.  -->
     <string name="development_settings_title">Development</string>
@@ -1917,39 +2065,6 @@ found in the list of installed applications.</string>
          the final name for Gadgets/Widgets, so please translate both for now. -->
     <string name="widget_picker_title">Choose widget</string>
 
-    <!-- Used to display "Details for UID 1234" in BatteryHistory -->
-    <string name="battery_history_details_for">Details for UID <xliff:g id="number" example="1234">%d</xliff:g></string>
-
-    <!-- Used to name a set of apps that share a user id in BatteryHistory -->
-    <string name="battery_history_uid">UID <xliff:g id="user_id">%1$d</xliff:g></string>
-
-    <!-- Used as a title for the network usage details screen in BatteryHistory -->
-    <string name="battery_history_network_usage">Network usage details for <xliff:g id="app_name">%1$s</xliff:g>:</string>
-
-    <!-- Used to show the number of bytes received by an app over the network in BatteryHistory -->
-    <string name="battery_history_bytes_received">Bytes received: <xliff:g id="bytes">%1$d</xliff:g></string>
-
-    <!-- Used to show the number of bytes sent by an app over the network in BatteryHistory -->
-    <string name="battery_history_bytes_sent">Bytes sent: <xliff:g id="bytes">%1$d</xliff:g></string>
-
-    <!-- Used to show the number of bytes sent and received by an app over the network in BatteryHistory -->
-    <string name="battery_history_bytes_total">Total bytes: <xliff:g id="bytes">%1$d</xliff:g></string>
-
-    <!-- Used as a title for the cpu usage details screen in BatteryHistory -->
-    <string name="battery_history_cpu_usage">CPU usage details for <xliff:g id="app_name">%1$s</xliff:g>:</string>
-
-    <!-- Used to show the time spent in user code for a given app in BatteryHistory -->
-    <string name="battery_history_user_time">User time: </string>
-
-    <!-- Used to show the time spent in system code for a given app in BatteryHistory -->
-    <string name="battery_history_system_time">System time: </string>
-
-    <!-- Used to show the time spent in user or system code for a given app in BatteryHistory -->
-    <string name="battery_history_total_time">Total time: </string>
-
-    <!-- Used to show the number of times an app has been started in BatteryHistory -->
-    <string name="battery_history_starts">Starts: <xliff:g id="starts">%1$d</xliff:g></string>
-
     <!-- Used to show an amount of time in the form "d days, h hours, m minutes, s seconds" in BatteryHistory -->
     <string name="battery_history_days"><xliff:g id="days">%1$d</xliff:g>d <xliff:g id="hours">%2$d</xliff:g>h <xliff:g id="minutes">%3$d</xliff:g>m <xliff:g id="seconds">%4$d</xliff:g>s</string>
 
@@ -1961,52 +2076,7 @@ found in the list of installed applications.</string>
 
     <!-- Used to show an amount of time in the form "s seconds" in BatteryHistory -->
     <string name="battery_history_seconds"><xliff:g id="seconds">%1$d</xliff:g>s</string>
-
-    <!-- Used to head a list of packages that share a given user id BatteryHistory -->
-    <string name="battery_history_packages_sharing_this_uid">Packages sharing this UID:</string>
-
-    <!-- Used when no battery data available in BatteryHistory -->
-    <string name="battery_history_no_data">No battery usage data available</string>
-
-    <!-- Used for Sensor detail screen in BatteryHistory -->
-    <string name="battery_history_sensor">Sensor:</string>
-
-    <!-- Used for Wakelock detail screen in BatteryHistory -->
-    <string name="battery_history_wakelock">Partial Wakelock:</string>
-
-    <!-- Used for Sensor detail screen in BatteryHistory -->
-    <string name="battery_history_used_by_packages">Sensor used by packages:</string>
-
-    <!-- Used for Sensor detail screen in BatteryHistory -->
-    <string name="battery_history_sensor_usage">Used <xliff:g id="count">%1$d</xliff:g> times by <xliff:g id="package">%2$s</xliff:g></string>
-
-    <!-- Used for Sensor detail screen in BatteryHistory -->
-    <string name="battery_history_sensor_usage_multi">Used <xliff:g id="count">%1$d</xliff:g> times by one of:</string>
-
-    <!-- Used for label of awake bar in BatteryHistory -->
-    <string name="battery_history_awake_label">Running</string>
-
-    <!-- Used for label of screen on bar in BatteryHistory -->
-    <string name="battery_history_screen_on_label">Screen on</string>
-
-    <!-- Used for label of phone on bar in BatteryHistory -->
-    <string name="battery_history_phone_on_label">Phone on</string>
-
-    <!-- Used for awake time message in BatteryHistory -->
-    <string name="battery_history_awake">Time spent without sleeping:</string>
-
-    <!-- Used for Screen on time message in BatteryHistory -->
-    <string name="battery_history_screen_on">Time spent with screen on:</string>
-
-    <!-- Used for Phone on time message in BatteryHistory -->
-    <string name="battery_history_phone_on">Time spent with phone on:</string>
-
-    <!-- Used for Screen on time message in BatteryHistory -->
-    <string name="battery_history_screen_on_battery">On battery:</string>
-
-    <!-- XXX remove? Used for Screen on time message in BatteryHistory -->
-    <string name="battery_history_screen_on_plugged">Plugged in:</string>
-
+    
     <!-- XXX remove? Strings used for displaying usage statistics -->
     <string name="usage_stats_label">Usage statistics</string>
 
@@ -2073,16 +2143,30 @@ found in the list of installed applications.</string>
     <string name="battery_since_unplugged">Battery use since unplugged</string>
     <!-- Battery usage since user reset the stats -->
     <string name="battery_since_reset">Battery use since reset</string>
+    <!-- Battery usage on battery duration -->
+    <string name="battery_stats_on_battery"><xliff:g id="time">%1$s</xliff:g> on battery</string>
     <!-- Battery usage duration -->
     <string name="battery_stats_duration"><xliff:g id="time">%1$s</xliff:g> since unplugged</string>
+    <!-- [CHAR LIMIT=25] Label for battery stats charging state graph -->
+    <string name="battery_stats_charging_label">Charging</string>
+    <!-- [CHAR LIMIT=25] Label for battery stats screen on state graph -->
+    <string name="battery_stats_screen_on_label">Screen on</string>
+    <!-- [CHAR LIMIT=25] Label for battery stats gps on state graph -->
+    <string name="battery_stats_gps_on_label">GPS on</string>
+    <!-- [CHAR LIMIT=25] Label for battery stats wifi running state graph -->
+    <string name="battery_stats_wifi_running_label">Wi-Fi</string>
+    <!-- [CHAR LIMIT=25] Label for battery stats wake lock state graph -->
+    <string name="battery_stats_wake_lock_label">Awake</string>
+    <!-- [CHAR LIMIT=25] Label for battery stats phone signal strength graph -->
+    <string name="battery_stats_phone_signal_label">Phone signal</string>
     <!-- Battery usage during last unplugged period -->
     <string name="battery_stats_last_duration">@string/menu_stats_last_unplugged</string>
     <!-- CPU awake time title -->
     <string name="awake">Device awake time</string>
     <!-- Wifi on time -->
-    <string name="wifi_on_time">WiFi on time</string>
+    <string name="wifi_on_time">Wi-Fi on time</string>
     <!-- Bluetooth on time -->
-    <string name="bluetooth_on_time">WiFi on time</string>
+    <string name="bluetooth_on_time">Wi-Fi on time</string>
     <!-- Application name and battery usage percentage -->
     <string name="usage_name_percent"><xliff:g id="name">%1$s</xliff:g>" - "
             <xliff:g id="number" example="30">%2$s</xliff:g><xliff:g id="percent" example="%">%%</xliff:g></string>
@@ -2113,8 +2197,12 @@ found in the list of installed applications.</string>
     <string name="usage_type_cpu">CPU total</string>
     <!-- Label for CPU usage in foreground -->
     <string name="usage_type_cpu_foreground">CPU foreground</string>
+    <!-- [CHAR LIMIT=25] Label for keeping device from sleeping -->
+    <string name="usage_type_wake_lock">Keep awake</string>
     <!-- Label for GPU usage time -->
     <string name="usage_type_gps">GPS</string>
+    <!-- [CHAR LIMIT=25] Label for WIFI usage time -->
+    <string name="usage_type_wifi_running">Wi-Fi running</string>
     <!-- Label for Phone usage time -->
     <string name="usage_type_phone">Phone</string>
     <!-- Label for Data sent -->
@@ -2138,7 +2226,7 @@ found in the list of installed applications.</string>
     <!-- Label for display settings -->
     <string name="battery_action_display">Display settings</string>
     <!-- Label for wifi settings -->
-    <string name="battery_action_wifi">WiFi settings</string>
+    <string name="battery_action_wifi">Wi-Fi settings</string>
     <!-- Label for bluetooth settings -->
     <string name="battery_action_bluetooth">Bluetooth settings</string>
 
@@ -2170,12 +2258,12 @@ found in the list of installed applications.</string>
     <!-- Suggestion for bluetooth headset -->
     <string name="battery_sugg_bluetooth_headset">Try connecting to a different bluetooth device</string>
 
-    <!-- Description for power consumed by applications -->
-    <string name="battery_desc_apps">Battery used by applications when running</string>
+    <!-- [CHAR LIMIT=50] Description for power consumed by applications -->
+    <string name="battery_desc_apps">Battery used by application</string>
     <!-- Suggestion for exploring application info to stop or uninstall -->
     <string name="battery_sugg_apps_info">Stop or uninstall the application</string>
-    <!-- Suggestion for getting apps to consume less power due to GPS-->
-    <string name="battery_sugg_apps_gps">"Turn off GPS when you're not using it"</string>
+    <!-- [CHAR LIMIT=100] Suggestion for getting apps to consume less power due to GPS-->
+    <string name="battery_sugg_apps_gps">"Manually control GPS to prevent application from using it"</string>
     <!-- Suggestion for getting apps to consume less power -->
     <string name="battery_sugg_apps_settings">The application may offer settings to reduce battery use</string>
 
@@ -2285,6 +2373,12 @@ found in the list of installed applications.</string>
     <string name="pico_voice_summary_female">Female</string>
     <!-- On Pico TTS Settings screen, summary text to indicate that a voice is male -->
     <string name="pico_voice_summary_male">Male</string>
+    <!-- [CHAR LIMIT=33] Notification title that appears when the installation of a new TTS engine completed -->
+    <string name="tts_notif_engine_install_title">Speech synthesis engine installed</string>
+    <!-- [CHAR LIMIT=30] Notification message that appears after the user has installed a new TTS engine,
+         to warn the user that this engine cannot be used before the checkbox for that engine
+         in TTS settings is checked. -->
+    <string name="tts_notif_engine_install_message">Enable new engine before use</string>
 
     <!-- Power Control Widget -->
     <string name="gadget_title">Power Control</string>
@@ -2437,10 +2531,14 @@ found in the list of installed applications.</string>
     <string name="credentials_unlock">Enter password</string>
     <!-- Description of dialog to enable/dislable access to credential storage -->
     <string name="credentials_unlock_hint">Enter the credential storage password.</string>
+    <!-- Title of preference to install certificates from SD card [CHAR LIMIT=25] -->
+    <string name="credentials_install_certificates" product="nosdcard">Install from USB storage</string>
     <!-- Title of preference to install certificates from SD card -->
-    <string name="credentials_install_certificates">Install from SD card</string>
+    <string name="credentials_install_certificates" product="default">Install from SD card</string>
+    <!-- Summary of preference to install certificates from SD card [CHAR LIMIT=25] -->
+    <string name="credentials_install_certificates_summary" product="nosdcard">Install encrypted certificates from USB storage</string>
     <!-- Summary of preference to install certificates from SD card -->
-    <string name="credentials_install_certificates_summary">Install encrypted certificates from SD card</string>
+    <string name="credentials_install_certificates_summary" product="default">Install encrypted certificates from SD card</string>
     <!-- Title of preference to set storage password -->
     <string name="credentials_set_password">Set password</string>
     <!-- Summary of preference to set storage password -->
@@ -2473,6 +2571,27 @@ found in the list of installed applications.</string>
     <!-- toast message -->
     <string name="credentials_disabled">Credential storage is disabled.</string>
 
+    <!-- Title of preference group for encrypted filesystem settings -->
+    <string name="encrypted_fs_category">Encrypted File System</string>
+    <!-- Title of preference to enable/dislable encrypted filesystem -->
+    <string name="encrypted_fs_enable">Encrypt private user data</string>
+    <!-- Summary of preference to enable/dislable encrypted filesystem -->
+    <string name="encrypted_fs_enable_summary">Enable encrypted file system storage for private user data in this device</string>
+    <!-- Dialog message to enable encrypted filesystem -->
+    <string name="encrypted_fs_enable_dialog">Enabling Encrypted File Systems requires a device data wipe.</string>
+    <!-- Dialog message to disable encrypted filesystem -->
+    <string name="encrypted_fs_disable_dialog">Disabling Encrypted File Systems requires a device data wipe.</string>
+    <!-- Button label to enable encrypted filesystem -->
+    <string name="encrypted_fs_enable_button">Enable</string>
+    <!-- Button label to disable encrypted filesystem -->
+    <string name="encrypted_fs_disable_button">Disable</string>
+    <!-- Button message to cancel toggling encrypted filesystem -->
+    <string name="encrypted_fs_cancel_button">Cancel</string>
+    <!-- Toast message to notify cancel toggling encrypted filesystem -->
+    <string name="encrypted_fs_cancel_confirm">Encrypted File Systems mode change cancelled.</string>
+    <!-- Dialog title to toggle encrypted filesystem -->
+    <string name="encrypted_fs_alert_dialog_title">Encrypted File Systems Warning.</string>
+
     <!-- Sound settings screen, setting check box label -->
     <string name="emergency_tone_title">Emergency tone</string>
     <!-- Sound settings screen, setting option summary text -->
@@ -2490,15 +2609,15 @@ found in the list of installed applications.</string>
     <!-- Backup data menu title -->
     <string name="backup_data_title">Back up my data</string>
     <!-- Summary text of the "back up data" setting -->
-    <string name="backup_data_summary">Back up my settings and other application data.</string>
+    <string name="backup_data_summary">Back up application data, Wi-Fi passwords, and other settings to Google servers</string>
     <!-- Auto-restore menu title -->
     <string name="auto_restore_title">Automatic restore</string>
     <!-- Summary text of the "automatic restore" setting -->
-    <string name="auto_restore_summary">If I reinstall an application, restore backed up settings or other data.</string>
+    <string name="auto_restore_summary">If I reinstall an application, restore backed up settings or other data</string>
     <!-- Dialog title for confirmation to erase backup data from server -->
     <string name="backup_erase_dialog_title">Backup</string>
     <!-- Dialog title for confirmation to erase backup data from server -->
-    <string name="backup_erase_dialog_message">Are you sure you want to stop backing up your settings and application data and erase all copies on Google servers?</string>
+    <string name="backup_erase_dialog_message">Are you sure you want to stop backing up your Wi-Fi passwords, bookmarks, and other settings and application data and erase all copies on Google servers?</string>
 
     <!-- Device admin settings screen --><skip/>
     <!-- Device admin settings activity title -->

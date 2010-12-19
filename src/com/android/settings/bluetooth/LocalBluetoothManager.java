@@ -45,9 +45,8 @@ public class LocalBluetoothManager {
 
     private static final String SHARED_PREFERENCES_NAME = "bluetooth_settings";
 
+    /** Singleton instance. */
     private static LocalBluetoothManager INSTANCE;
-    /** Used when obtaining a reference to the singleton instance. */
-    private static Object INSTANCE_LOCK = new Object();
     private boolean mInitialized;
 
     private Context mContext;
@@ -86,7 +85,7 @@ public class LocalBluetoothManager {
     private long mLastScan;
 
     public static LocalBluetoothManager getInstance(Context context) {
-        synchronized (INSTANCE_LOCK) {
+        synchronized (LocalBluetoothManager.class) {
             if (INSTANCE == null) {
                 INSTANCE = new LocalBluetoothManager();
             }
@@ -356,7 +355,7 @@ public class LocalBluetoothManager {
                 deviceAddress);
         editor.putLong(LocalBluetoothManager.SHARED_PREFERENCES_KEY_LAST_SELECTED_DEVICE_TIME,
                 System.currentTimeMillis());
-        editor.commit();
+        editor.apply();
     }
 
     public boolean hasDockAutoConnectSetting(String addr) {
@@ -371,12 +370,12 @@ public class LocalBluetoothManager {
     public void saveDockAutoConnectSetting(String addr, boolean autoConnect) {
         SharedPreferences.Editor editor = getSharedPreferences().edit();
         editor.putBoolean(SHARED_PREFERENCES_KEY_DOCK_AUTO_CONNECT + addr, autoConnect);
-        editor.commit();
+        editor.apply();
     }
 
     public void removeDockAutoConnectSetting(String addr) {
         SharedPreferences.Editor editor = getSharedPreferences().edit();
         editor.remove(SHARED_PREFERENCES_KEY_DOCK_AUTO_CONNECT + addr);
-        editor.commit();
+        editor.apply();
     }
 }
